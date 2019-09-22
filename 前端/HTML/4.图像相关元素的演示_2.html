@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>图像相关元素的演示_2</title>
+</head>
+<body>
+    <!--加载图片,使用map映射-->
+    <!--
+        <img/>中有一个usemap属性
+        新建一个map,先当于将图片包装成了一个地图的索引
+        <map>中有一个或者多个<area/>
+        <area/>中有一下属性：
+            shape:指定区域的形状(圆形、矩形、自定义图形)
+            coords:指定区域的坐标
+            href:指定区域连接的资源
+    -->
+    <img src="../img/朱茵.jpg" alt="紫霞仙子.jpg" width="960px" height="540px" usemap="#map"/>
+    <!--创建一个map标签-->
+    <map id="map">
+        <area shape="circle" coords="240px, 270px, 200px" href="4.introduce.html"/>
+        <area shape="rect" coords="450px, 100px, 900px, 500px" href="4.introduce2.html"/>
+
+    </map>
+
+
+</body>
+</html>

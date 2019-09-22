@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>遮罩层的制作</title>
+    <style>
+
+        div.father{
+            width: 1146px;
+            height: 400px;
+            background-color: gray;
+            position: relative;
+        }
+        div.son{
+            width: 1146px;
+            height: 400px;
+            background-color: hotpink;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            opacity: 0.0;
+            z-index: 1;
+        }
+        /*div.son:hover{*/
+            /*cursor: pointer;*/
+            /*opacity: 0.2;*/
+        /*}*/
+        div.son_2{
+            width: 60px;
+            height: 60px;
+            background-color: white;
+            border-radius: 30px;
+            position: absolute;
+            top: 170px;
+            left: 543px;
+            opacity: 0.0;
+            z-index: 2;
+        }
+        div.son:hover .son_2{
+            cursor: pointer;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <div class="father">
+        <img src="img/weipinhui.jpg"/>
+        <div class="son"></div>
+        <div class="son_2"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>样式应用优先级问题</title>
+    <style>
+        div{
+            width: 200px;
+            height:200px;
+            background-color: red;
+        }
+    </style>
+    <link href="3.外部样式.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+    <!--样式应用优先级问题
+        就近原则
+        内部样式优先级永远最大
+        内部样式和外部样式采用就近原则
+        离得近优先级高
+    -->
+    <div style="width:100px; height:100px; background-color: blue"></div>
+</body>
+</html>

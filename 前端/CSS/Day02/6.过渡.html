@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>过渡</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+
+            /*设置延时显示时间*/
+            transition-delay: 500ms;
+            /*设置过度持续时间*/
+            transition-duration: 3000ms;
+            /*设置过度参与的属性*/
+            transition-property: width, height, border-radius, background-color;
+            /*设置过度速率*/
+            transition-timing-function: linear;
+        }
+        div:hover{
+            width: 100px;
+            height: 100px;
+            border-radius: 50px;
+            background-color: blue;
+
+            /*设置延时显示时间*/
+            transition-delay: 500ms;
+            /*设置过度持续时间*/
+            transition-duration: 3000ms;
+            /*设置过度参与的属性*/
+            transition-property: width, height, border-radius, background-color;
+            /*设置过度速率*/
+            transition-timing-function: linear;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<sim-project version="4.80">
+  <meta>
+    <name>Project</name>
+    <authors />
+    <description />
+  </meta>
+  <management>
+    <persons />
+    <tasks />
+    <requirements />
+    <issues />
+    <to-dos />
+  </management>
+  <types>
+    <type-sets>
+      <type-set file="UmlTypes.xml" />
+    </type-sets>
+    <custom-types>
+      <type id="string" name="string" description="" />
+      <type id="Uml.String" name="Uml.String" description="" />
+      <type id="double" name="double" description="" />
+      <type id="Uml.Integer" name="Uml.Integer" description="" />
+    </custom-types>
+  </types>
+  <items>
+    <item id="di434643859415055624" cid="C001" type="class" name="Teacher" style-class="" is-abstract="false">
+      <stereotypes />
+      <tagged-values />
+      <documentation>{\rtf1\ansi\ansicpg936\deff0\deflang1033\deflangfe2052{\fonttbl{\f0\fswiss\fcharset0 Arial;}{\f1\fnil\fcharset134 \'cb\'ce\'cc\'e5;}}
+\viewkind4\uc1\pard\lang2052\f0\fs18 Teacher\f1\'c0\'e0\par
+}
+</documentation>
+      <associated-diagrams />
+      <owned-items />
+      <style class="default" />
+      <attributes>
+        <attribute id="" name="teacherID" type="string" type-id="string" visibility="private" abstract="false" virtual="false" default-value="">
+          <stereotypes />
+          <documentation>{\rtf1\ansi\ansicpg936\deff0\deflang1033\deflangfe2052{\fonttbl{\f0\fnil\fcharset134 \'cb\'ce\'cc\'e5;}}
+\viewkind4\uc1\pard\lang2052\f0\fs18\'bd\'cc\'ca\'a6\'b9\'a4\'ba\'c5\par
+}
+</documentation>
+        </attribute>
+        <attribute id="" name="teacherName" type="string" type-id="string" visibility="private" abstract="false" virtual="false" default-value="">
+          <stereotypes />
+          <documentation>{\rtf1\ansi\ansicpg936\deff0\deflang1033\deflangfe2052{\fonttbl{\f0\fnil\fcharset134 \'cb\'ce\'cc\'e5;}}
+\viewkind4\uc1\pard\lang2052\f0\fs18\'bd\'cc\'ca\'a6\'d0\'d5\'c3\'fb\par
+}
+</documentation>
+        </attribute>
+        <attribute id="" name="teacherAge" type="string" type-id="string" visibility="private" abstract="false" virtual="false" default-value="">
+          <stereotypes />
+          <documentation>{\rtf1\ansi\ansicpg936\deff0\deflang1033\deflangfe2052{\fonttbl{\f0\fnil\fcharset134 \'cb\'ce\'cc\'e5;}}
+\viewkind4\uc1\pard\lang2052\f0\fs18\'bd\'cc\'ca\'a6\'c4\'ea\'c1\'e4\par
+}
+</documentation>
+        </attribute>
+        <attribute id="" name="educationBackground " type="string" type-id="string" visibility="private" abstract="false" virtual="false" default-value="&quot;硕士&quot;">
+          <stereotypes />
+          <documentation>{\rtf1\ansi\ansicpg936\deff0\deflang1033\deflangfe2052{\fonttbl{\f0\fnil\fcharset134 \'cb\'ce\'cc\'e5;}}
+\viewkind4\uc1\pard\lang2052\f0\fs18\'bd\'cc\'ca\'a6\'d1\'a7\'c0\'fa\par
+}
+</documentation>
+        </attribute>
+        <attribute id="" name="teacherTitle" type="string" type-id="string" visibility="private" abstract="false" virtual="false" default-value="&quot;讲师&quot;">
+          <stereotypes />
+          <documentation>{\rtf1\ansi\ansicpg936\deff0\deflang1033\deflangfe2052{\fonttbl{\f0\fnil\fcharset134 \'cb\'ce\'cc\'e5;}}
+\viewkind4\uc1\pard\lang2052\f0\fs18\'bd\'cc\'ca\'a6\'d6\'b0\'b3\'c6\par
+}
+</documentation>
+        </attribute>
+        <attribute id="" name="monthlySalary" type="double" type-id="double" visibility="private" abstract="false" virtual="false" default-value="3000.0">
+          <stereotypes />
+          <documentation>{\rtf1\ansi\ansicpg936\deff0\deflang1033\deflangfe2052{\fonttbl{\f0\fnil\fcharset134 \'cb\'ce\'cc\'e5;}}
+\viewkind4\uc1\pard\lang2052\f0\fs18\'d4\'c2\'d0\'bd\par
+}
+</documentation>
+        </attribute>
+      </attributes>
+      <operations>
+        <operation id="" name="getAge" type="Integer" type-id="Uml.Integer" visibility="public" abstract="false" virtual="false" static="false">
+          <parameters>
+            <parameter id="" name="birthYear    " type="Uml.Integer" type-id="Uml.Integer" default-value="">
+              <documentation />
+            </parameter>
+          </parameters>
+          <stereotypes />
+          <documentation>{\rtf1\ansi\ansicpg936\deff0\deflang1033\deflangfe2052{\fonttbl{\f0\fnil\fcharset134 \'cb\'ce\'cc\'e5;}}
+\viewkind4\uc1\pard\lang2052\f0\fs18\'bc\'c6\'cb\'e3\'bd\'cc\'ca\'a6\'c4\'ea\'c1\'e4\par
+}
+</documentation>
+        </operation>
+        <operation id="" name="getWorkingAge" type="Integer" type-id="Uml.Integer" visibility="public" abstract="false" virtual="false" static="false">
+          <parameters>
+            <parameter id="" name="entryYear   " type="Uml.Integer" type-id="Uml.Integer" default-value="">
+              <documentation />
+            </parameter>
+          </parameters>
+          <stereotypes />
+          <documentation>{\rtf1\ansi\ansicpg936\deff0\deflang1033\deflangfe2052{\fonttbl{\f0\fnil\fcharset134 \'cb\'ce\'cc\'e5;}}
+\viewkind4\uc1\pard\lang2052\f0\fs18\'bc\'c6\'cb\'e3\'bd\'cc\'ca\'a6\'b9\'a4\'c1\'e4\par
+}
+</documentation>
+        </operation>
+        <operation id="" name="getAnnualSalary" type="double" type-id="double" visibility="public" abstract="false" virtual="false" static="false">
+          <parameters>
+            <parameter id="" name="performanceSalary   " type="double" type-id="double" default-value="">
+              <documentation />
+            </parameter>
+          </parameters>
+          <stereotypes />
+          <documentation>{\rtf1\ansi\ansicpg936\deff0\deflang1033\deflangfe2052{\fonttbl{\f0\fnil\fcharset134 \'cb\'ce\'cc\'e5;}}
+\viewkind4\uc1\pard\lang2052\f0\fs18\'bc\'c6\'cb\'e3\'bd\'cc\'ca\'a6\'c4\'ea\'d0\'bd\par
+}
+</documentation>
+        </operation>
+      </operations>
+      <template-parameters />
+    </item>
+  </items>
+  <models>
+    <model id="p150936839812587378" name="cn.tit.edu.corejava03" type="" namespace="">
+      <documentation />
+      <sub-models />
+      <diagram type="uml-class" id="p703500479209971731" name="ClassDiagram1">
+        <meta>
+          <authors />
+          <description />
+          <creation-date>04/26/2019 19:45:04</creation-date>
+          <change-date>04/26/2019 19:45:04</change-date>
+          <revision-count>0</revision-count>
+          <version />
+        </meta>
+        <documentation />
+        <layer name="Default" visible="true" enabled="true" locked="false">
+          <item id="di434643859415055624" show-cid="false" show-parent-name="false" show-stereotypes="true" show-tagged-values="false" type="entity">
+            <layout ax="342" ay="209" awidth="150" aheight="170" x="342" y="209" width="0" height="0" />
+            <class />
+          </item>
+        </layer>
+      </diagram>
+    </model>
+  </models>
+</sim-project>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>动态伪类选择器</title>
+    <style>
+        /*超链接被访问前的状态*/
+        a:link{
+            /*去掉下划线*/
+            text-decoration: none;
+            color: black;
+        }
+        /*超链接被访问后的状态*/
+        a:visited{
+            text-decoration: none;
+            color: gray;
+        }
+        /*设置鼠标滑过的状态*/
+        a:hover{
+            text-decoration: underline;
+            color: blue;
+        }
+        /*设置正在被点击时的状态*/
+        a:active{
+            color: red;
+        }
+        /*hover应用在<div>上*/
+        div{
+            width: 100px;
+            height:100px;
+            background-color:rosybrown;
+        }
+        div:hover{
+            width: 200px;
+            height:200px;
+            background-color:red;
+        }
+        /*hover应用在图片上*/
+        img{
+            width: 200px;
+            height: 150px;
+        }
+        img:hover{
+             width: 400px;
+             height: 300px;
+         }
+    </style>
+</head>
+<body>
+    <a href="http://www.baidu.com" target="_blank">百度一下，你就知道</a><br/>
+    <div></div><br/>
+    <img src="../../Html/img/朱茵.jpg" alt="朱茵.jpg"><br/>
+</body>
+</html>

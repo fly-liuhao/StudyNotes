@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Apple</title>
+    <link>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        div.advertising{
+            width: 100%;
+            height: 40px;
+            background-color: rgb(68,68,68);
+        }
+        div.top{
+            width: 100%;
+            height: 44px;
+            background-color: rgb(49,49,49);
+        }
+        div.top_center{
+            width: 1000px;
+            margin: 0 auto;
+
+            /*width: 65%;*/
+            /*max-width: 1000px;*/
+            /*min-width: 1000px;*/
+        }
+        li.father_li{
+            width: 70px;
+            height: 44px;
+            background-color: rgb(49,49,49);
+            list-style: none;
+            float: left;
+            /*设置文字样式*/
+            color: white;
+            text-align: center;
+            line-height: 44px;
+            margin: 0px 20px;
+        }
+        li.father_li:hover{
+            color: rgb(68,68,68);
+            background-color: rgb(255,255,255);
+            /*设置移动上去的鼠标图标变为手形*/
+            cursor: pointer;
+        }
+        ul.ul_son{
+            width: 160px;
+            height: 0px;
+            background-color: rgb(49,49,49);
+            /*设置透明度*/
+            /*opacity: 0.5;*/
+            /*重新调整下拉菜单的位置*/
+            position: relative;
+            left: -45px;
+            /*溢出的内容使用隐藏*/
+            overflow: hidden;
+            /*设置反向过度*/
+            transition-duration: 500ms;
+            transition-property: height;
+            transition-timing-function: ease-in;
+        }
+        li.son_li{
+            width: 160px;
+            height: 40px;
+            list-style: none;
+            /*设置文字样式*/
+            color: white;
+            text-align: center;
+            line-height: 40px;
+            margin-bottom: 10px;
+        }
+        li.father_li:hover .ul_son{
+            /*恢复高度*/
+            height: 200px;
+            /*设置过度*/
+            transition-duration: 500ms;
+            transition-property: height;
+            transition-timing-function: ease-out;
+        }
+        li.son_li:hover{
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+<div class="advertising"></div>
+<div class="top">
+    <div class="top_center">
+        <ul class="ul_father">
+            <li class="father_li"><img src="img/apple.png" alt="apple.jpg" style="position: relative; top: 7px;"/></li>
+            <li class="father_li">Mac
+                <ul class="ul_son">
+                    <a href=""><li class="son_li">MacBook Air</li></a>
+                    <a href=""><li class="son_li">MacBook Pro</li></a>
+                    <a href=""><li class="son_li">iMac</li></a>
+                    <a href=""><li class="son_li">iMac Pro</li></a>
+                </ul>
+            </li>
+            <li class="father_li">iPad
+                <ul class="ul_son">
+                    <a href=""><li class="son_li">iPad Pro</li></a>
+                    <a href=""><li class="son_li">iPad Air</li></a>
+                    <a href=""><li class="son_li">iPad 2019</li></a>
+                    <a href=""><li class="son_li">iPad mini</li></a>
+                </ul>
+            </li>
+            <li class="father_li">iPhone
+                <ul class="ul_son">
+                    <a href=""><li class="son_li">iPhone XS</li></a>
+                    <a href=""><li class="son_li">iPhone XR</li></a>
+                    <a href=""><li class="son_li">iPhone 8</li></a>
+                    <a href=""><li class="son_li">iPhone 7</li></a>
+                </ul>
+            </li>
+            <li class="father_li">Watch
+                <ul class="ul_son">
+                    <a href=""><li class="son_li" style="font-size: small">Apple Watch Series 4</li></a>
+                    <a href=""><li class="son_li" style="font-size: small">Apple Watch Nike+</li></a>
+                    <a href=""><li class="son_li" style="font-size: small">Apple Watch Hermès</li></a>
+                    <a href=""><li class="son_li" style="font-size: small">Apple Watch Series 3</li></a>
+                </ul>
+            </li>
+            <li class="father_li">Music
+                <ul class="ul_son">
+                    <a href=""><li class="son_li">Apple Music</li></a>
+                    <a href=""><li class="son_li">iTunes</li></a>
+                    <a href=""><li class="son_li">HomePod</li></a>
+                    <a href=""><li class="son_li">AirPods</li></a>
+                </ul>
+            </li>
+            <li class="father_li" style="font-size: small">技术支持</li>
+            <li class="father_li"><img src="img/1.png"/></li>
+            <li class="father_li"><img src="img/1.png"></li>
+        </ul>
+    </div>
+</div>
+
+</body>
+</html>

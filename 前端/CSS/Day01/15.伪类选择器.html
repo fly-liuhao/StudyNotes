@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /*设置第一行（父元素的第一个孩子）*/
+        li:first-child{
+            color: red;
+        }
+        /*设置最后一行*/
+        li:last-child{
+            color: blue;
+        }
+        /*设置指定行（从前数）*/
+        li:nth-child(2){
+            color: gold;
+        }
+        /*设置指定行（从后数）*/
+        li:nth-last-child(2){
+            color: green;
+        }
+        /*设置奇数行*/
+        tr:nth-child(odd){
+            background-color: white;
+        }
+        /*设置偶数行*/
+        tr:nth-child(even){
+            background-color: gray;
+        }
+    </style>
+</head>
+<body>
+    <ol>
+        <li>列表项</li>
+        <li>列表项</li>
+        <li>列表项</li>
+        <li>列表项</li>
+        <li>列表项</li>
+    </ol>
+    <ul>
+        <li>列表项</li>
+        <li>列表项</li>
+        <li>列表项</li>
+        <li>列表项</li>
+        <li>列表项</li>
+    </ul>
+
+    <table border="1px" width="300px" cellspacing="0px" style="text-align: center">
+        <tr>
+            <td>1-1</td>
+            <td>1-2</td>
+            <td>1-3</td>
+        </tr>
+        <tr>
+            <td>2-1</td>
+            <td>2-2</td>
+            <td>2-3</td>
+        </tr>
+        <tr>
+            <td>3-1</td>
+            <td>3-2</td>
+            <td>3-3</td>
+        </tr>
+        <tr>
+            <td>4-1</td>
+            <td>4-2</td>
+            <td>4-3</td>
+        </tr>
+        <tr>
+            <td>5-1</td>
+            <td>5-2</td>
+            <td>5-3</td>
+        </tr>
+    </table>
+</body>
+</html>

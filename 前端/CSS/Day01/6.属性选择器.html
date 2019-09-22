@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /*选择包含 id 属性的所有元素*/
+        a[id]{
+            background-color: red;
+        }
+        /*选择包含 class 属性的所有元素*/
+        a[class]{
+            background-color: green;
+        }
+        /*选择 class 属性值为 "c" 的所有元素*/
+        a[class="c"]{
+            background-color: gold;
+        }
+        /*选择 href 属性值以 "http" 开头的所有元素*/
+        a[href^="http"]{
+            color: green;
+        }
+        /*选择 href 属性值以 "css/" 结尾的所有元素*/
+        a[href$="css/"]{
+            color: white;
+        }
+        /*选择 href 属性值中包含子串 "apple" 的所有元素*/
+        a[href*="apple"]{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <a href="http://www.w3school.com.cn/" id="1">W3School</a><br/>
+    <a href="http://www.w3school.com.cn/css/" class="a">CSS</a><br/>
+    <a href="http://www.w3school.com.cn/html/"class="c">HTML</a><br/>
+
+    <hr />
+
+    <a href="http://www.w3c.org/">W3C</a><br/>
+    <a href="http://www.microsoft.com" >Microsoft</a><br/>
+    <a href="http://www.apple.com.cn">Apple</a><br/>
+</body>
+</html>

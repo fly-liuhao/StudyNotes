@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>z_index</title>
+    <style>
+        #one{
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+        }
+        #two{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: relative;
+            top: -90px;
+            /*设置z-index，值越小越靠下*/
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+    <div id="one"></div>
+    <div id="two"></div>
+</body>
+</html>

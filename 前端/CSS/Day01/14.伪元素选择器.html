@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>伪元素选择器</title>
+    <style>
+        p:first-letter{
+            font-size: 20pt;
+            color: red;
+        }
+        p:first-line{
+            color: green;
+        }
+        p:before{
+            content: "小情歌——";
+        }
+        p:after{
+            content: "——吴青峰";
+        }
+    </style>
+</head>
+<body>
+    <P>这是一首简单的小情歌,唱着人们心肠的曲折,
+        我想我很快乐,当有你的温热,脚边的空气转了
+    </P>
+</body>
+</html>

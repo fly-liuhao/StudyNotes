@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>处理元素内容的溢出</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: bisque;
+            margin: 50px;
+        }
+        #div_1{
+            /*使用滑动条方式一*/
+            overflow: scroll;
+            /*使用滑动条方式二*/
+            overflow-x: scroll;
+         }
+        #div_2{
+            /*使用滑动条方式一*/
+            overflow: scroll;
+            /*使用滑动条方式二*/
+            overflow-y: scroll;
+        }
+        #div_3{
+            /*隐藏*/
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div id="div_1">11111111111111111111111</div>
+    <div id="div_2">1111<br/>1111<br/>1111<br/>1111<br/>1111<br/>1111<br/>1111<br/></div>
+    <div id="div_3">123456789123456789123456789</div>
+</body>
+</html>

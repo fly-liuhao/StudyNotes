@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>列表块的制作</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        .father{
+            width: 362px;
+            height: 338px;
+            background-color: black;
+            margin: 20px;
+            /*添加反向过度*/
+            transform: scale(1.00);
+            box-shadow:0px 0px 0px gray, 0px 0px 0px gray;
+            transition-duration: 250ms;
+            transition-property: transform, box-shadow;
+            transition-timing-function: ease-in;
+            /*浮动*/
+            float: left;
+        }
+        .father:hover{
+            transform: scale(1.02);
+            box-shadow:3px 3px 10px gray, -3px -3px 10px gray;
+            /*更换鼠标团*/
+            cursor: pointer;
+            /*添加过度*/
+            transition-duration: 250ms;
+            transition-property: transform, box-shadow;
+            transition-timing-function: ease-out;
+        }
+        .son{
+            width: 362px;
+            height: 122px;
+            background-color: gainsboro;
+            position: relative;
+            top: -4px;
+            /*添加反向过度*/
+            transition-duration: 250ms;
+            transition-property: background-color;
+            transition-timing-function: ease-in;
+        }
+        .father:hover .son{
+            background-color: gold;
+            /*添加过度*/
+            transition-duration: 250ms;
+            transition-property: background-color;
+            transition-timing-function: ease-out;
+        }
+        .p_title{
+            color: dimgrey;
+            font-size: 20px;
+            text-align: center;
+            padding: 10px 0px;
+        }
+        .p_content{
+            color: gray;
+            padding: 0px 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <figure class="father">
+        <img src="img/block_1.png">
+        <figcaption class="son">
+            <p class="p_title">大数据</p>
+            <p class="p_content">中质信联以电梯安全监管为切入点，以电梯云大数据为支撑，为各单位、社会大众提供大数据服务，实现数据共享。</p>
+        </figcaption>
+    </figure>
+    <figure class="father">
+        <img src="img/block_2.png">
+        <figcaption class="son">
+            <p class="p_title">移动终端</p>
+            <p class="p_content">电梯安全公共服务平台APP是一个展示电梯安全公共服务类信息的移动端平台,社会公众通过社会公众号关注电梯进行方面的监督和投诉。</p>
+        </figcaption>
+    </figure>
+    <figure class="father">
+        <img src="img/block_3.png">
+        <figcaption class="son">
+            <p class="p_title">电梯互联网</p>
+            <p class="p_content"> 山西中质信联将大数据与物联网技术结合，通过云计算的数据统计分析,确保了电梯公共服务的及时性、安全性。</p>
+        </figcaption>
+    </figure>
+</body>
+</html>

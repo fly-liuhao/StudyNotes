@@ -1,0 +1,23 @@
+/*--第一种方式--*/
+div{
+    color: blue;
+}
+span{
+    color: blue;
+}
+h3{
+    color: blue;
+}
+p{
+    color: blue;
+}
+
+/*--第二种方式--*/
+.a{
+    color: gold;
+}
+
+/*--第三种方式--*/
+#div_1,span,#h3_1,p{
+    color: green;
+}
