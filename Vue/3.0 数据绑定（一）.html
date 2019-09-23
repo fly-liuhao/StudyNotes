@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title>3.0 数据绑定（一）.html</title>
+  <meta name="generator" content="Haroopad 0.13.1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>div.oembedall-githubrepos{border:1px solid #DDD;border-radius:4px;list-style-type:none;margin:0 0 10px;padding:8px 10px 0;font:13.34px/1.4 helvetica,arial,freesans,clean,sans-serif;width:452px;background-color:#fff}div.oembedall-githubrepos .oembedall-body{background:-moz-linear-gradient(center top,#FAFAFA,#EFEFEF);background:-webkit-gradient(linear,left top,left bottom,from(#FAFAFA),to(#EFEFEF));border-bottom-left-radius:4px;border-bottom-right-radius:4px;border-top:1px solid #EEE;margin-left:-10px;margin-top:8px;padding:5px 10px;width:100%}div.oembedall-githubrepos h3{font-size:14px;margin:0;padding-left:18px;white-space:nowrap}div.oembedall-githubrepos p.oembedall-description{color:#444;font-size:12px;margin:0 0 3px}div.oembedall-githubrepos p.oembedall-updated-at{color:#888;font-size:11px;margin:0}div.oembedall-githubrepos ul.oembedall-repo-stats{border:none;float:right;font-size:11px;font-weight:700;padding-left:15px;position:relative;z-index:5;margin:0}div.oembedall-githubrepos ul.oembedall-repo-stats li{border:none;color:#666;display:inline-block;list-style-type:none;margin:0!important}div.oembedall-githubrepos ul.oembedall-repo-stats li a{background-color:transparent;border:none;color:#666!important;background-position:5px -2px;background-repeat:no-repeat;border-left:1px solid #DDD;display:inline-block;height:21px;line-height:21px;padding:0 5px 0 23px}div.oembedall-githubrepos ul.oembedall-repo-stats li:first-child a{border-left:medium none;margin-right:-3px}div.oembedall-githubrepos ul.oembedall-repo-stats li a:hover{background:5px -27px no-repeat #4183C4;color:#FFF!important;text-decoration:none}div.oembedall-githubrepos ul.oembedall-repo-stats li:first-child a:hover{border-bottom-left-radius:3px;border-top-left-radius:3px}ul.oembedall-repo-stats li:last-child a:hover{border-bottom-right-radius:3px;border-top-right-radius:3px}span.oembedall-closehide{background-color:#aaa;border-radius:2px;cursor:pointer;margin-right:3px}div.oembedall-container{margin-top:5px;text-align:left}.oembedall-ljuser{font-weight:700}.oembedall-ljuser img{vertical-align:bottom;border:0;padding-right:1px}.oembedall-stoqembed{border-bottom:1px dotted #999;float:left;overflow:hidden;width:730px;line-height:1;background:#FFF;color:#000;font-family:Arial,Liberation Sans,DejaVu Sans,sans-serif;font-size:80%;text-align:left;margin:0;padding:0}.oembedall-stoqembed a{color:#07C;text-decoration:none;margin:0;padding:0}.oembedall-stoqembed a:hover{text-decoration:underline}.oembedall-stoqembed a:visited{color:#4A6B82}.oembedall-stoqembed h3{font-family:Trebuchet MS,Liberation Sans,DejaVu Sans,sans-serif;font-size:130%;font-weight:700;margin:0;padding:0}.oembedall-stoqembed .oembedall-reputation-score{color:#444;font-size:120%;font-weight:700;margin-right:2px}.oembedall-stoqembed .oembedall-user-info{height:35px;width:185px}.oembedall-stoqembed .oembedall-user-info .oembedall-user-gravatar32{float:left;height:32px;width:32px}.oembedall-stoqembed .oembedall-user-info .oembedall-user-details{float:left;margin-left:5px;overflow:hidden;white-space:nowrap;width:145px}.oembedall-stoqembed .oembedall-question-hyperlink{font-weight:700}.oembedall-stoqembed .oembedall-stats{background:#EEE;margin:0 0 0 7px;padding:4px 7px 6px;width:58px}.oembedall-stoqembed .oembedall-statscontainer{float:left;margin-right:8px;width:86px}.oembedall-stoqembed .oembedall-votes{color:#555;padding:0 0 7px;text-align:center}.oembedall-stoqembed .oembedall-vote-count-post{font-size:240%;color:#808185;display:block;font-weight:700}.oembedall-stoqembed .oembedall-views{color:#999;padding-top:4px;text-align:center}.oembedall-stoqembed .oembedall-status{margin-top:-3px;padding:4px 0;text-align:center;background:#75845C;color:#FFF}.oembedall-stoqembed .oembedall-status strong{color:#FFF;display:block;font-size:140%}.oembedall-stoqembed .oembedall-summary{float:left;width:635px}.oembedall-stoqembed .oembedall-excerpt{line-height:1.2;margin:0;padding:0 0 5px}.oembedall-stoqembed .oembedall-tags{float:left;line-height:18px}.oembedall-stoqembed .oembedall-tags a:hover{text-decoration:none}.oembedall-stoqembed .oembedall-post-tag{background-color:#E0EAF1;border-bottom:1px solid #3E6D8E;border-right:1px solid #7F9FB6;color:#3E6D8E;font-size:90%;line-height:2.4;margin:2px 2px 2px 0;padding:3px 4px;text-decoration:none;white-space:nowrap}.oembedall-stoqembed .oembedall-post-tag:hover{background-color:#3E6D8E;border-bottom:1px solid #37607D;border-right:1px solid #37607D;color:#E0EAF1}.oembedall-stoqembed .oembedall-fr{float:right}.oembedall-stoqembed .oembedall-statsarrow{background-image:url(http://cdn.sstatic.net/stackoverflow/img/sprites.png?v=3);background-repeat:no-repeat;overflow:hidden;background-position:0 -435px;float:right;height:13px;margin-top:12px;width:7px}.oembedall-facebook1{border:1px solid #1A3C6C;padding:0;font:13.34px/1.4 verdana;width:500px}.oembedall-facebook2{background-color:#627add}.oembedall-facebook2 a{color:#e8e8e8;text-decoration:none}.oembedall-facebookBody{background-color:#fff;vertical-align:top;padding:5px}.oembedall-facebookBody .contents{display:inline-block;width:100%}.oembedall-facebookBody div img{float:left;margin-right:5px}div.oembedall-lanyard{-webkit-box-shadow:none;-webkit-transition-delay:0s;-webkit-transition-duration:.4000000059604645s;-webkit-transition-property:width;-webkit-transition-timing-function:cubic-bezier(0.42,0,.58,1);background-attachment:scroll;background-clip:border-box;background-color:transparent;background-image:none;background-origin:padding-box;border-width:0;box-shadow:none;color:#112644;display:block;float:left;font-family:'Trebuchet MS',Trebuchet,sans-serif;font-size:16px;height:253px;line-height:19px;margin:0;max-width:none;min-height:0;outline:#112644 0;overflow-x:visible;overflow-y:visible;padding:0;position:relative;text-align:left;vertical-align:baseline;width:804px}div.oembedall-lanyard .tagline{font-size:1.5em}div.oembedall-lanyard .wrapper{overflow:hidden;clear:both}div.oembedall-lanyard .split{float:left;display:inline}div.oembedall-lanyard .prominent-place .flag:active,div.oembedall-lanyard .prominent-place .flag:focus,div.oembedall-lanyard .prominent-place .flag:hover,div.oembedall-lanyard .prominent-place .flag:link,div.oembedall-lanyard .prominent-place .flag:visited{float:left;display:block;width:48px;height:48px;position:relative;top:-5px;margin-right:10px}div.oembedall-lanyard .place-context{font-size:.889em}div.oembedall-lanyard .prominent-place .sub-place{display:block}div.oembedall-lanyard .prominent-place{font-size:1.125em;line-height:1.1em;font-weight:400}div.oembedall-lanyard .main-date{color:#8CB4E0;font-weight:700;line-height:1.1}div.oembedall-lanyard .first{width:48.57%;margin:0 0 0 2.857%}.mermaid .label{color:#333}.node circle,.node polygon,.node rect{fill:#cde498;stroke:#13540c;stroke-width:1px}.edgePath .path{stroke:green;stroke-width:1.5px}.cluster rect{fill:#cdffb2;rx:40;stroke:#6eaa49;stroke-width:1px}.cluster text{fill:#333}.actor{stroke:#13540c;fill:#cde498}text.actor{fill:#000;stroke:none}.actor-line{stroke:grey}.messageLine0{stroke-width:1.5;stroke-dasharray:"2 2";marker-end:"url(#arrowhead)";stroke:#333}.messageLine1{stroke-width:1.5;stroke-dasharray:"2 2";stroke:#333}#arrowhead{fill:#333}#crosshead path{fill:#333!important;stroke:#333!important}.messageText{fill:#333;stroke:none}.labelBox{stroke:#326932;fill:#cde498}.labelText,.loopText{fill:#000;stroke:none}.loopLine{stroke-width:2;stroke-dasharray:"2 2";marker-end:"url(#arrowhead)";stroke:#326932}.note{stroke:#6eaa49;fill:#fff5ad}.noteText{fill:#000;stroke:none;font-family:'trebuchet ms',verdana,arial;font-size:14px}.section{stroke:none;opacity:.2}.section0,.section2{fill:#6eaa49}.section1,.section3{fill:#fff;opacity:.2}.sectionTitle0,.sectionTitle1,.sectionTitle2,.sectionTitle3{fill:#333}.sectionTitle{text-anchor:start;font-size:11px;text-height:14px}.grid .tick{stroke:lightgrey;opacity:.3;shape-rendering:crispEdges}.grid path{stroke-width:0}.today{fill:none;stroke:red;stroke-width:2px}.task{stroke-width:2}.taskText{text-anchor:middle;font-size:11px}.taskTextOutsideRight{fill:#000;text-anchor:start;font-size:11px}.taskTextOutsideLeft{fill:#000;text-anchor:end;font-size:11px}.taskText0,.taskText1,.taskText2,.taskText3{fill:#fff}.task0,.task1,.task2,.task3{fill:#487e3a;stroke:#13540c}.taskTextOutside0,.taskTextOutside1,.taskTextOutside2,.taskTextOutside3{fill:#000}.active0,.active1,.active2,.active3{fill:#cde498;stroke:#13540c}.activeText0,.activeText1,.activeText2,.activeText3{fill:#000!important}.done0,.done1,.done2,.done3{stroke:grey;fill:lightgrey;stroke-width:2}.doneText0,.doneText1,.doneText2,.doneText3{fill:#000!important}.crit0,.crit1,.crit2,.crit3{stroke:#f88;fill:red;stroke-width:2}.activeCrit0,.activeCrit1,.activeCrit2,.activeCrit3{stroke:#f88;fill:#cde498;stroke-width:2}.doneCrit0,.doneCrit1,.doneCrit2,.doneCrit3{stroke:#f88;fill:lightgrey;stroke-width:2;cursor:pointer;shape-rendering:crispEdges}.activeCritText0,.activeCritText1,.activeCritText2,.activeCritText3,.doneCritText0,.doneCritText1,.doneCritText2,.doneCritText3{fill:#000!important}.titleText{text-anchor:middle;font-size:18px;fill:#000}text{font-family:'trebuchet ms',verdana,arial;font-size:14px}html{height:100%}body{margin:0!important;padding:5px 20px 26px!important;background-color:#fff;font-family:"Lucida Grande","Segoe UI","Apple SD Gothic Neo","Malgun Gothic","Lucida Sans Unicode",Helvetica,Arial,sans-serif;font-size:.9em;overflow-x:hidden;overflow-y:auto}br,h1,h2,h3,h4,h5,h6{clear:both}hr.page{background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAECAYAAACtBE5DAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OENDRjNBN0E2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OENDRjNBN0I2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4Q0NGM0E3ODY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo4Q0NGM0E3OTY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PqqezsUAAAAfSURBVHjaYmRABcYwBiM2QSA4y4hNEKYDQxAEAAIMAHNGAzhkPOlYAAAAAElFTkSuQmCC) repeat-x;border:0;height:3px;padding:0}hr.underscore{border-top-style:dashed!important}body >:first-child{margin-top:0!important}img.plugin{box-shadow:0 1px 3px rgba(0,0,0,.1);border-radius:3px}iframe{border:0}figure{-webkit-margin-before:0;-webkit-margin-after:0;-webkit-margin-start:0;-webkit-margin-end:0}kbd{border:1px solid #aaa;-moz-border-radius:2px;-webkit-border-radius:2px;border-radius:2px;-moz-box-shadow:1px 2px 2px #ddd;-webkit-box-shadow:1px 2px 2px #ddd;box-shadow:1px 2px 2px #ddd;background-color:#f9f9f9;background-image:-moz-linear-gradient(top,#eee,#f9f9f9,#eee);background-image:-o-linear-gradient(top,#eee,#f9f9f9,#eee);background-image:-webkit-linear-gradient(top,#eee,#f9f9f9,#eee);background-image:linear-gradient(top,#eee,#f9f9f9,#eee);padding:1px 3px;font-family:inherit;font-size:.85em}.oembeded .oembed_photo{display:inline-block}img[data-echo]{margin:25px 0;width:100px;height:100px;background:url(../img/ajax.gif) center center no-repeat #fff}.spinner{display:inline-block;width:10px;height:10px;margin-bottom:-.1em;border:2px solid rgba(0,0,0,.5);border-top-color:transparent;border-radius:100%;-webkit-animation:spin 1s infinite linear;animation:spin 1s infinite linear}.spinner:after{content:'';display:block;width:0;height:0;position:absolute;top:-6px;left:0;border:4px solid transparent;border-bottom-color:rgba(0,0,0,.5);-webkit-transform:rotate(45deg);transform:rotate(45deg)}@-webkit-keyframes spin{to{-webkit-transform:rotate(360deg)}}@keyframes spin{to{transform:rotate(360deg)}}p.toc{margin:0!important}p.toc ul{padding-left:10px}p.toc>ul{padding:10px;margin:0 10px;display:inline-block;border:1px solid #ededed;border-radius:5px}p.toc li,p.toc ul{list-style-type:none}p.toc li{width:100%;padding:0;overflow:hidden}p.toc li a::after{content:"."}p.toc li a:before{content:"• "}p.toc h5{text-transform:uppercase}p.toc .title{float:left;padding-right:3px}p.toc .number{margin:0;float:right;padding-left:3px;background:#fff;display:none}input.task-list-item{margin-left:-1.62em}.markdown{font-family:"Hiragino Sans GB","Microsoft YaHei",STHeiti,SimSun,"Lucida Grande","Lucida Sans Unicode","Lucida Sans",'Segoe UI',AppleSDGothicNeo-Medium,'Malgun Gothic',Verdana,Tahoma,sans-serif;padding:20px}.markdown a{text-decoration:none;vertical-align:baseline}.markdown a:hover{text-decoration:underline}.markdown h1{font-size:2.2em;font-weight:700;margin:1.5em 0 1em}.markdown h2{font-size:1.8em;font-weight:700;margin:1.275em 0 .85em}.markdown h3{font-size:1.6em;font-weight:700;margin:1.125em 0 .75em}.markdown h4{font-size:1.4em;font-weight:700;margin:.99em 0 .66em}.markdown h5{font-size:1.2em;font-weight:700;margin:.855em 0 .57em}.markdown h6{font-size:1em;font-weight:700;margin:.75em 0 .5em}.markdown h1+p,.markdown h1:first-child,.markdown h2+p,.markdown h2:first-child,.markdown h3+p,.markdown h3:first-child,.markdown h4+p,.markdown h4:first-child,.markdown h5+p,.markdown h5:first-child,.markdown h6+p,.markdown h6:first-child{margin-top:0}.markdown hr{border:1px solid #ccc}.markdown p{margin:1em 0;word-wrap:break-word}.markdown ol{list-style-type:decimal}.markdown li{display:list-item;line-height:1.4em}.markdown blockquote{margin:1em 20px}.markdown blockquote>:first-child{margin-top:0}.markdown blockquote>:last-child{margin-bottom:0}.markdown blockquote cite:before{content:'\2014 \00A0'}.markdown .code{border-radius:3px;word-wrap:break-word}.markdown pre{border-radius:3px;word-wrap:break-word;border:1px solid #ccc;overflow:auto;padding:.5em}.markdown pre code{border:0;display:block}.markdown pre>code{font-family:Consolas,Inconsolata,Courier,monospace;font-weight:700;white-space:pre;margin:0}.markdown code{border-radius:3px;word-wrap:break-word;border:1px solid #ccc;padding:0 5px;margin:0 2px}.markdown img{max-width:100%}.markdown mark{color:#000;background-color:#fcf8e3}.markdown table{padding:0;border-collapse:collapse;border-spacing:0;margin-bottom:16px}.markdown table tr td,.markdown table tr th{border:1px solid #ccc;margin:0;padding:6px 13px}.markdown table tr th{font-weight:700}.markdown table tr th>:first-child{margin-top:0}.markdown table tr th>:last-child{margin-bottom:0}.markdown table tr td>:first-child{margin-top:0}.markdown table tr td>:last-child{margin-bottom:0}@import url(http://fonts.googleapis.com/css?family=Roboto+Condensed:300italic,400italic,700italic,400,300,700);.haroopad{padding:20px;color:#222;font-size:15px;font-family:"Roboto Condensed",Tauri,"Hiragino Sans GB","Microsoft YaHei",STHeiti,SimSun,"Lucida Grande","Lucida Sans Unicode","Lucida Sans",'Segoe UI',AppleSDGothicNeo-Medium,'Malgun Gothic',Verdana,Tahoma,sans-serif;background:#fff;line-height:1.6;-webkit-font-smoothing:antialiased}.haroopad a{color:#3269a0}.haroopad a:hover{color:#4183c4}.haroopad h2{border-bottom:1px solid #e6e6e6}.haroopad h6{color:#777}.haroopad hr{border:1px solid #e6e6e6}.haroopad blockquote>code,.haroopad h1>code,.haroopad h2>code,.haroopad h3>code,.haroopad h4>code,.haroopad h5>code,.haroopad h6>code,.haroopad li>code,.haroopad p>code,.haroopad td>code{font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;font-size:85%;background-color:rgba(0,0,0,.02);padding:.2em .5em;border:1px solid #efefef}.haroopad pre>code{font-size:1em;letter-spacing:-1px;font-weight:700}.haroopad blockquote{border-left:4px solid #e6e6e6;padding:0 15px;color:#777}.haroopad table{background-color:#fafafa}.haroopad table tr td,.haroopad table tr th{border:1px solid #e6e6e6}.haroopad table tr:nth-child(2n){background-color:#f2f2f2}.hljs{display:block;overflow-x:auto;padding:.5em;background:#fdf6e3;color:#657b83;-webkit-text-size-adjust:none}.diff .hljs-header,.hljs-comment,.hljs-doctype,.hljs-javadoc,.hljs-pi,.lisp .hljs-string{color:#93a1a1}.css .hljs-tag,.hljs-addition,.hljs-keyword,.hljs-request,.hljs-status,.hljs-winutils,.method,.nginx .hljs-title{color:#859900}.hljs-command,.hljs-dartdoc,.hljs-hexcolor,.hljs-link_url,.hljs-number,.hljs-phpdoc,.hljs-regexp,.hljs-rules .hljs-value,.hljs-string,.hljs-tag .hljs-value,.tex .hljs-formula{color:#2aa198}.css .hljs-function,.hljs-built_in,.hljs-chunk,.hljs-decorator,.hljs-id,.hljs-identifier,.hljs-localvars,.hljs-title,.vhdl .hljs-literal{color:#268bd2}.hljs-attribute,.hljs-class .hljs-title,.hljs-constant,.hljs-link_reference,.hljs-parent,.hljs-type,.hljs-variable,.lisp .hljs-body,.smalltalk .hljs-number{color:#b58900}.css .hljs-pseudo,.diff .hljs-change,.hljs-attr_selector,.hljs-cdata,.hljs-header,.hljs-pragma,.hljs-preprocessor,.hljs-preprocessor .hljs-keyword,.hljs-shebang,.hljs-special,.hljs-subst,.hljs-symbol,.hljs-symbol .hljs-string{color:#cb4b16}.hljs-deletion,.hljs-important{color:#dc322f}.hljs-link_label{color:#6c71c4}.tex .hljs-formula{background:#eee8d5}.MathJax_Hover_Frame{border-radius:.25em;-webkit-border-radius:.25em;-moz-border-radius:.25em;-khtml-border-radius:.25em;box-shadow:0 0 15px #83A;-webkit-box-shadow:0 0 15px #83A;-moz-box-shadow:0 0 15px #83A;-khtml-box-shadow:0 0 15px #83A;border:1px solid #A6D!important;display:inline-block;position:absolute}.MathJax_Hover_Arrow{position:absolute;width:15px;height:11px;cursor:pointer}#MathJax_About{position:fixed;left:50%;width:auto;text-align:center;border:3px outset;padding:1em 2em;background-color:#DDD;color:#000;cursor:default;font-family:message-box;font-size:120%;font-style:normal;text-indent:0;text-transform:none;line-height:normal;letter-spacing:normal;word-spacing:normal;word-wrap:normal;white-space:nowrap;float:none;z-index:201;border-radius:15px;-webkit-border-radius:15px;-moz-border-radius:15px;-khtml-border-radius:15px;box-shadow:0 10px 20px gray;-webkit-box-shadow:0 10px 20px gray;-moz-box-shadow:0 10px 20px gray;-khtml-box-shadow:0 10px 20px gray;filter:progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}.MathJax_Menu{position:absolute;background-color:#fff;color:#000;width:auto;padding:2px;border:1px solid #CCC;margin:0;cursor:default;font:menu;text-align:left;text-indent:0;text-transform:none;line-height:normal;letter-spacing:normal;word-spacing:normal;word-wrap:normal;white-space:nowrap;float:none;z-index:201;box-shadow:0 10px 20px gray;-webkit-box-shadow:0 10px 20px gray;-moz-box-shadow:0 10px 20px gray;-khtml-box-shadow:0 10px 20px gray;filter:progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}.MathJax_MenuItem{padding:2px 2em;background:0 0}.MathJax_MenuArrow{position:absolute;right:.5em;color:#666}.MathJax_MenuActive .MathJax_MenuArrow{color:#fff}.MathJax_MenuArrow.RTL{left:.5em;right:auto}.MathJax_MenuCheck{position:absolute;left:.7em}.MathJax_MenuCheck.RTL{right:.7em;left:auto}.MathJax_MenuRadioCheck{position:absolute;left:1em}.MathJax_MenuRadioCheck.RTL{right:1em;left:auto}.MathJax_MenuLabel{padding:2px 2em 4px 1.33em;font-style:italic}.MathJax_MenuRule{border-top:1px solid #CCC;margin:4px 1px 0}.MathJax_MenuDisabled{color:GrayText}.MathJax_MenuActive{background-color:Highlight;color:HighlightText}.MathJax_Menu_Close{position:absolute;width:31px;height:31px;top:-15px;left:-15px}#MathJax_Zoom{position:absolute;background-color:#F0F0F0;overflow:auto;display:block;z-index:301;padding:.5em;border:1px solid #000;margin:0;font-weight:400;font-style:normal;text-align:left;text-indent:0;text-transform:none;line-height:normal;letter-spacing:normal;word-spacing:normal;word-wrap:normal;white-space:nowrap;float:none;box-shadow:5px 5px 15px #AAA;-webkit-box-shadow:5px 5px 15px #AAA;-moz-box-shadow:5px 5px 15px #AAA;-khtml-box-shadow:5px 5px 15px #AAA;filter:progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}#MathJax_ZoomOverlay{position:absolute;left:0;top:0;z-index:300;display:inline-block;width:100%;height:100%;border:0;padding:0;margin:0;background-color:#fff;opacity:0;filter:alpha(opacity=0)}#MathJax_ZoomFrame{position:relative;display:inline-block;height:0;width:0}#MathJax_ZoomEventTrap{position:absolute;left:0;top:0;z-index:302;display:inline-block;border:0;padding:0;margin:0;background-color:#fff;opacity:0;filter:alpha(opacity=0)}.MathJax_Preview{color:#888}#MathJax_Message{position:fixed;left:1px;bottom:2px;background-color:#E6E6E6;border:1px solid #959595;margin:0;padding:2px 8px;z-index:102;color:#000;font-size:80%;width:auto;white-space:nowrap}#MathJax_MSIE_Frame{position:absolute;top:0;left:0;width:0;z-index:101;border:0;margin:0;padding:0}.MathJax_Error{color:#C00;font-style:italic}footer{position:fixed;font-size:.8em;text-align:right;bottom:0;margin-left:-25px;height:20px;width:100%}</style>
+</head>
+<body class="markdown haroopad">
+<h1 id="三、vue数据绑定（一）"><a name="三、vue数据绑定（一）" href="#三、vue数据绑定（一）"></a>三、Vue数据绑定（一）</h1><h2 id="3.1-文本插值"><a name="3.1-文本插值" href="#3.1-文本插值"></a>3.1 文本插值</h2><p>数据绑定最常见的形式就是使用“Mustache”语法 (双大括号) 的文本插值：</p><pre class="javascript hljs"><code class="javascript" data-origin="<pre><code class=&quot;javascript&quot;>&amp;lt;body&amp;gt;
+    &amp;lt;div id=&quot;web&quot;&amp;gt;
+        &amp;lt;p&amp;gt;{{message}}&amp;lt;/p&amp;gt;
+    &amp;lt;/div&amp;gt;
+    &amp;lt;script&amp;gt;
+        var vm = new Vue({
+           el: &quot;#web&quot;,
+           data: {
+               message: &quot;文本插值&quot;
+           }
+        });
+    &amp;lt;/script&amp;gt;
+&amp;lt;/body&amp;gt;
+</code></pre>">&lt;body&gt;
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"web"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>{{message}}<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">script</span>&gt;</span><span class="javascript">
+        <span class="hljs-keyword">var</span> vm = <span class="hljs-keyword">new</span> Vue({
+           el: <span class="hljs-string">"#web"</span>,
+           data: {
+               message: <span class="hljs-string">"文本插值"</span>
+           }
+        });
+    </span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">body</span>&gt;</span>
+</span></code></pre><p>Mustache 标签将会被替代为对应数据对象上 message 属性的值。无论何时，绑定的数据对象上 message 属性发生了改变，插值处的内容都会更新。</p><p>通过使用 v-once 指令，你也能执行一次性地插值，当数据改变时，插值处的内容不会更新。但请留心这会影响到该节点上的其它数据绑定：</p><pre class="javascript hljs"><code class="javascript" data-origin="<pre><code class=&quot;javascript&quot;>&amp;lt;body&amp;gt;
+    &amp;lt;div id=&quot;web&quot;&amp;gt;
+        &amp;lt;p&amp;gt;{{message}}&amp;lt;/p&amp;gt;
+        &amp;lt;p&amp;gt;&amp;lt;span v-once&amp;gt;一次性插值：{{spanValue}}&amp;lt;/span&amp;gt;&amp;lt;/p&amp;gt;
+    &amp;lt;/div&amp;gt;
+    &amp;lt;script&amp;gt;
+        var vm = new Vue({
+           el: &quot;#web&quot;,
+           data: {
+               message: &quot;文本插值&quot;,
+               spanValue: &quot;spanValue&quot;
+           }
+        });
+    &amp;lt;/script&amp;gt;
+&amp;lt;/body&amp;gt;
+</code></pre>">&lt;body&gt;
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"web"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>{{message}}<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">v-once</span>&gt;</span>一次性插值：{{spanValue}}<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">script</span>&gt;</span><span class="javascript">
+        <span class="hljs-keyword">var</span> vm = <span class="hljs-keyword">new</span> Vue({
+           el: <span class="hljs-string">"#web"</span>,
+           data: {
+               message: <span class="hljs-string">"文本插值"</span>,
+               spanValue: <span class="hljs-string">"spanValue"</span>
+           }
+        });
+    </span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">body</span>&gt;</span>
+</span></code></pre><h2 id="3.2-原始html文本插值"><a name="3.2-原始html文本插值" href="#3.2-原始html文本插值"></a>3.2 原始HTML文本插值</h2><p>双大括号Mustache标签会将数据解释为普通文本，而非 HTML 代码。为了输出真正的 HTML，你需要使用 v-html 指令。</p><p>v-html指令接收一个字符串类型的数据，将该字符串解析为HTML模板内容之后，再进行输出。v-html指令要求必须挂载一个HTML元素节点下。</p><pre class="javascript hljs"><code class="javascript" data-origin="<pre><code class=&quot;javascript&quot;>&amp;lt;body&amp;gt;
+&amp;lt;div id=&quot;web&quot;&amp;gt;
+    &amp;lt;p&amp;gt;直接显示html文本内容：{{html}}&amp;lt;/p&amp;gt;
+    &amp;lt;p v-html=&quot;html&quot;&amp;gt;&amp;lt;/p&amp;gt;
+    &amp;lt;p&amp;gt;将html文本内容渲染为html内容后显示：&amp;lt;div v-html=&quot;html&quot;&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;/p&amp;gt;
+    &amp;lt;!--&amp;lt;p&amp;gt;将html文本内容渲染为html内容后显示：&amp;lt;div v-html=&quot;{{html}}&quot;&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;/p&amp;gt;--&amp;gt;
+    &amp;lt;!--&amp;lt;p v-html&amp;gt;将html文本内容渲染为html内容后显示：{{html}}&amp;lt;/p&amp;gt;--&amp;gt;
+    &amp;lt;!--&amp;lt;p v-html=&quot;将html文本内容渲染为html内容后显示：+ {{html}}&quot;&amp;gt;&amp;lt;/p&amp;gt;--&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;script&amp;gt;
+    var vm = new Vue({
+        el: &quot;#web&quot;,
+        data: {
+            html: &quot;&amp;lt;span style='color: red'&amp;gt;这是一段文本内容&amp;lt;/span&amp;gt;&quot;
+        }
+    });
+&amp;lt;/script&amp;gt;
+&amp;lt;/body&amp;gt;
+</code></pre>">&lt;body&gt;
+<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"web"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>直接显示html文本内容：{{html}}<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">v-html</span>=<span class="hljs-value">"html"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>将html文本内容渲染为html内容后显示：<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">v-html</span>=<span class="hljs-value">"html"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+    <span class="hljs-comment">&lt;!--&lt;p&gt;将html文本内容渲染为html内容后显示：&lt;div v-html="{{html}}"&gt;&lt;/div&gt;&lt;/p&gt;--&gt;</span>
+    <span class="hljs-comment">&lt;!--&lt;p v-html&gt;将html文本内容渲染为html内容后显示：{{html}}&lt;/p&gt;--&gt;</span>
+    <span class="hljs-comment">&lt;!--&lt;p v-html="将html文本内容渲染为html内容后显示：+ {{html}}"&gt;&lt;/p&gt;--&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">script</span>&gt;</span><span class="javascript">
+    <span class="hljs-keyword">var</span> vm = <span class="hljs-keyword">new</span> Vue({
+        el: <span class="hljs-string">"#web"</span>,
+        data: {
+            html: <span class="hljs-string">"&lt;span style='color: red'&gt;这是一段文本内容&lt;/span&gt;"</span>
+        }
+    });
+</span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">body</span>&gt;</span>
+</span></code></pre><h2 id="3.3-html属性绑定值"><a name="3.3-html属性绑定值" href="#3.3-html属性绑定值"></a>3.3 HTML属性绑定值</h2><p>Mustache语法不能作用在 HTML 特性上，遇到这种情况应该使用 v-bind 指令。v-bind指令接收一个Vue实例中的属性，也可以接收一个字符串内容。</p><pre class="javascript hljs"><code class="javascript" data-origin="<pre><code class=&quot;javascript&quot;>&amp;lt;body&amp;gt;
+    &amp;lt;div id=&quot;web&quot;&amp;gt;
+        &amp;lt;p v-bind:style=&quot;message&quot;&amp;gt;段落文本&amp;lt;/p&amp;gt;
+        &amp;lt;p v-bind:style=&quot;'font-size:20px;' + message&quot;&amp;gt;段落文本&amp;lt;/p&amp;gt;
+    &amp;lt;/div&amp;gt;
+    &amp;lt;script&amp;gt;
+        var vm = new Vue({
+           el: &quot;#web&quot;,
+           data: {
+               message: &quot;color:red&quot;
+           }
+        });
+    &amp;lt;/script&amp;gt;
+&amp;lt;/body&amp;gt;
+</code></pre>">&lt;body&gt;
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"web"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">v-bind:style</span>=<span class="hljs-value">"message"</span>&gt;</span>段落文本<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">v-bind:style</span>=<span class="hljs-value">"'font-size:20px;' + message"</span>&gt;</span>段落文本<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">script</span>&gt;</span><span class="javascript">
+        <span class="hljs-keyword">var</span> vm = <span class="hljs-keyword">new</span> Vue({
+           el: <span class="hljs-string">"#web"</span>,
+           data: {
+               message: <span class="hljs-string">"color:red"</span>
+           }
+        });
+    </span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">body</span>&gt;</span>
+</span></code></pre><h2 id="3.4-数据绑定中的javascript的表达式"><a name="3.4-数据绑定中的javascript的表达式" href="#3.4-数据绑定中的javascript的表达式"></a>3.4 数据绑定中的JavaScript的表达式</h2><p>迄今为止，在我们的模板中，我们一直都只绑定简单的属性键值。但事实上，对于所有的数据绑定，Vue.js 都提供了完全的 JavaScript 表达式支持。</p><pre class="javascript hljs"><code class="javascript" data-origin="<pre><code class=&quot;javascript&quot;>&amp;lt;body&amp;gt;
+    &amp;lt;div id=&quot;web&quot;&amp;gt;
+        &amp;lt;h3&amp;gt;number：{{number++}}&amp;lt;/h3&amp;gt;
+        &amp;lt;h3&amp;gt;{{boolean ? &quot;yes&quot; : &quot;no&quot;}}&amp;lt;/h3&amp;gt;
+        &amp;lt;h3&amp;gt;{{str.split(',').reverse().join(',')}}&amp;lt;/h3&amp;gt;
+    &amp;lt;/div&amp;gt;
+    &amp;lt;script&amp;gt;
+        var vm = new Vue({
+            el: &quot;#web&quot;,
+            data: {
+                number: 1,
+                boolean: true,
+                str: &quot;a,b,c,d&quot;
+            }
+        });
+    &amp;lt;/script&amp;gt;
+&amp;lt;/body&amp;gt;
+</code></pre>">&lt;body&gt;
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"web"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>number：{{number++}}<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>{{boolean ? "yes" : "no"}}<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>{{str.split(',').reverse().join(',')}}<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">script</span>&gt;</span><span class="javascript">
+        <span class="hljs-keyword">var</span> vm = <span class="hljs-keyword">new</span> Vue({
+            el: <span class="hljs-string">"#web"</span>,
+            data: {
+                number: <span class="hljs-number">1</span>,
+                boolean: <span class="hljs-literal">true</span>,
+                str: <span class="hljs-string">"a,b,c,d"</span>
+            }
+        });
+    </span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">body</span>&gt;</span>
+</span></code></pre><p>要注意，在进行数据绑定时，只能使用一个JavaScript的表达式：</p><pre class="javascript hljs"><code class="javascript" data-origin="<pre><code class=&quot;javascript&quot;>&amp;lt;h3&amp;gt;{{var a = 1}}&amp;lt;/h3&amp;gt;
+&amp;lt;h3&amp;gt;{{if(boolean){ return number;} }}&amp;lt;/h3&amp;gt;
+</code></pre>">&lt;h3&gt;{{var a = 1}}&lt;/h3&gt;
+&lt;h3&gt;{{if(boolean){ return number;} }}&lt;/h3&gt;
+</code></pre><h2 id="3.5-vue自定义过滤器"><a name="3.5-vue自定义过滤器" href="#3.5-vue自定义过滤器"></a>3.5 Vue自定义过滤器</h2><p>在Vue数据绑定过程中可以通过自定义过滤器对数据进行简单的文本格式化，过滤器的使用通过管道符“|”来指示。</p><p>Vue自定义过滤器存在全局定义的方式和局部定义的方式。</p><pre class="javascript hljs"><code class="javascript" data-origin="<pre><code class=&quot;javascript&quot;>&amp;lt;body&amp;gt;
+    &amp;lt;div id=&quot;web&quot;&amp;gt;
+        &amp;lt;h1&amp;gt;Vue实例1挂载对象&amp;lt;/h1&amp;gt;
+        &amp;lt;h3&amp;gt;{{message}}&amp;lt;/h3&amp;gt;
+        &amp;lt;h3&amp;gt;{{message | toUpperCase}}&amp;lt;/h3&amp;gt;
+        &amp;lt;h3&amp;gt;{{value | number(2)}}&amp;lt;/h3&amp;gt;
+    &amp;lt;/div&amp;gt;
+    &amp;lt;div id=&quot;web1&quot;&amp;gt;
+        &amp;lt;h1&amp;gt;Vue实例2挂载对象&amp;lt;/h1&amp;gt;
+        &amp;lt;h3&amp;gt;{{message | toUpperCase}}&amp;lt;/h3&amp;gt;
+    &amp;lt;/div&amp;gt;
+    &amp;lt;script&amp;gt;
+        /*全局式过滤器定义，在此之后的vue实例都可以使用该过滤器*/
+        /*过滤器函数默认会把管道符指示的绑定数据当做首个参数传入，当前toUpperCase只接收一个参数，即message*/
+        Vue.filter(&quot;toUpperCase&quot;,function (inString) {
+            return inString.toUpperCase();
+        });
+
+        var vm = new Vue({
+            el: &quot;#web&quot;,
+            data: {
+                message: &quot;Hello World!&quot;,
+                value: 3.1415926
+            },
+            /*局部式过滤器定义，在此定义的过滤器只能在当前Vue实例挂载的元素节点下使用*/
+            filters:{
+                /*将传入的绑定数据data，保留指定n位小数，该过滤器接收两个参数*/
+                number: function (data,num) {
+                    console.log(data);
+                    return data.toFixed(num);
+                }
+            }
+        });
+
+        var vm1 = new Vue({
+            el: &quot;#web1&quot;,
+            data: {
+                message: &quot;Hello World!&quot;
+            }
+        });
+    &amp;lt;/script&amp;gt;
+&amp;lt;/body&amp;gt;
+</code></pre>">&lt;body&gt;
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"web"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">h1</span>&gt;</span>Vue实例1挂载对象<span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>{{message}}<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>{{message | toUpperCase}}<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>{{value | number(2)}}<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"web1"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">h1</span>&gt;</span>Vue实例2挂载对象<span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>{{message | toUpperCase}}<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">script</span>&gt;</span><span class="javascript">
+        <span class="hljs-comment">/*全局式过滤器定义，在此之后的vue实例都可以使用该过滤器*/</span>
+        <span class="hljs-comment">/*过滤器函数默认会把管道符指示的绑定数据当做首个参数传入，当前toUpperCase只接收一个参数，即message*/</span>
+        Vue.filter(<span class="hljs-string">"toUpperCase"</span>,<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(inString)</span> </span>{
+            <span class="hljs-keyword">return</span> inString.toUpperCase();
+        });
+
+        <span class="hljs-keyword">var</span> vm = <span class="hljs-keyword">new</span> Vue({
+            el: <span class="hljs-string">"#web"</span>,
+            data: {
+                message: <span class="hljs-string">"Hello World!"</span>,
+                value: <span class="hljs-number">3.1415926</span>
+            },
+            <span class="hljs-comment">/*局部式过滤器定义，在此定义的过滤器只能在当前Vue实例挂载的元素节点下使用*/</span>
+            filters:{
+                <span class="hljs-comment">/*将传入的绑定数据data，保留指定n位小数，该过滤器接收两个参数*/</span>
+                number: <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(data,num)</span> </span>{
+                    <span class="hljs-built_in">console</span>.log(data);
+                    <span class="hljs-keyword">return</span> data.toFixed(num);
+                }
+            }
+        });
+
+        <span class="hljs-keyword">var</span> vm1 = <span class="hljs-keyword">new</span> Vue({
+            el: <span class="hljs-string">"#web1"</span>,
+            data: {
+                message: <span class="hljs-string">"Hello World!"</span>
+            }
+        });
+    </span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">body</span>&gt;</span>
+</span></code></pre><h5 id="测试"><a name="测试" href="#测试"></a>测试</h5><ul>
+<li>在控制台输入vm.value = 3.1123。再次尝试输入其他数字。</li></ul><p>自定义过滤器的实现本质上就通过Vue实例生命周期钩子函数beforeUpdate来实现的，我们每次更新Vue实例中的数据时，自定义过滤器都会生效，操作完数据后，再将处理后的值覆盖当实例数据中去。</p><pre class="javascript hljs"><code class="javascript" data-origin="<pre><code class=&quot;javascript&quot;>&amp;lt;body&amp;gt;
+    &amp;lt;div id=&quot;web2&quot;&amp;gt;
+        &amp;lt;h1&amp;gt;Vue实例3挂载对象&amp;lt;/h1&amp;gt;
+        &amp;lt;h3&amp;gt;{{message}}&amp;lt;/h3&amp;gt;
+    &amp;lt;/div&amp;gt;
+    &amp;lt;script&amp;gt;
+        var vm2 = new Vue({
+            el: &quot;#web2&quot;,
+            data: {
+                message: &quot;Hello World!&quot;
+            },
+            beforeMount: function(){
+                this.message = this.message.toLowerCase();
+            },
+            beforeUpdate: function () {
+                this.message = this.message.toLowerCase();
+            }
+        })
+    &amp;lt;/script&amp;gt;
+&amp;lt;/body&amp;gt;
+</code></pre>">&lt;body&gt;
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"web2"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">h1</span>&gt;</span>Vue实例3挂载对象<span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>{{message}}<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">script</span>&gt;</span><span class="javascript">
+        <span class="hljs-keyword">var</span> vm2 = <span class="hljs-keyword">new</span> Vue({
+            el: <span class="hljs-string">"#web2"</span>,
+            data: {
+                message: <span class="hljs-string">"Hello World!"</span>
+            },
+            beforeMount: <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span></span>{
+                <span class="hljs-keyword">this</span>.message = <span class="hljs-keyword">this</span>.message.toLowerCase();
+            },
+            beforeUpdate: <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">()</span> </span>{
+                <span class="hljs-keyword">this</span>.message = <span class="hljs-keyword">this</span>.message.toLowerCase();
+            }
+        })
+    </span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">body</span>&gt;</span>
+</span></code></pre><p>Vue1.0版本提供了Vue自带的几个过滤器，但这几个过滤器功能相对都比较简单，例如我们上面编写的大小写转换过滤器，意义并不大，因此，Vue2.0取消了这些自定义过滤器，统一由编程者进行过滤器的编写。</p><h2 id="3.7-计算属性"><a name="3.7-计算属性" href="#3.7-计算属性"></a>3.7 计算属性</h2><h5 id="来源于方法的数据绑定"><a name="来源于方法的数据绑定" href="#来源于方法的数据绑定"></a>来源于方法的数据绑定</h5><p>在介绍计算属性之前，我们先看一下使用来源方法的数据绑定：</p><pre class="javascript hljs"><code class="javascript" data-origin="<pre><code class=&quot;javascript&quot;>&amp;lt;body&amp;gt;
+&amp;lt;div id=&quot;web&quot;&amp;gt;
+    &amp;lt;h3&amp;gt;{{message}}&amp;lt;/h3&amp;gt;
+    &amp;lt;h3&amp;gt;{{oldMessage}}&amp;lt;/h3&amp;gt;
+    &amp;lt;h3&amp;gt;{{change()}}&amp;lt;/h3&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;script&amp;gt;
+    var vm = new Vue({
+        el: &quot;#web&quot;,
+        data: {
+            message: &quot;Hello World!&quot;,
+            oldMessage: &quot;&quot;
+        },
+        methods: {
+            change: function () {
+                this.oldMessage = this.message.toUpperCase()
+                return this.oldMessage;
+            }
+        }
+    });
+&amp;lt;/script&amp;gt;
+&amp;lt;/body&amp;gt;
+</code></pre>">&lt;body&gt;
+<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"web"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>{{message}}<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>{{oldMessage}}<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>{{change()}}<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">script</span>&gt;</span><span class="javascript">
+    <span class="hljs-keyword">var</span> vm = <span class="hljs-keyword">new</span> Vue({
+        el: <span class="hljs-string">"#web"</span>,
+        data: {
+            message: <span class="hljs-string">"Hello World!"</span>,
+            oldMessage: <span class="hljs-string">""</span>
+        },
+        methods: {
+            change: <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">()</span> </span>{
+                <span class="hljs-keyword">this</span>.oldMessage = <span class="hljs-keyword">this</span>.message.toUpperCase()
+                <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.oldMessage;
+            }
+        }
+    });
+</span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">body</span>&gt;</span>
+</span></code></pre><p>当我们在控制台动态地修改message属性的信息时，我们可以看到change方法中的数据也发生了变化。message信息发生一次变化，相当就触发了一次change方法，将变化后的数据渲染在页面上。</p><p>Vue计算属性的出现就是为了实现方法调用的类似功能，但计算属性的功能比方法的使用更加高效与强大。</p><pre class="javascript hljs"><code class="javascript" data-origin="<pre><code class=&quot;javascript&quot;>&amp;lt;body&amp;gt;
+&amp;lt;div id=&quot;web&quot;&amp;gt;
+    &amp;lt;h3&amp;gt;{{message}}&amp;lt;/h3&amp;gt;
+    &amp;lt;h3&amp;gt;{{newMessage}}&amp;lt;/h3&amp;gt;
+    &amp;lt;h3&amp;gt;{{newMessageMethod()}}&amp;lt;/h3&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;script&amp;gt;
+    var vm = new Vue({
+        el: &quot;#web&quot;,
+        data: {
+            message: &quot;Hello World!&quot;
+        },
+        computed: {
+            newMessage: function () {
+                return this.message.toUpperCase();
+            }
+        },
+        methods:{
+            newMessageMethod: function(){
+                return this.message.toUpperCase();
+            }
+        }
+    });
+&amp;lt;/script&amp;gt;
+&amp;lt;/body&amp;gt;
+</code></pre>">&lt;body&gt;
+<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"web"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>{{message}}<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>{{newMessage}}<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>{{newMessageMethod()}}<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">script</span>&gt;</span><span class="javascript">
+    <span class="hljs-keyword">var</span> vm = <span class="hljs-keyword">new</span> Vue({
+        el: <span class="hljs-string">"#web"</span>,
+        data: {
+            message: <span class="hljs-string">"Hello World!"</span>
+        },
+        computed: {
+            newMessage: <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">()</span> </span>{
+                <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.message.toUpperCase();
+            }
+        },
+        methods:{
+            newMessageMethod: <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span></span>{
+                <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.message.toUpperCase();
+            }
+        }
+    });
+</span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">body</span>&gt;</span>
+</span></code></pre><p>Vue计算属性通过Vue实例中的computed属性来定义，该JSON结构下的属性即为计算属性，接收一个函数类型的对象。</p><p>计算属性之所以称之为计算属性，是因为computed定义的属性都是通过一些复杂计算得出的，在计算过程中，该属性的值可以依赖于当前Vue实例的其他属性数据。</p><h5 id="测试"><a name="测试" href="#测试"></a>测试</h5><ul>
+<li>在控制台输入vm.message = ‘abc’。</li><li>在控制台输入vm.newMessage = ‘123’。</li></ul><p>当我们修改计算属性依赖的属性时，计算属性也会动态的发生改变。但我们直接修改计算属性时，会出现一个异常。这是因为计算属性的默认定义方式并没有提供setter方法。</p><p>我们显示地定义计算属性的setter方法：</p><pre class="javascript hljs"><code class="javascript" data-origin="<pre><code class=&quot;javascript&quot;>&amp;lt;body&amp;gt;
+&amp;lt;div id=&quot;web&quot;&amp;gt;
+    &amp;lt;h3&amp;gt;{{message}}&amp;lt;/h3&amp;gt;
+    &amp;lt;h3&amp;gt;{{newMessage}}&amp;lt;/h3&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;script&amp;gt;
+    var vm = new Vue({
+        el: &quot;#web&quot;,
+        data: {
+            message: &quot;Hello World!&quot;
+        },
+        computed: {
+            newMessage:{
+                //get方法，计算属性默认定义的函数相当于设置get函数
+                get: function () {
+                    return this.message.toUpperCase();
+                },
+                set: function (newValue) {
+                    console.log(&quot;新值：&quot; + newValue);
+                    console.log(&quot;老值：&quot; + this.newMessage);
+                    //直接使用传入值为当前计算属性设置值，将会引起死循环，因为直接为newMessage赋值将会触发set方法
+                    //this.newMessage = newValue;
+                    //触发message值的修改，之后在通过get函数来获取newMessage的值
+                    this.message = newValue;
+                }
+            }
+        }
+    });
+&amp;lt;/script&amp;gt;
+&amp;lt;/body&amp;gt;
+</code></pre>">&lt;body&gt;
+<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"web"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>{{message}}<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>{{newMessage}}<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">script</span>&gt;</span><span class="javascript">
+    <span class="hljs-keyword">var</span> vm = <span class="hljs-keyword">new</span> Vue({
+        el: <span class="hljs-string">"#web"</span>,
+        data: {
+            message: <span class="hljs-string">"Hello World!"</span>
+        },
+        computed: {
+            newMessage:{
+                <span class="hljs-comment">//get方法，计算属性默认定义的函数相当于设置get函数</span>
+                get: <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">()</span> </span>{
+                    <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.message.toUpperCase();
+                },
+                set: <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(newValue)</span> </span>{
+                    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"新值："</span> + newValue);
+                    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"老值："</span> + <span class="hljs-keyword">this</span>.newMessage);
+                    <span class="hljs-comment">//直接使用传入值为当前计算属性设置值，将会引起死循环，因为直接为newMessage赋值将会触发set方法</span>
+                    <span class="hljs-comment">//this.newMessage = newValue;</span>
+                    <span class="hljs-comment">//触发message值的修改，之后在通过get函数来获取newMessage的值</span>
+                    <span class="hljs-keyword">this</span>.message = newValue;
+                }
+            }
+        }
+    });
+</span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">body</span>&gt;</span>
+</span></code></pre><p>通过上述案例，我们可以看到message属性的变化前的值以及变化后的值。通过计算属性的操作方式，我们可以获取到属性值的变化内容。</p><p>当Vue实例中定义的属性在进行渲染之前，涉及复杂的内容计算或者与其他属性存在依赖关系时，我们可以考虑将该属性定义为计算属性。</p><h5 id="计算属性与方法数据绑定的比较"><a name="计算属性与方法数据绑定的比较" href="#计算属性与方法数据绑定的比较"></a>计算属性与方法数据绑定的比较</h5><p>虽然计算属性与方法的数据绑定都能实现类似的数据绑定功能，使得呈现出的数据效果相同，但两种用法却存在本质的差别。</p><pre class="javascript hljs"><code class="javascript" data-origin="<pre><code class=&quot;javascript&quot;>&amp;lt;body&amp;gt;
+&amp;lt;div id=&quot;web&quot;&amp;gt;
+    &amp;lt;h3&amp;gt;{{message}}&amp;lt;/h3&amp;gt;
+    &amp;lt;h3&amp;gt;{{newMessage}}&amp;lt;/h3&amp;gt;
+    &amp;lt;h3&amp;gt;{{newMessage}}&amp;lt;/h3&amp;gt;
+    &amp;lt;h3&amp;gt;{{newMessageMethod()}}&amp;lt;/h3&amp;gt;
+    &amp;lt;h3&amp;gt;{{newMessageMethod()}}&amp;lt;/h3&amp;gt;
+    &amp;lt;h3&amp;gt;{{newMessageMethod()}}&amp;lt;/h3&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;script&amp;gt;
+    var vm = new Vue({
+        el: &quot;#web&quot;,
+        data: {
+            message: &quot;abc&quot;
+        },
+        computed: {
+            newMessage: function () {
+                console.log(&quot;--计算属性--&quot;);
+                return this.message.toUpperCase();
+            }
+        },
+        methods:{
+            newMessageMethod: function(){
+                console.log(&quot;--方法计算值--&quot;);
+                return this.message.toUpperCase();
+            }
+        }
+    });
+&amp;lt;/script&amp;gt;
+
+&amp;lt;/body&amp;gt;
+</code></pre>">&lt;body&gt;
+<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"web"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>{{message}}<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>{{newMessage}}<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>{{newMessage}}<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>{{newMessageMethod()}}<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>{{newMessageMethod()}}<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>{{newMessageMethod()}}<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">script</span>&gt;</span><span class="javascript">
+    <span class="hljs-keyword">var</span> vm = <span class="hljs-keyword">new</span> Vue({
+        el: <span class="hljs-string">"#web"</span>,
+        data: {
+            message: <span class="hljs-string">"abc"</span>
+        },
+        computed: {
+            newMessage: <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">()</span> </span>{
+                <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"--计算属性--"</span>);
+                <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.message.toUpperCase();
+            }
+        },
+        methods:{
+            newMessageMethod: <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span></span>{
+                <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"--方法计算值--"</span>);
+                <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.message.toUpperCase();
+            }
+        }
+    });
+</span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+
+<span class="hljs-tag">&lt;/<span class="hljs-title">body</span>&gt;</span>
+</span></code></pre><p>而对于计算属性newMessage，内部会进行相关的缓存操作，如果计算属性的依赖属性message内容没有发生改变，newMessage属性的值也不会发生改变，而是直接进行数据返回，计算属性进行一次计算之后将不再进行计算。因此，计算属性的执行效率要高于方法的数据绑定，因此，我们能使用计算属性进行数据绑定时，尽量使用计算属性。</p><h2 id="3.8-侦听属性"><a name="3.8-侦听属性" href="#3.8-侦听属性"></a>3.8 侦听属性</h2><p>Vue为实例属性值变化提供了一种监听机制，当某个属性发生变化时，将触发该属性的侦听函数。</p><pre class="javascript hljs"><code class="javascript" data-origin="<pre><code class=&quot;javascript&quot;>&amp;lt;body&amp;gt;
+    &amp;lt;div id=&quot;web&quot;&amp;gt;
+        &amp;lt;h3&amp;gt;{{firstName}}&amp;lt;/h3&amp;gt;
+        &amp;lt;h3&amp;gt;{{lastName}}&amp;lt;/h3&amp;gt;
+        &amp;lt;h3&amp;gt;{{fullName}}&amp;lt;/h3&amp;gt;
+    &amp;lt;/div&amp;gt;
+    &amp;lt;script&amp;gt;
+        var vm = new Vue({
+            el: &quot;#web&quot;,
+            data: {
+                firstName: &quot;Jackie&quot;,
+                lastName: &quot;Chan&quot;,
+                fullName: &quot;Jackie Chan&quot;
+            },
+            watch: {
+                //侦听函数的第一个参数为当前属性传入的新值，第二个参数为当前属性的旧值
+                firstName: function (newval,oldval) {
+                    console.log(newval);
+                    console.log(oldval);
+                    this.fullName = newval + &quot; &quot; + this.lastName;
+                },
+                lastName: function (val) {
+                    console.log(val);
+                    this.fullName = this.firstName + &quot; &quot; + val;
+                }
+            }
+        })
+    &amp;lt;/script&amp;gt;
+&amp;lt;/body&amp;gt;
+</code></pre>">&lt;body&gt;
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"web"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>{{firstName}}<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>{{lastName}}<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>{{fullName}}<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">script</span>&gt;</span><span class="javascript">
+        <span class="hljs-keyword">var</span> vm = <span class="hljs-keyword">new</span> Vue({
+            el: <span class="hljs-string">"#web"</span>,
+            data: {
+                firstName: <span class="hljs-string">"Jackie"</span>,
+                lastName: <span class="hljs-string">"Chan"</span>,
+                fullName: <span class="hljs-string">"Jackie Chan"</span>
+            },
+            watch: {
+                <span class="hljs-comment">//侦听函数的第一个参数为当前属性传入的新值，第二个参数为当前属性的旧值</span>
+                firstName: <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(newval,oldval)</span> </span>{
+                    <span class="hljs-built_in">console</span>.log(newval);
+                    <span class="hljs-built_in">console</span>.log(oldval);
+                    <span class="hljs-keyword">this</span>.fullName = newval + <span class="hljs-string">" "</span> + <span class="hljs-keyword">this</span>.lastName;
+                },
+                lastName: <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(val)</span> </span>{
+                    <span class="hljs-built_in">console</span>.log(val);
+                    <span class="hljs-keyword">this</span>.fullName = <span class="hljs-keyword">this</span>.firstName + <span class="hljs-string">" "</span> + val;
+                }
+            }
+        })
+    </span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">body</span>&gt;</span>
+</span></code></pre><p>为Vue实例定义一个watch属性，在该属性即可对该实例中声明的属性设置监听函数，当侦听属性发生变化时，将会触发侦听函数的执行。</p><p>对于侦听属性，我们完全可以通过计算属性来替代，而且代码编写更加简洁。</p><pre class="javascript hljs"><code class="javascript" data-origin="<pre><code class=&quot;javascript&quot;>&amp;lt;body&amp;gt;
+    &amp;lt;div id=&quot;web&quot;&amp;gt;
+        &amp;lt;h3&amp;gt;{{firstName}}&amp;lt;/h3&amp;gt;
+        &amp;lt;h3&amp;gt;{{lastName}}&amp;lt;/h3&amp;gt;
+        &amp;lt;h3&amp;gt;{{fullName}}&amp;lt;/h3&amp;gt;
+    &amp;lt;/div&amp;gt;
+    &amp;lt;script&amp;gt;
+        var vm = new Vue({
+            el: &quot;#web&quot;,
+            data: {
+                firstName: &quot;Jackie&quot;,
+                lastName: &quot;Chan&quot;
+            },
+            computed: {
+                fullName: function () {
+                    return this.firstName + &quot; &quot; + this.lastName;
+                }
+            }
+        });
+    &amp;lt;/script&amp;gt;
+&amp;lt;/body&amp;gt;
+</code></pre>">&lt;body&gt;
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"web"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>{{firstName}}<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>{{lastName}}<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>{{fullName}}<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">script</span>&gt;</span><span class="javascript">
+        <span class="hljs-keyword">var</span> vm = <span class="hljs-keyword">new</span> Vue({
+            el: <span class="hljs-string">"#web"</span>,
+            data: {
+                firstName: <span class="hljs-string">"Jackie"</span>,
+                lastName: <span class="hljs-string">"Chan"</span>
+            },
+            computed: {
+                fullName: <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">()</span> </span>{
+                    <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.firstName + <span class="hljs-string">" "</span> + <span class="hljs-keyword">this</span>.lastName;
+                }
+            }
+        });
+    </span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">body</span>&gt;</span>
+</span></code></pre>
+
+<footer style="position:fixed; font-size:.8em; text-align:right; bottom:0px; margin-left:-25px; height:20px; width:100%;">generated by <a href="http://pad.haroopress.com" target="_blank">haroopad</a></footer>
+</body>
+</html>

@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title>2.0 Vue实例.html</title>
+  <meta name="generator" content="Haroopad 0.13.1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>div.oembedall-githubrepos{border:1px solid #DDD;border-radius:4px;list-style-type:none;margin:0 0 10px;padding:8px 10px 0;font:13.34px/1.4 helvetica,arial,freesans,clean,sans-serif;width:452px;background-color:#fff}div.oembedall-githubrepos .oembedall-body{background:-moz-linear-gradient(center top,#FAFAFA,#EFEFEF);background:-webkit-gradient(linear,left top,left bottom,from(#FAFAFA),to(#EFEFEF));border-bottom-left-radius:4px;border-bottom-right-radius:4px;border-top:1px solid #EEE;margin-left:-10px;margin-top:8px;padding:5px 10px;width:100%}div.oembedall-githubrepos h3{font-size:14px;margin:0;padding-left:18px;white-space:nowrap}div.oembedall-githubrepos p.oembedall-description{color:#444;font-size:12px;margin:0 0 3px}div.oembedall-githubrepos p.oembedall-updated-at{color:#888;font-size:11px;margin:0}div.oembedall-githubrepos ul.oembedall-repo-stats{border:none;float:right;font-size:11px;font-weight:700;padding-left:15px;position:relative;z-index:5;margin:0}div.oembedall-githubrepos ul.oembedall-repo-stats li{border:none;color:#666;display:inline-block;list-style-type:none;margin:0!important}div.oembedall-githubrepos ul.oembedall-repo-stats li a{background-color:transparent;border:none;color:#666!important;background-position:5px -2px;background-repeat:no-repeat;border-left:1px solid #DDD;display:inline-block;height:21px;line-height:21px;padding:0 5px 0 23px}div.oembedall-githubrepos ul.oembedall-repo-stats li:first-child a{border-left:medium none;margin-right:-3px}div.oembedall-githubrepos ul.oembedall-repo-stats li a:hover{background:5px -27px no-repeat #4183C4;color:#FFF!important;text-decoration:none}div.oembedall-githubrepos ul.oembedall-repo-stats li:first-child a:hover{border-bottom-left-radius:3px;border-top-left-radius:3px}ul.oembedall-repo-stats li:last-child a:hover{border-bottom-right-radius:3px;border-top-right-radius:3px}span.oembedall-closehide{background-color:#aaa;border-radius:2px;cursor:pointer;margin-right:3px}div.oembedall-container{margin-top:5px;text-align:left}.oembedall-ljuser{font-weight:700}.oembedall-ljuser img{vertical-align:bottom;border:0;padding-right:1px}.oembedall-stoqembed{border-bottom:1px dotted #999;float:left;overflow:hidden;width:730px;line-height:1;background:#FFF;color:#000;font-family:Arial,Liberation Sans,DejaVu Sans,sans-serif;font-size:80%;text-align:left;margin:0;padding:0}.oembedall-stoqembed a{color:#07C;text-decoration:none;margin:0;padding:0}.oembedall-stoqembed a:hover{text-decoration:underline}.oembedall-stoqembed a:visited{color:#4A6B82}.oembedall-stoqembed h3{font-family:Trebuchet MS,Liberation Sans,DejaVu Sans,sans-serif;font-size:130%;font-weight:700;margin:0;padding:0}.oembedall-stoqembed .oembedall-reputation-score{color:#444;font-size:120%;font-weight:700;margin-right:2px}.oembedall-stoqembed .oembedall-user-info{height:35px;width:185px}.oembedall-stoqembed .oembedall-user-info .oembedall-user-gravatar32{float:left;height:32px;width:32px}.oembedall-stoqembed .oembedall-user-info .oembedall-user-details{float:left;margin-left:5px;overflow:hidden;white-space:nowrap;width:145px}.oembedall-stoqembed .oembedall-question-hyperlink{font-weight:700}.oembedall-stoqembed .oembedall-stats{background:#EEE;margin:0 0 0 7px;padding:4px 7px 6px;width:58px}.oembedall-stoqembed .oembedall-statscontainer{float:left;margin-right:8px;width:86px}.oembedall-stoqembed .oembedall-votes{color:#555;padding:0 0 7px;text-align:center}.oembedall-stoqembed .oembedall-vote-count-post{font-size:240%;color:#808185;display:block;font-weight:700}.oembedall-stoqembed .oembedall-views{color:#999;padding-top:4px;text-align:center}.oembedall-stoqembed .oembedall-status{margin-top:-3px;padding:4px 0;text-align:center;background:#75845C;color:#FFF}.oembedall-stoqembed .oembedall-status strong{color:#FFF;display:block;font-size:140%}.oembedall-stoqembed .oembedall-summary{float:left;width:635px}.oembedall-stoqembed .oembedall-excerpt{line-height:1.2;margin:0;padding:0 0 5px}.oembedall-stoqembed .oembedall-tags{float:left;line-height:18px}.oembedall-stoqembed .oembedall-tags a:hover{text-decoration:none}.oembedall-stoqembed .oembedall-post-tag{background-color:#E0EAF1;border-bottom:1px solid #3E6D8E;border-right:1px solid #7F9FB6;color:#3E6D8E;font-size:90%;line-height:2.4;margin:2px 2px 2px 0;padding:3px 4px;text-decoration:none;white-space:nowrap}.oembedall-stoqembed .oembedall-post-tag:hover{background-color:#3E6D8E;border-bottom:1px solid #37607D;border-right:1px solid #37607D;color:#E0EAF1}.oembedall-stoqembed .oembedall-fr{float:right}.oembedall-stoqembed .oembedall-statsarrow{background-image:url(http://cdn.sstatic.net/stackoverflow/img/sprites.png?v=3);background-repeat:no-repeat;overflow:hidden;background-position:0 -435px;float:right;height:13px;margin-top:12px;width:7px}.oembedall-facebook1{border:1px solid #1A3C6C;padding:0;font:13.34px/1.4 verdana;width:500px}.oembedall-facebook2{background-color:#627add}.oembedall-facebook2 a{color:#e8e8e8;text-decoration:none}.oembedall-facebookBody{background-color:#fff;vertical-align:top;padding:5px}.oembedall-facebookBody .contents{display:inline-block;width:100%}.oembedall-facebookBody div img{float:left;margin-right:5px}div.oembedall-lanyard{-webkit-box-shadow:none;-webkit-transition-delay:0s;-webkit-transition-duration:.4000000059604645s;-webkit-transition-property:width;-webkit-transition-timing-function:cubic-bezier(0.42,0,.58,1);background-attachment:scroll;background-clip:border-box;background-color:transparent;background-image:none;background-origin:padding-box;border-width:0;box-shadow:none;color:#112644;display:block;float:left;font-family:'Trebuchet MS',Trebuchet,sans-serif;font-size:16px;height:253px;line-height:19px;margin:0;max-width:none;min-height:0;outline:#112644 0;overflow-x:visible;overflow-y:visible;padding:0;position:relative;text-align:left;vertical-align:baseline;width:804px}div.oembedall-lanyard .tagline{font-size:1.5em}div.oembedall-lanyard .wrapper{overflow:hidden;clear:both}div.oembedall-lanyard .split{float:left;display:inline}div.oembedall-lanyard .prominent-place .flag:active,div.oembedall-lanyard .prominent-place .flag:focus,div.oembedall-lanyard .prominent-place .flag:hover,div.oembedall-lanyard .prominent-place .flag:link,div.oembedall-lanyard .prominent-place .flag:visited{float:left;display:block;width:48px;height:48px;position:relative;top:-5px;margin-right:10px}div.oembedall-lanyard .place-context{font-size:.889em}div.oembedall-lanyard .prominent-place .sub-place{display:block}div.oembedall-lanyard .prominent-place{font-size:1.125em;line-height:1.1em;font-weight:400}div.oembedall-lanyard .main-date{color:#8CB4E0;font-weight:700;line-height:1.1}div.oembedall-lanyard .first{width:48.57%;margin:0 0 0 2.857%}.mermaid .label{color:#333}.node circle,.node polygon,.node rect{fill:#cde498;stroke:#13540c;stroke-width:1px}.edgePath .path{stroke:green;stroke-width:1.5px}.cluster rect{fill:#cdffb2;rx:40;stroke:#6eaa49;stroke-width:1px}.cluster text{fill:#333}.actor{stroke:#13540c;fill:#cde498}text.actor{fill:#000;stroke:none}.actor-line{stroke:grey}.messageLine0{stroke-width:1.5;stroke-dasharray:"2 2";marker-end:"url(#arrowhead)";stroke:#333}.messageLine1{stroke-width:1.5;stroke-dasharray:"2 2";stroke:#333}#arrowhead{fill:#333}#crosshead path{fill:#333!important;stroke:#333!important}.messageText{fill:#333;stroke:none}.labelBox{stroke:#326932;fill:#cde498}.labelText,.loopText{fill:#000;stroke:none}.loopLine{stroke-width:2;stroke-dasharray:"2 2";marker-end:"url(#arrowhead)";stroke:#326932}.note{stroke:#6eaa49;fill:#fff5ad}.noteText{fill:#000;stroke:none;font-family:'trebuchet ms',verdana,arial;font-size:14px}.section{stroke:none;opacity:.2}.section0,.section2{fill:#6eaa49}.section1,.section3{fill:#fff;opacity:.2}.sectionTitle0,.sectionTitle1,.sectionTitle2,.sectionTitle3{fill:#333}.sectionTitle{text-anchor:start;font-size:11px;text-height:14px}.grid .tick{stroke:lightgrey;opacity:.3;shape-rendering:crispEdges}.grid path{stroke-width:0}.today{fill:none;stroke:red;stroke-width:2px}.task{stroke-width:2}.taskText{text-anchor:middle;font-size:11px}.taskTextOutsideRight{fill:#000;text-anchor:start;font-size:11px}.taskTextOutsideLeft{fill:#000;text-anchor:end;font-size:11px}.taskText0,.taskText1,.taskText2,.taskText3{fill:#fff}.task0,.task1,.task2,.task3{fill:#487e3a;stroke:#13540c}.taskTextOutside0,.taskTextOutside1,.taskTextOutside2,.taskTextOutside3{fill:#000}.active0,.active1,.active2,.active3{fill:#cde498;stroke:#13540c}.activeText0,.activeText1,.activeText2,.activeText3{fill:#000!important}.done0,.done1,.done2,.done3{stroke:grey;fill:lightgrey;stroke-width:2}.doneText0,.doneText1,.doneText2,.doneText3{fill:#000!important}.crit0,.crit1,.crit2,.crit3{stroke:#f88;fill:red;stroke-width:2}.activeCrit0,.activeCrit1,.activeCrit2,.activeCrit3{stroke:#f88;fill:#cde498;stroke-width:2}.doneCrit0,.doneCrit1,.doneCrit2,.doneCrit3{stroke:#f88;fill:lightgrey;stroke-width:2;cursor:pointer;shape-rendering:crispEdges}.activeCritText0,.activeCritText1,.activeCritText2,.activeCritText3,.doneCritText0,.doneCritText1,.doneCritText2,.doneCritText3{fill:#000!important}.titleText{text-anchor:middle;font-size:18px;fill:#000}text{font-family:'trebuchet ms',verdana,arial;font-size:14px}html{height:100%}body{margin:0!important;padding:5px 20px 26px!important;background-color:#fff;font-family:"Lucida Grande","Segoe UI","Apple SD Gothic Neo","Malgun Gothic","Lucida Sans Unicode",Helvetica,Arial,sans-serif;font-size:.9em;overflow-x:hidden;overflow-y:auto}br,h1,h2,h3,h4,h5,h6{clear:both}hr.page{background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAECAYAAACtBE5DAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OENDRjNBN0E2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OENDRjNBN0I2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4Q0NGM0E3ODY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo4Q0NGM0E3OTY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PqqezsUAAAAfSURBVHjaYmRABcYwBiM2QSA4y4hNEKYDQxAEAAIMAHNGAzhkPOlYAAAAAElFTkSuQmCC) repeat-x;border:0;height:3px;padding:0}hr.underscore{border-top-style:dashed!important}body >:first-child{margin-top:0!important}img.plugin{box-shadow:0 1px 3px rgba(0,0,0,.1);border-radius:3px}iframe{border:0}figure{-webkit-margin-before:0;-webkit-margin-after:0;-webkit-margin-start:0;-webkit-margin-end:0}kbd{border:1px solid #aaa;-moz-border-radius:2px;-webkit-border-radius:2px;border-radius:2px;-moz-box-shadow:1px 2px 2px #ddd;-webkit-box-shadow:1px 2px 2px #ddd;box-shadow:1px 2px 2px #ddd;background-color:#f9f9f9;background-image:-moz-linear-gradient(top,#eee,#f9f9f9,#eee);background-image:-o-linear-gradient(top,#eee,#f9f9f9,#eee);background-image:-webkit-linear-gradient(top,#eee,#f9f9f9,#eee);background-image:linear-gradient(top,#eee,#f9f9f9,#eee);padding:1px 3px;font-family:inherit;font-size:.85em}.oembeded .oembed_photo{display:inline-block}img[data-echo]{margin:25px 0;width:100px;height:100px;background:url(../img/ajax.gif) center center no-repeat #fff}.spinner{display:inline-block;width:10px;height:10px;margin-bottom:-.1em;border:2px solid rgba(0,0,0,.5);border-top-color:transparent;border-radius:100%;-webkit-animation:spin 1s infinite linear;animation:spin 1s infinite linear}.spinner:after{content:'';display:block;width:0;height:0;position:absolute;top:-6px;left:0;border:4px solid transparent;border-bottom-color:rgba(0,0,0,.5);-webkit-transform:rotate(45deg);transform:rotate(45deg)}@-webkit-keyframes spin{to{-webkit-transform:rotate(360deg)}}@keyframes spin{to{transform:rotate(360deg)}}p.toc{margin:0!important}p.toc ul{padding-left:10px}p.toc>ul{padding:10px;margin:0 10px;display:inline-block;border:1px solid #ededed;border-radius:5px}p.toc li,p.toc ul{list-style-type:none}p.toc li{width:100%;padding:0;overflow:hidden}p.toc li a::after{content:"."}p.toc li a:before{content:"• "}p.toc h5{text-transform:uppercase}p.toc .title{float:left;padding-right:3px}p.toc .number{margin:0;float:right;padding-left:3px;background:#fff;display:none}input.task-list-item{margin-left:-1.62em}.markdown{font-family:"Hiragino Sans GB","Microsoft YaHei",STHeiti,SimSun,"Lucida Grande","Lucida Sans Unicode","Lucida Sans",'Segoe UI',AppleSDGothicNeo-Medium,'Malgun Gothic',Verdana,Tahoma,sans-serif;padding:20px}.markdown a{text-decoration:none;vertical-align:baseline}.markdown a:hover{text-decoration:underline}.markdown h1{font-size:2.2em;font-weight:700;margin:1.5em 0 1em}.markdown h2{font-size:1.8em;font-weight:700;margin:1.275em 0 .85em}.markdown h3{font-size:1.6em;font-weight:700;margin:1.125em 0 .75em}.markdown h4{font-size:1.4em;font-weight:700;margin:.99em 0 .66em}.markdown h5{font-size:1.2em;font-weight:700;margin:.855em 0 .57em}.markdown h6{font-size:1em;font-weight:700;margin:.75em 0 .5em}.markdown h1+p,.markdown h1:first-child,.markdown h2+p,.markdown h2:first-child,.markdown h3+p,.markdown h3:first-child,.markdown h4+p,.markdown h4:first-child,.markdown h5+p,.markdown h5:first-child,.markdown h6+p,.markdown h6:first-child{margin-top:0}.markdown hr{border:1px solid #ccc}.markdown p{margin:1em 0;word-wrap:break-word}.markdown ol{list-style-type:decimal}.markdown li{display:list-item;line-height:1.4em}.markdown blockquote{margin:1em 20px}.markdown blockquote>:first-child{margin-top:0}.markdown blockquote>:last-child{margin-bottom:0}.markdown blockquote cite:before{content:'\2014 \00A0'}.markdown .code{border-radius:3px;word-wrap:break-word}.markdown pre{border-radius:3px;word-wrap:break-word;border:1px solid #ccc;overflow:auto;padding:.5em}.markdown pre code{border:0;display:block}.markdown pre>code{font-family:Consolas,Inconsolata,Courier,monospace;font-weight:700;white-space:pre;margin:0}.markdown code{border-radius:3px;word-wrap:break-word;border:1px solid #ccc;padding:0 5px;margin:0 2px}.markdown img{max-width:100%}.markdown mark{color:#000;background-color:#fcf8e3}.markdown table{padding:0;border-collapse:collapse;border-spacing:0;margin-bottom:16px}.markdown table tr td,.markdown table tr th{border:1px solid #ccc;margin:0;padding:6px 13px}.markdown table tr th{font-weight:700}.markdown table tr th>:first-child{margin-top:0}.markdown table tr th>:last-child{margin-bottom:0}.markdown table tr td>:first-child{margin-top:0}.markdown table tr td>:last-child{margin-bottom:0}@import url(http://fonts.googleapis.com/css?family=Roboto+Condensed:300italic,400italic,700italic,400,300,700);.haroopad{padding:20px;color:#222;font-size:15px;font-family:"Roboto Condensed",Tauri,"Hiragino Sans GB","Microsoft YaHei",STHeiti,SimSun,"Lucida Grande","Lucida Sans Unicode","Lucida Sans",'Segoe UI',AppleSDGothicNeo-Medium,'Malgun Gothic',Verdana,Tahoma,sans-serif;background:#fff;line-height:1.6;-webkit-font-smoothing:antialiased}.haroopad a{color:#3269a0}.haroopad a:hover{color:#4183c4}.haroopad h2{border-bottom:1px solid #e6e6e6}.haroopad h6{color:#777}.haroopad hr{border:1px solid #e6e6e6}.haroopad blockquote>code,.haroopad h1>code,.haroopad h2>code,.haroopad h3>code,.haroopad h4>code,.haroopad h5>code,.haroopad h6>code,.haroopad li>code,.haroopad p>code,.haroopad td>code{font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;font-size:85%;background-color:rgba(0,0,0,.02);padding:.2em .5em;border:1px solid #efefef}.haroopad pre>code{font-size:1em;letter-spacing:-1px;font-weight:700}.haroopad blockquote{border-left:4px solid #e6e6e6;padding:0 15px;color:#777}.haroopad table{background-color:#fafafa}.haroopad table tr td,.haroopad table tr th{border:1px solid #e6e6e6}.haroopad table tr:nth-child(2n){background-color:#f2f2f2}.hljs{display:block;overflow-x:auto;padding:.5em;background:#fdf6e3;color:#657b83;-webkit-text-size-adjust:none}.diff .hljs-header,.hljs-comment,.hljs-doctype,.hljs-javadoc,.hljs-pi,.lisp .hljs-string{color:#93a1a1}.css .hljs-tag,.hljs-addition,.hljs-keyword,.hljs-request,.hljs-status,.hljs-winutils,.method,.nginx .hljs-title{color:#859900}.hljs-command,.hljs-dartdoc,.hljs-hexcolor,.hljs-link_url,.hljs-number,.hljs-phpdoc,.hljs-regexp,.hljs-rules .hljs-value,.hljs-string,.hljs-tag .hljs-value,.tex .hljs-formula{color:#2aa198}.css .hljs-function,.hljs-built_in,.hljs-chunk,.hljs-decorator,.hljs-id,.hljs-identifier,.hljs-localvars,.hljs-title,.vhdl .hljs-literal{color:#268bd2}.hljs-attribute,.hljs-class .hljs-title,.hljs-constant,.hljs-link_reference,.hljs-parent,.hljs-type,.hljs-variable,.lisp .hljs-body,.smalltalk .hljs-number{color:#b58900}.css .hljs-pseudo,.diff .hljs-change,.hljs-attr_selector,.hljs-cdata,.hljs-header,.hljs-pragma,.hljs-preprocessor,.hljs-preprocessor .hljs-keyword,.hljs-shebang,.hljs-special,.hljs-subst,.hljs-symbol,.hljs-symbol .hljs-string{color:#cb4b16}.hljs-deletion,.hljs-important{color:#dc322f}.hljs-link_label{color:#6c71c4}.tex .hljs-formula{background:#eee8d5}.MathJax_Hover_Frame{border-radius:.25em;-webkit-border-radius:.25em;-moz-border-radius:.25em;-khtml-border-radius:.25em;box-shadow:0 0 15px #83A;-webkit-box-shadow:0 0 15px #83A;-moz-box-shadow:0 0 15px #83A;-khtml-box-shadow:0 0 15px #83A;border:1px solid #A6D!important;display:inline-block;position:absolute}.MathJax_Hover_Arrow{position:absolute;width:15px;height:11px;cursor:pointer}#MathJax_About{position:fixed;left:50%;width:auto;text-align:center;border:3px outset;padding:1em 2em;background-color:#DDD;color:#000;cursor:default;font-family:message-box;font-size:120%;font-style:normal;text-indent:0;text-transform:none;line-height:normal;letter-spacing:normal;word-spacing:normal;word-wrap:normal;white-space:nowrap;float:none;z-index:201;border-radius:15px;-webkit-border-radius:15px;-moz-border-radius:15px;-khtml-border-radius:15px;box-shadow:0 10px 20px gray;-webkit-box-shadow:0 10px 20px gray;-moz-box-shadow:0 10px 20px gray;-khtml-box-shadow:0 10px 20px gray;filter:progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}.MathJax_Menu{position:absolute;background-color:#fff;color:#000;width:auto;padding:2px;border:1px solid #CCC;margin:0;cursor:default;font:menu;text-align:left;text-indent:0;text-transform:none;line-height:normal;letter-spacing:normal;word-spacing:normal;word-wrap:normal;white-space:nowrap;float:none;z-index:201;box-shadow:0 10px 20px gray;-webkit-box-shadow:0 10px 20px gray;-moz-box-shadow:0 10px 20px gray;-khtml-box-shadow:0 10px 20px gray;filter:progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}.MathJax_MenuItem{padding:2px 2em;background:0 0}.MathJax_MenuArrow{position:absolute;right:.5em;color:#666}.MathJax_MenuActive .MathJax_MenuArrow{color:#fff}.MathJax_MenuArrow.RTL{left:.5em;right:auto}.MathJax_MenuCheck{position:absolute;left:.7em}.MathJax_MenuCheck.RTL{right:.7em;left:auto}.MathJax_MenuRadioCheck{position:absolute;left:1em}.MathJax_MenuRadioCheck.RTL{right:1em;left:auto}.MathJax_MenuLabel{padding:2px 2em 4px 1.33em;font-style:italic}.MathJax_MenuRule{border-top:1px solid #CCC;margin:4px 1px 0}.MathJax_MenuDisabled{color:GrayText}.MathJax_MenuActive{background-color:Highlight;color:HighlightText}.MathJax_Menu_Close{position:absolute;width:31px;height:31px;top:-15px;left:-15px}#MathJax_Zoom{position:absolute;background-color:#F0F0F0;overflow:auto;display:block;z-index:301;padding:.5em;border:1px solid #000;margin:0;font-weight:400;font-style:normal;text-align:left;text-indent:0;text-transform:none;line-height:normal;letter-spacing:normal;word-spacing:normal;word-wrap:normal;white-space:nowrap;float:none;box-shadow:5px 5px 15px #AAA;-webkit-box-shadow:5px 5px 15px #AAA;-moz-box-shadow:5px 5px 15px #AAA;-khtml-box-shadow:5px 5px 15px #AAA;filter:progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}#MathJax_ZoomOverlay{position:absolute;left:0;top:0;z-index:300;display:inline-block;width:100%;height:100%;border:0;padding:0;margin:0;background-color:#fff;opacity:0;filter:alpha(opacity=0)}#MathJax_ZoomFrame{position:relative;display:inline-block;height:0;width:0}#MathJax_ZoomEventTrap{position:absolute;left:0;top:0;z-index:302;display:inline-block;border:0;padding:0;margin:0;background-color:#fff;opacity:0;filter:alpha(opacity=0)}.MathJax_Preview{color:#888}#MathJax_Message{position:fixed;left:1px;bottom:2px;background-color:#E6E6E6;border:1px solid #959595;margin:0;padding:2px 8px;z-index:102;color:#000;font-size:80%;width:auto;white-space:nowrap}#MathJax_MSIE_Frame{position:absolute;top:0;left:0;width:0;z-index:101;border:0;margin:0;padding:0}.MathJax_Error{color:#C00;font-style:italic}footer{position:fixed;font-size:.8em;text-align:right;bottom:0;margin-left:-25px;height:20px;width:100%}</style>
+</head>
+<body class="markdown haroopad">
+<h1 id="二、-vue实例"><a name="二、-vue实例" href="#二、-vue实例"></a>二、 Vue实例</h1><p>从前面的Vue基础案例中，我们可以看到Vue.js框架都是通过一个new Vue()构造函数来创建一个JavaScript对象来组织整个应用的，该对象叫做Vue实例对象。事实上，整个Vue框架都是通过Vue实例对象来进行应用的组织构建的。</p><pre class="javascript hljs"><code class="javascript" data-origin="<pre><code class=&quot;javascript&quot;>var vm = new Vue({});
+</code></pre>"><span class="hljs-keyword">var</span> vm = <span class="hljs-keyword">new</span> Vue({});
+</code></pre><p>Vue.js通过构造函数Vue({option})来创建一个Vue实例，接收一个JSON格式的对象。该实例对象只是JavaScript语言的一个普通对象，只是Vue.js对该对象的入参JSON对象属性进行特定功能的限定，例如el属性代表了挂载元素；data属性代表了数据绑定对象等。</p><p>Vue实例代表MVVM结构中的VM结构，用于处理V视图层（UI元素）与M数据层（数据）的数据绑定。</p><p>在上面基础案例的使用中，我们发现Vue.js实际上也只是一个JavaScript编写地一个函数库，它为我们提供了一些特殊的JS函数处理功能，而Vue构造函数就是该JS库提供的一个函数。</p><p>Vue构造函数接收的JSON对象属性都是特定的，代表不同的功能作用。接下来，我们来详细解析该JSON对象具有哪些属性，每个属性具备的特定功能是什么。</p><h3 id="2.1-实例挂载元素el"><a name="2.1-实例挂载元素el" href="#2.1-实例挂载元素el"></a>2.1 实例挂载元素el</h3><p>在Vue中，每一个Vue实例都必须挂载在一个DOM元素下，所谓挂载就是指该Vue实例在哪个HTML元素节点下生效。</p><p>Vue实例通过el属性来指定当前实例挂载的DOM元素。默认支持以一个CSS选择器格式的字符串来指定挂载元素。在Vue2.0中规定，不允许将Vue实例挂载在html节点与body节点下。</p><p>案例1：</p><pre class="javascript hljs"><code class="javascript" data-origin="<pre><code class=&quot;javascript&quot;>&amp;lt;body&amp;gt;
+    &amp;lt;div id=&quot;web&quot; class=&quot;divClass&quot;&amp;gt;
+        &amp;lt;h1&amp;gt;{{message}}&amp;lt;/h1&amp;gt;
+    &amp;lt;/div&amp;gt;
+    &amp;lt;script&amp;gt;
+        var vm = new Vue({
+            //el: &quot;#web&quot;,
+            //el: &quot;.divClass&quot;,
+            el: &quot;div&quot;,
+            data: {
+                message: &quot;Hello World&quot;
+            }
+        });
+    &amp;lt;/script&amp;gt;
+&amp;lt;/body&amp;gt;
+</code></pre>">&lt;body&gt;
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"web"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"divClass"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">h1</span>&gt;</span>{{message}}<span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">script</span>&gt;</span><span class="javascript">
+        <span class="hljs-keyword">var</span> vm = <span class="hljs-keyword">new</span> Vue({
+            <span class="hljs-comment">//el: "#web",</span>
+            <span class="hljs-comment">//el: ".divClass",</span>
+            el: <span class="hljs-string">"div"</span>,
+            data: {
+                message: <span class="hljs-string">"Hello World"</span>
+            }
+        });
+    </span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">body</span>&gt;</span>
+</span></code></pre><p>案例2，会抛出异常：</p><pre class="javascript hljs"><code class="javascript" data-origin="<pre><code class=&quot;javascript&quot;>&amp;lt;body&amp;gt;
+    &amp;lt;h1&amp;gt;{{message}}&amp;lt;/h1&amp;gt;
+    &amp;lt;script&amp;gt;
+        var vm = new Vue({
+            //el: &quot;#web&quot;,
+            //el: &quot;.divClass&quot;,
+            el: &quot;body&quot;,
+            data: {
+                message: &quot;Hello World&quot;
+            }
+        });
+    &amp;lt;/script&amp;gt;
+&amp;lt;/body&amp;gt;
+</code></pre>">&lt;body&gt;
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">h1</span>&gt;</span>{{message}}<span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">script</span>&gt;</span><span class="javascript">
+        <span class="hljs-keyword">var</span> vm = <span class="hljs-keyword">new</span> Vue({
+            <span class="hljs-comment">//el: "#web",</span>
+            <span class="hljs-comment">//el: ".divClass",</span>
+            el: <span class="hljs-string">"body"</span>,
+            data: {
+                message: <span class="hljs-string">"Hello World"</span>
+            }
+        });
+    </span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">body</span>&gt;</span>
+</span></code></pre><h3 id="2.2-数据data"><a name="2.2-数据data" href="#2.2-数据data"></a>2.2 数据data</h3><p>Vue实例中可以通过data属性来定义数据，这些数据可以在该实例挂载的元素节点下进行数据绑定并使用。</p><p>data数据接收一个JSON格式的对象或者函数。</p><blockquote>
+<p>注意：在获取data属性下的数据时，Vue实例会代理data属性下的数据，无需获取原有的data属性即可直接获取该属性下的数据。</p>
+</blockquote><p>案例1：</p><pre class="javascript hljs"><code class="javascript" data-origin="<pre><code class=&quot;javascript&quot;>&amp;lt;body&amp;gt;
+    &amp;lt;div id=&quot;web&quot;&amp;gt;
+        &amp;lt;h3&amp;gt;{{message}}&amp;lt;/h3&amp;gt;
+        &amp;lt;!--加入data属性之后，反而无法找到vue实例中的数据了，程序会发生错误--&amp;gt;
+        &amp;lt;!--&amp;lt;h3&amp;gt;{{data.message}}&amp;lt;/h3&amp;gt;--&amp;gt;
+        &amp;lt;h3&amp;gt;id:{{info.id}}&amp;lt;/h3&amp;gt;
+        &amp;lt;h3&amp;gt;name:{{info.name}}&amp;lt;/h3&amp;gt;
+        &amp;lt;h3&amp;gt;sex:{{info.sex}}&amp;lt;/h3&amp;gt;
+        &amp;lt;h3&amp;gt;age:{{info.age}}&amp;lt;/h3&amp;gt;
+    &amp;lt;/div&amp;gt;
+    &amp;lt;script&amp;gt;
+        var vm = new Vue({
+            el: &quot;#web&quot;,
+            data:{
+                message: &quot;Hello World!&quot;,
+                info: {
+                    id: 1,
+                    name: &quot;张三&quot;,
+                    sex: &quot;男&quot;,
+                    age: 18
+                }
+            }
+        });
+    &amp;lt;/script&amp;gt;
+&amp;lt;/body&amp;gt;
+</code></pre>">&lt;body&gt;
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"web"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>{{message}}<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
+        <span class="hljs-comment">&lt;!--加入data属性之后，反而无法找到vue实例中的数据了，程序会发生错误--&gt;</span>
+        <span class="hljs-comment">&lt;!--&lt;h3&gt;{{data.message}}&lt;/h3&gt;--&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>id:{{info.id}}<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>name:{{info.name}}<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>sex:{{info.sex}}<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>age:{{info.age}}<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">script</span>&gt;</span><span class="javascript">
+        <span class="hljs-keyword">var</span> vm = <span class="hljs-keyword">new</span> Vue({
+            el: <span class="hljs-string">"#web"</span>,
+            data:{
+                message: <span class="hljs-string">"Hello World!"</span>,
+                info: {
+                    id: <span class="hljs-number">1</span>,
+                    name: <span class="hljs-string">"张三"</span>,
+                    sex: <span class="hljs-string">"男"</span>,
+                    age: <span class="hljs-number">18</span>
+                }
+            }
+        });
+    </span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">body</span>&gt;</span>
+</span></code></pre><p>案例2：</p><pre class="javascript hljs"><code class="javascript" data-origin="<pre><code class=&quot;javascript&quot;>&amp;lt;body&amp;gt;
+    &amp;lt;div id=&quot;web&quot;&amp;gt;
+        &amp;lt;h3&amp;gt;{{message}}&amp;lt;/h3&amp;gt;
+        &amp;lt;h3&amp;gt;id:{{info.id}}&amp;lt;/h3&amp;gt;
+        &amp;lt;h3&amp;gt;name:{{info.name}}&amp;lt;/h3&amp;gt;
+        &amp;lt;h3&amp;gt;sex:{{info.sex}}&amp;lt;/h3&amp;gt;
+        &amp;lt;h3&amp;gt;age:{{info.age}}&amp;lt;/h3&amp;gt;
+    &amp;lt;/div&amp;gt;
+    &amp;lt;script&amp;gt;
+        var vm = new Vue({
+            el: &quot;#web&quot;,
+            data: function(){
+                return {
+                    message: &quot;Hello World!&quot;,
+                    info: {
+                        id: 1,
+                        name: &quot;张三&quot;,
+                        sex: &quot;男&quot;,
+                        age: 18
+                    }
+                }
+            }
+        });
+    &amp;lt;/script&amp;gt;
+&amp;lt;/body&amp;gt;
+</code></pre>">&lt;body&gt;
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"web"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>{{message}}<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>id:{{info.id}}<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>name:{{info.name}}<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>sex:{{info.sex}}<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>age:{{info.age}}<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">script</span>&gt;</span><span class="javascript">
+        <span class="hljs-keyword">var</span> vm = <span class="hljs-keyword">new</span> Vue({
+            el: <span class="hljs-string">"#web"</span>,
+            data: <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span></span>{
+                <span class="hljs-keyword">return</span> {
+                    message: <span class="hljs-string">"Hello World!"</span>,
+                    info: {
+                        id: <span class="hljs-number">1</span>,
+                        name: <span class="hljs-string">"张三"</span>,
+                        sex: <span class="hljs-string">"男"</span>,
+                        age: <span class="hljs-number">18</span>
+                    }
+                }
+            }
+        });
+    </span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">body</span>&gt;</span>
+</span></code></pre><blockquote>
+<p>注意：对于Vue组件类型的实例，要求data属性定义的数据类型必须为一个带有返回值的函数。这部分知识，我们会在后续组件学习中介绍。</p>
+</blockquote><p>Vue对于数据的处理是响应式的，也即我们动态改变data属性中的数据，界面数据同样会发生改变。</p><p>案例3：</p><pre class="javascript hljs"><code class="javascript" data-origin="<pre><code class=&quot;javascript&quot;>&amp;lt;body&amp;gt;
+    &amp;lt;div id=&quot;web&quot;&amp;gt;
+        &amp;lt;h3&amp;gt;id:{{id}}&amp;lt;/h3&amp;gt;
+        &amp;lt;h3&amp;gt;id:{{name}}&amp;lt;/h3&amp;gt;
+        &amp;lt;h3&amp;gt;id:{{sex}}&amp;lt;/h3&amp;gt;
+    &amp;lt;/div&amp;gt;
+    &amp;lt;script&amp;gt;
+        var message = {
+            id: 1,
+            name: &quot;张三&quot;,
+            sex: &quot;男&quot;
+        };
+        var vm = new Vue({
+           el: &quot;#web&quot;,
+           data: message
+        });
+    &amp;lt;/script&amp;gt;
+&amp;lt;/body&amp;gt;
+</code></pre>">&lt;body&gt;
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"web"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>id:{{id}}<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>id:{{name}}<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>id:{{sex}}<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">script</span>&gt;</span><span class="javascript">
+        <span class="hljs-keyword">var</span> message = {
+            id: <span class="hljs-number">1</span>,
+            name: <span class="hljs-string">"张三"</span>,
+            sex: <span class="hljs-string">"男"</span>
+        };
+        <span class="hljs-keyword">var</span> vm = <span class="hljs-keyword">new</span> Vue({
+           el: <span class="hljs-string">"#web"</span>,
+           data: message
+        });
+    </span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">body</span>&gt;</span>
+</span></code></pre><h5 id="测试"><a name="测试" href="#测试"></a>测试</h5><ul>
+<li>在控制台输入：message.id = 123。</li><li>在控制台输入：vm.id = 111。</li><li>在控制台直接获取：message.id。</li><li>在控制台直接获取：message。</li><li>在控制台直接获取：vm.id。</li><li>在控制台直接获取：vm。</li><li>在控制台输入：vm.id == message.id。</li><li>在控制台输入：vm.name === message.name。</li><li>在控制台输入：vm.$data === message。</li></ul><p>若想获取Vue实例中data属性的整个数据对象，可以使用Vue实例对象的$data属性，借助该对象再访问数据中的信息。</p><pre class="javascript hljs"><code class="javascript" data-origin="<pre><code class=&quot;javascript&quot;>console.log(vm.$data);
+console.log(vm.$data.name);
+</code></pre>"><span class="hljs-built_in">console</span>.log(vm.$data);
+<span class="hljs-built_in">console</span>.log(vm.$data.name);
+</code></pre><p>当然，我们也可以借助$data属性对data数据内容进行修改。</p><pre class="javascript hljs"><code class="javascript" data-origin="<pre><code class=&quot;javascript&quot;>vm.$data.name = &quot;lisi&quot;;
+</code></pre>">vm.$data.name = <span class="hljs-string">"lisi"</span>;
+</code></pre><blockquote>
+<p>注意：只有在初始化Vue实例时声明的data数据才是响应式的。例如：在vm实例中data属性并没有声明age属性数据，如果直接使用{{}}获取age信息，或者使用vm.$data.age获取age信息，是无法获取到age信息的。</p>
+</blockquote><pre class="javascript hljs"><code class="javascript" data-origin="<pre><code class=&quot;javascript&quot;>&amp;lt;body&amp;gt;
+    &amp;lt;div id=&quot;web&quot;&amp;gt;
+        &amp;lt;h3&amp;gt;id:{{id}}&amp;lt;/h3&amp;gt;
+        &amp;lt;h3&amp;gt;name:{{name}}&amp;lt;/h3&amp;gt;
+        &amp;lt;h3&amp;gt;age:{{age}}&amp;lt;/h3&amp;gt;
+    &amp;lt;/div&amp;gt;
+    &amp;lt;script&amp;gt;
+        var vm = new Vue({
+            el: &quot;#web&quot;,
+            data: {
+                id: 1,
+                name: &quot;张三&quot;
+            }
+        });
+        vm.$data.age = 18;
+    &amp;lt;/script&amp;gt;
+&amp;lt;/body&amp;gt;
+</code></pre>">&lt;body&gt;
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"web"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>id:{{id}}<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>name:{{name}}<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>age:{{age}}<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">script</span>&gt;</span><span class="javascript">
+        <span class="hljs-keyword">var</span> vm = <span class="hljs-keyword">new</span> Vue({
+            el: <span class="hljs-string">"#web"</span>,
+            data: {
+                id: <span class="hljs-number">1</span>,
+                name: <span class="hljs-string">"张三"</span>
+            }
+        });
+        vm.$data.age = <span class="hljs-number">18</span>;
+    </span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">body</span>&gt;</span>
+</span></code></pre><h3 id="2.3-方法methods"><a name="2.3-方法methods" href="#2.3-方法methods"></a>2.3 方法methods</h3><p>Vue实例可以通过methods属性来定义方法，并配合v-on指令来监听DOM元素事件。</p><p>案例1：</p><pre class="javascript hljs"><code class="javascript" data-origin="<pre><code class=&quot;javascript&quot;>&amp;lt;body&amp;gt;
+&amp;lt;div id=&quot;web&quot;&amp;gt;
+    &amp;lt;h3&amp;gt;id:{{id}}&amp;lt;/h3&amp;gt;
+    &amp;lt;h3&amp;gt;name:{{name}}&amp;lt;/h3&amp;gt;
+    &amp;lt;button v-on:click=&quot;alert&quot;&amp;gt;显示当前name&amp;lt;/button&amp;gt;
+    &amp;lt;button v-on:click=&quot;reset&quot;&amp;gt;重置当前name&amp;lt;/button&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;script&amp;gt;
+    var vm = new Vue({
+        el: &quot;#web&quot;,
+        data: {
+            id: 1,
+            name: &quot;张三&quot;
+        },
+        methods:{
+            alert: function () {
+                //this代表当前的Vue实例对象
+                console.log(this.name);
+                alert(this.name);
+                alert(vm.name);
+            },
+            reset: function () {
+                this.name = &quot;&quot;;
+            }
+        }
+    });
+&amp;lt;/script&amp;gt;
+&amp;lt;/body&amp;gt;
+</code></pre>">&lt;body&gt;
+<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"web"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>id:{{id}}<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>name:{{name}}<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">v-on:click</span>=<span class="hljs-value">"alert"</span>&gt;</span>显示当前name<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">v-on:click</span>=<span class="hljs-value">"reset"</span>&gt;</span>重置当前name<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">script</span>&gt;</span><span class="javascript">
+    <span class="hljs-keyword">var</span> vm = <span class="hljs-keyword">new</span> Vue({
+        el: <span class="hljs-string">"#web"</span>,
+        data: {
+            id: <span class="hljs-number">1</span>,
+            name: <span class="hljs-string">"张三"</span>
+        },
+        methods:{
+            alert: <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">()</span> </span>{
+                <span class="hljs-comment">//this代表当前的Vue实例对象</span>
+                <span class="hljs-built_in">console</span>.log(<span class="hljs-keyword">this</span>.name);
+                alert(<span class="hljs-keyword">this</span>.name);
+                alert(vm.name);
+            },
+            reset: <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">()</span> </span>{
+                <span class="hljs-keyword">this</span>.name = <span class="hljs-string">""</span>;
+            }
+        }
+    });
+</span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">body</span>&gt;</span>
+</span></code></pre><p>对于methods属性定义的方法，同样会被Vue实例所代理，我们可以直接通过方法名称来进行使用。</p><p>v-on指令能够进行DOM元素事件的绑定，我们这里简单地使用即可，后续我们会具体学习该指令的用法。</p><p>方法中的this关键字代表当前的Vue实例，由于我们可以通过vm.name来获取name值，自然可以使用this.name来获取该实例的name值。</p><h3 id="2.4-模板template"><a name="2.4-模板template" href="#2.4-模板template"></a>2.4 模板template</h3><p>Vue实例中存在一个template属性，该属性只接收一个DOM结构的字符串，用作模板的定义。template属性定义的字符串模板将会替换当前Vue实例挂载的元素结构。事实上，template属性的使用更像是Vue组件的一个基础使用。</p><p>案例1：</p><pre class="javascript hljs"><code class="javascript" data-origin="<pre><code class=&quot;javascript&quot;>&amp;lt;body&amp;gt;
+    &amp;lt;div id=&quot;web&quot;&amp;gt;
+        &amp;lt;h3&amp;gt;我将会被替换！&amp;lt;/h3&amp;gt;
+    &amp;lt;/div&amp;gt;
+    &amp;lt;script&amp;gt;
+        var vm = new Vue({
+            el: &quot;#web&quot;,
+            template: &quot;&amp;lt;div&amp;gt;&amp;lt;h2&amp;gt;我是将显示的内容&amp;lt;/h2&amp;gt;&amp;lt;/div&amp;gt;&quot;
+        })
+    &amp;lt;/script&amp;gt;
+&amp;lt;/body&amp;gt;
+</code></pre>">&lt;body&gt;
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"web"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>我将会被替换！<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">script</span>&gt;</span><span class="javascript">
+        <span class="hljs-keyword">var</span> vm = <span class="hljs-keyword">new</span> Vue({
+            el: <span class="hljs-string">"#web"</span>,
+            template: <span class="hljs-string">"&lt;div&gt;&lt;h2&gt;我是将显示的内容&lt;/h2&gt;&lt;/div&gt;"</span>
+        })
+    </span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">body</span>&gt;</span>
+</span></code></pre><h5 id="测试"><a name="测试" href="#测试"></a>测试</h5><p>编写以上页面代码之后，通过控制台查看当前HTML页面结构，我们会发现Vue实例挂载的元素节点被整个都替换掉了，而并不是只是替换挂载节点下的子节点。</p><p>Vue的模板定义要求该模板内容必须存在一个顶级的父节点，如果一个模板存在多个同级的元素节点，程序将会出现异常。</p><p>案例2：</p><pre class="javascript hljs"><code class="javascript" data-origin="<pre><code class=&quot;javascript&quot;>&amp;lt;body&amp;gt;
+    &amp;lt;div id=&quot;web&quot;&amp;gt;
+        &amp;lt;h3&amp;gt;我将会被替换！&amp;lt;/h3&amp;gt;
+    &amp;lt;/div&amp;gt;
+    &amp;lt;script&amp;gt;
+        var vm = new Vue({
+            el: &quot;#web&quot;,
+            //template: &quot;&amp;lt;div&amp;gt;&amp;lt;h2&amp;gt;我是将显示的内容&amp;lt;/h2&amp;gt;&amp;lt;/div&amp;gt;&quot;
+            /*template: &quot;&amp;lt;div&amp;gt;&amp;lt;h2&amp;gt;我是将显示的内容&amp;lt;/h2&amp;gt;&amp;lt;/div&amp;gt;&quot; +
+                &quot;&amp;lt;div&amp;gt;&amp;lt;h2&amp;gt;我是将显示的内容&amp;lt;/h2&amp;gt;&amp;lt;/div&amp;gt;&quot; +
+                &quot;&amp;lt;div&amp;gt;&amp;lt;h2&amp;gt;我是将显示的内容&amp;lt;/h2&amp;gt;&amp;lt;/div&amp;gt;&quot;*/
+            template: &quot;&amp;lt;p&amp;gt;内容1&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;内容2&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;内容3&amp;lt;/p&amp;gt;&quot;
+        })
+    &amp;lt;/script&amp;gt;
+&amp;lt;/body&amp;gt;
+</code></pre>">&lt;body&gt;
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"web"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>我将会被替换！<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">script</span>&gt;</span><span class="javascript">
+        <span class="hljs-keyword">var</span> vm = <span class="hljs-keyword">new</span> Vue({
+            el: <span class="hljs-string">"#web"</span>,
+            <span class="hljs-comment">//template: "&lt;div&gt;&lt;h2&gt;我是将显示的内容&lt;/h2&gt;&lt;/div&gt;"</span>
+            <span class="hljs-comment">/*template: "&lt;div&gt;&lt;h2&gt;我是将显示的内容&lt;/h2&gt;&lt;/div&gt;" +
+                "&lt;div&gt;&lt;h2&gt;我是将显示的内容&lt;/h2&gt;&lt;/div&gt;" +
+                "&lt;div&gt;&lt;h2&gt;我是将显示的内容&lt;/h2&gt;&lt;/div&gt;"*/</span>
+            template: <span class="hljs-string">"&lt;p&gt;内容1&lt;/p&gt;&lt;p&gt;内容2&lt;/p&gt;&lt;p&gt;内容3&lt;/p&gt;"</span>
+        })
+    </span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">body</span>&gt;</span>
+</span></code></pre><p>将上述案例修改为如下代码，将会正常显示：</p><pre class="javascript hljs"><code class="javascript" data-origin="<pre><code class=&quot;javascript&quot;>&amp;lt;script&amp;gt;
+    var vm = new Vue({
+        el: &quot;#web&quot;,
+        //template: &quot;&amp;lt;div&amp;gt;&amp;lt;h2&amp;gt;我是将显示的内容&amp;lt;/h2&amp;gt;&amp;lt;/div&amp;gt;&quot;
+        /*template: &quot;&amp;lt;div&amp;gt;&amp;lt;h2&amp;gt;我是将显示的内容&amp;lt;/h2&amp;gt;&amp;lt;/div&amp;gt;&quot; +
+            &quot;&amp;lt;div&amp;gt;&amp;lt;h2&amp;gt;我是将显示的内容&amp;lt;/h2&amp;gt;&amp;lt;/div&amp;gt;&quot; +
+            &quot;&amp;lt;div&amp;gt;&amp;lt;h2&amp;gt;我是将显示的内容&amp;lt;/h2&amp;gt;&amp;lt;/div&amp;gt;&quot;*/
+        template: &quot;&amp;lt;div&amp;gt;&amp;lt;p&amp;gt;内容1&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;内容2&amp;lt;/p&amp;gt;&amp;lt;p&amp;gt;内容3&amp;lt;/p&amp;gt;&amp;lt;/div&amp;gt;&quot;
+    })
+&amp;lt;/script&amp;gt;
+</code></pre>">&lt;script&gt;
+    var vm = new Vue({
+        el: "#web",
+        //template: "&lt;div&gt;&lt;h2&gt;我是将显示的内容&lt;/h2&gt;&lt;/div&gt;"
+        /*template: "&lt;div&gt;&lt;h2&gt;我是将显示的内容&lt;/h2&gt;&lt;/div&gt;" +
+            "&lt;div&gt;&lt;h2&gt;我是将显示的内容&lt;/h2&gt;&lt;/div&gt;" +
+            "&lt;div&gt;&lt;h2&gt;我是将显示的内容&lt;/h2&gt;&lt;/div&gt;"*/
+        template: "&lt;div&gt;&lt;p&gt;内容1&lt;/p&gt;&lt;p&gt;内容2&lt;/p&gt;&lt;p&gt;内容3&lt;/p&gt;&lt;/div&gt;"
+    })
+&lt;/script&gt;
+</code></pre><p>使用template属性进行模板定义时，我们发现当模板字符串定义过长时，对于字符串的拼接将是一件极其痛苦的事情，为了简化这种操作，我们可以引入ES6规范的相关知识解决。</p><p>案例3：</p><pre class="javascript hljs"><code class="javascript" data-origin="<pre><code class=&quot;javascript&quot;>&amp;lt;body&amp;gt;
+    &amp;lt;div id=&quot;web&quot;&amp;gt;
+
+    &amp;lt;/div&amp;gt;
+    &amp;lt;script id=&quot;template1&quot; type=&quot;x-template&quot;&amp;gt;
+        &amp;lt;!--&amp;lt;script id=&quot;template1&quot;&amp;gt;--&amp;gt;
+        &amp;lt;div&amp;gt;
+            &amp;lt;h3&amp;gt;id:{{id}}&amp;lt;/h3&amp;gt;
+            &amp;lt;h3&amp;gt;name:{{name}}&amp;lt;/h3&amp;gt;
+            &amp;lt;button v-on:click=&quot;alert&quot;&amp;gt;显示name&amp;lt;/button&amp;gt;
+        &amp;lt;/div&amp;gt;
+    &amp;lt;/script&amp;gt;
+    &amp;lt;script&amp;gt;
+        var vm = new Vue({
+            el: &quot;#web&quot;,
+            data: {
+                id: 1,
+                name: &quot;张三&quot;,
+                sex: &quot;男&quot;
+            },
+            methods: {
+                alert: function () {
+                    alert(this.name);
+                }
+            },
+            template: &quot;#template1&quot;
+        });
+    &amp;lt;/script&amp;gt;
+&amp;lt;/body&amp;gt;
+</code></pre>">&lt;body&gt;
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"web"</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"template1"</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"x-template"</span>&gt;</span><span class="javascript">
+        &lt;!--<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"template1"</span>&gt;</span><span class="javascript">--&gt;
+        <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>id:{{id}}<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>name:{{name}}<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">v-on:click</span>=<span class="hljs-value">"alert"</span>&gt;</span>显示name<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    </span></span></span></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">script</span>&gt;</span><span class="javascript">
+        <span class="hljs-keyword">var</span> vm = <span class="hljs-keyword">new</span> Vue({
+            el: <span class="hljs-string">"#web"</span>,
+            data: {
+                id: <span class="hljs-number">1</span>,
+                name: <span class="hljs-string">"张三"</span>,
+                sex: <span class="hljs-string">"男"</span>
+            },
+            methods: {
+                alert: <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">()</span> </span>{
+                    alert(<span class="hljs-keyword">this</span>.name);
+                }
+            },
+            template: <span class="hljs-string">"#template1"</span>
+        });
+    </span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">body</span>&gt;</span>
+</span></code></pre><p>通过这种模板单独定义的方式，不但可以简化模板拼接的复杂工作，降低开发时出错的频率；同时还可以很方便地使用Vue的其他语法，如上所示的数据绑定与事件绑定。</p><blockquote>
+<p>注意：在使用这种简化方式进行模板定义时，我们必须要将id=”template1”的模板定义在Vue实例创建之前，否则将会出现程序异常。出现异常的原因很简单，正是HTML文档的加载顺序，如果将template1模板定义在Vue实例之后，Vue实例加载时，模板代码还未加载，将会无法找到template1模板。我们也可以使用JS的window.onload函数解决该问题。</p>
+</blockquote><p>案例4：</p><pre class="javascript hljs"><code class="javascript" data-origin="<pre><code class=&quot;javascript&quot;>&amp;lt;body&amp;gt;
+    &amp;lt;div id=&quot;web&quot;&amp;gt;
+
+    &amp;lt;/div&amp;gt;
+    &amp;lt;script&amp;gt;
+        window.onload = function () {
+            var vm = new Vue({
+                el: &quot;#web&quot;,
+                data: {
+                    id: 1,
+                    name: &quot;张三&quot;,
+                    sex: &quot;男&quot;
+                },
+                methods: {
+                    alert: function () {
+                        alert(this.name);
+                    }
+                },
+                template: &quot;#template1&quot;
+            });
+        }
+    &amp;lt;/script&amp;gt;
+    &amp;lt;script id=&quot;template1&quot; type=&quot;x-template&quot;&amp;gt;
+        &amp;lt;!--&amp;lt;script id=&quot;template1&quot;&amp;gt;--&amp;gt;
+        &amp;lt;div&amp;gt;
+            &amp;lt;h3&amp;gt;id:{{id}}&amp;lt;/h3&amp;gt;
+            &amp;lt;h3&amp;gt;name:{{name}}&amp;lt;/h3&amp;gt;
+            &amp;lt;button v-on:click=&quot;alert&quot;&amp;gt;显示name&amp;lt;/button&amp;gt;
+        &amp;lt;/div&amp;gt;
+    &amp;lt;/script&amp;gt;
+&amp;lt;/body&amp;gt;
+</code></pre>">&lt;body&gt;
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"web"</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">script</span>&gt;</span><span class="javascript">
+        <span class="hljs-built_in">window</span>.onload = <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">()</span> </span>{
+            <span class="hljs-keyword">var</span> vm = <span class="hljs-keyword">new</span> Vue({
+                el: <span class="hljs-string">"#web"</span>,
+                data: {
+                    id: <span class="hljs-number">1</span>,
+                    name: <span class="hljs-string">"张三"</span>,
+                    sex: <span class="hljs-string">"男"</span>
+                },
+                methods: {
+                    alert: <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">()</span> </span>{
+                        alert(<span class="hljs-keyword">this</span>.name);
+                    }
+                },
+                template: <span class="hljs-string">"#template1"</span>
+            });
+        }
+    </span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"template1"</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"x-template"</span>&gt;</span><span class="javascript">
+        &lt;!--<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"template1"</span>&gt;</span><span class="javascript">--&gt;
+        <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>id:{{id}}<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>name:{{name}}<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">v-on:click</span>=<span class="hljs-value">"alert"</span>&gt;</span>显示name<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    </span></span></span></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">body</span>&gt;</span>
+</span></code></pre><h3 id="2.5-vue实例的生命周期"><a name="2.5-vue实例的生命周期" href="#2.5-vue实例的生命周期"></a>2.5 Vue实例的生命周期</h3><p>Vue框架通过Vue实例来驱动整个应用的构建，每一个实例都具有一个完整的初始化、使用、销毁过程，这称之为Vue实例的生命周期。</p><p>若想监控Vue实例的生命周期，可以通过Vue的生命周期钩子函数来加入当前Vue实例的相关处理。</p><p>Vue实例的生命周期图解。</p><p>Vue实例的生命周期大致分为四个阶段：初始化、挂载、数据监听、销毁。现阶段学习Vue的生命周期，我们可能难以理解，但对Vue实例的生命周期的了解能够帮助我们的后续学习。</p><blockquote>
+<p>注意：Vue1.0与Vue2.0版本的生命周期钩子函数完全不同。这里，我们以Vue2.0为基准介绍生命周期钩子函数。</p>
+</blockquote><h5 id="vue生命周期钩子函数"><a name="vue生命周期钩子函数" href="#vue生命周期钩子函数"></a>Vue生命周期钩子函数</h5><ul>
+<li>beforeCreate：Vue实例初始化完成之前，将会调用该函数。</li><li>created：Vue实例初始化完成之后，将会调用该函数。</li><li>beforeMount：Vue实例完成挂载之前，将会调用该函数。</li><li>mounted：Vue实例完成挂载之后，将会调用该函数。</li><li>beforeUpdate：Vue实例中属性数据发生更新之前，将会调用该函数。</li><li>updated：Vue实例中属性数据发生变更之后，将会调用该函数。</li><li>beforeDestroy：Vue实例销毁之前，将会调用该函数。</li><li>destroyed：Vue实例完成销毁之后，将会调用该函数。</li></ul><p>案例1：</p><pre class="javascript hljs"><code class="javascript" data-origin="<pre><code class=&quot;javascript&quot;>&amp;lt;!DOCTYPE html&amp;gt;
+&amp;lt;html lang=&quot;en&quot;&amp;gt;
+&amp;lt;head&amp;gt;
+    &amp;lt;meta charset=&quot;UTF-8&quot;&amp;gt;
+    &amp;lt;title&amp;gt;Vue实例生命周期钩子函数测试&amp;lt;/title&amp;gt;
+    &amp;lt;script src=&quot;vue/vue.js&quot;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;/head&amp;gt;
+&amp;lt;body&amp;gt;
+    &amp;lt;div id=&quot;web&quot;&amp;gt;
+        &amp;lt;h1&amp;gt;{{message}}&amp;lt;/h1&amp;gt;
+    &amp;lt;/div&amp;gt;
+    &amp;lt;script&amp;gt;
+        var vm = new Vue({
+            el: &quot;#web&quot;,
+            data: {
+                message: &quot;Hello World!&quot;
+            },
+            beforeCreate: function () {
+                /*通过$el、$data可以获取Vue实例的el、data属性*/
+                console.log(&quot;----------------------beforeCreate实例初始化完成之前-------------------&quot;);
+                console.log(&quot;el:&quot; + this.$el);
+                console.log(&quot;data:&quot; + this.$data);
+                console.log(&quot;message:&quot; + this.message);
+            },
+            created: function () {
+                console.log(&quot;----------------------Created实例初始化完成之后-------------------&quot;);
+                console.log(&quot;el:&quot; + this.$el);
+                console.log(&quot;data:&quot; + this.$data);
+                console.log(&quot;message:&quot; + this.message);
+            },
+            beforeMount: function () {
+                console.log(&quot;----------------------beforeMount实例挂载完成之前-------------------&quot;);
+                console.log(&quot;el:&quot; + this.$el);
+                console.log(&quot;data:&quot; + this.$data);
+                console.log(&quot;message:&quot; + this.message);
+            },
+            mounted: function () {
+                console.log(&quot;----------------------mounted实例挂载完成之后-------------------&quot;);
+                console.log(&quot;el:&quot; + this.$el);
+                console.log(&quot;data:&quot; + this.$data);
+                console.log(&quot;message:&quot; + this.message);
+            },
+            /*beforeUpdate和updated中的信息基本都是一样的，要想获取修改之前的信息，官方推荐使用计算属性操作*/
+            beforeUpdate: function () {
+                console.log(&quot;----------------------beforeUpdate实例数据发生更新之前-------------------&quot;);
+                console.log(&quot;el:&quot; + this.$el);
+                console.log(&quot;data:&quot; + this.$data);
+                console.log(&quot;message:&quot; + this.message);
+            },
+            updated: function () {
+                console.log(&quot;----------------------updated实例数据发生更新之后-------------------&quot;);
+                console.log(&quot;el:&quot; + this.$el);
+                console.log(&quot;data:&quot; + this.$data);
+                console.log(&quot;message:&quot; + this.message);
+            },
+            beforeDestroy: function () {
+                console.log(&quot;----------------------beforeDestroy实例销毁之前-------------------&quot;);
+                console.log(&quot;el:&quot; + this.$el);
+                console.log(&quot;data:&quot; + this.$data);
+                console.log(&quot;message:&quot; + this.message);
+            },
+            destroyed: function () {
+                console.log(&quot;----------------------destroyed实例销毁之后-------------------&quot;);
+                console.log(&quot;el:&quot; + this.$el);
+                console.log(&quot;data:&quot; + this.$data);
+                console.log(&quot;message:&quot; + this.message);
+            }
+        });
+    &amp;lt;/script&amp;gt;
+&amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+</code></pre>">&lt;!DOCTYPE html&gt;
+<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">html</span> <span class="hljs-attribute">lang</span>=<span class="hljs-value">"en"</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">head</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">meta</span> <span class="hljs-attribute">charset</span>=<span class="hljs-value">"UTF-8"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">title</span>&gt;</span>Vue实例生命周期钩子函数测试<span class="hljs-tag">&lt;/<span class="hljs-title">title</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"vue/vue.js"</span>&gt;</span><span class="javascript"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">head</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">body</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"web"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">h1</span>&gt;</span>{{message}}<span class="hljs-tag">&lt;/<span class="hljs-title">h1</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">script</span>&gt;</span><span class="javascript">
+        <span class="hljs-keyword">var</span> vm = <span class="hljs-keyword">new</span> Vue({
+            el: <span class="hljs-string">"#web"</span>,
+            data: {
+                message: <span class="hljs-string">"Hello World!"</span>
+            },
+            beforeCreate: <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">()</span> </span>{
+                <span class="hljs-comment">/*通过$el、$data可以获取Vue实例的el、data属性*/</span>
+                <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"----------------------beforeCreate实例初始化完成之前-------------------"</span>);
+                <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"el:"</span> + <span class="hljs-keyword">this</span>.$el);
+                <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"data:"</span> + <span class="hljs-keyword">this</span>.$data);
+                <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"message:"</span> + <span class="hljs-keyword">this</span>.message);
+            },
+            created: <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">()</span> </span>{
+                <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"----------------------Created实例初始化完成之后-------------------"</span>);
+                <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"el:"</span> + <span class="hljs-keyword">this</span>.$el);
+                <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"data:"</span> + <span class="hljs-keyword">this</span>.$data);
+                <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"message:"</span> + <span class="hljs-keyword">this</span>.message);
+            },
+            beforeMount: <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">()</span> </span>{
+                <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"----------------------beforeMount实例挂载完成之前-------------------"</span>);
+                <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"el:"</span> + <span class="hljs-keyword">this</span>.$el);
+                <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"data:"</span> + <span class="hljs-keyword">this</span>.$data);
+                <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"message:"</span> + <span class="hljs-keyword">this</span>.message);
+            },
+            mounted: <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">()</span> </span>{
+                <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"----------------------mounted实例挂载完成之后-------------------"</span>);
+                <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"el:"</span> + <span class="hljs-keyword">this</span>.$el);
+                <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"data:"</span> + <span class="hljs-keyword">this</span>.$data);
+                <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"message:"</span> + <span class="hljs-keyword">this</span>.message);
+            },
+            <span class="hljs-comment">/*beforeUpdate和updated中的信息基本都是一样的，要想获取修改之前的信息，官方推荐使用计算属性操作*/</span>
+            beforeUpdate: <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">()</span> </span>{
+                <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"----------------------beforeUpdate实例数据发生更新之前-------------------"</span>);
+                <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"el:"</span> + <span class="hljs-keyword">this</span>.$el);
+                <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"data:"</span> + <span class="hljs-keyword">this</span>.$data);
+                <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"message:"</span> + <span class="hljs-keyword">this</span>.message);
+            },
+            updated: <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">()</span> </span>{
+                <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"----------------------updated实例数据发生更新之后-------------------"</span>);
+                <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"el:"</span> + <span class="hljs-keyword">this</span>.$el);
+                <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"data:"</span> + <span class="hljs-keyword">this</span>.$data);
+                <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"message:"</span> + <span class="hljs-keyword">this</span>.message);
+            },
+            beforeDestroy: <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">()</span> </span>{
+                <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"----------------------beforeDestroy实例销毁之前-------------------"</span>);
+                <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"el:"</span> + <span class="hljs-keyword">this</span>.$el);
+                <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"data:"</span> + <span class="hljs-keyword">this</span>.$data);
+                <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"message:"</span> + <span class="hljs-keyword">this</span>.message);
+            },
+            destroyed: <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">()</span> </span>{
+                <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"----------------------destroyed实例销毁之后-------------------"</span>);
+                <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"el:"</span> + <span class="hljs-keyword">this</span>.$el);
+                <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"data:"</span> + <span class="hljs-keyword">this</span>.$data);
+                <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"message:"</span> + <span class="hljs-keyword">this</span>.message);
+            }
+        });
+    </span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">html</span>&gt;</span>
+</span></code></pre><h5 id="测试"><a name="测试" href="#测试"></a>测试</h5><ol>
+<li>在控制台输入vm.message = ‘123’。</li><li>在控制台输入vm.$destroy()。</li><li>在控制台输入vm.message。</li><li>在控制台再次输入vm.message = ‘123’。</li></ol><p>Vue实例的$destroy()方法是将实例中绑定的事件监听以及指令进行解除，并不是把整个实例完整的销毁。调用$destroy()之后，我们会发现Vue实例的生命周期钩子函数不再生效，且无法动态进行数据绑定。</p>
+
+<footer style="position:fixed; font-size:.8em; text-align:right; bottom:0px; margin-left:-25px; height:20px; width:100%;">generated by <a href="http://pad.haroopress.com" target="_blank">haroopad</a></footer>
+</body>
+</html>

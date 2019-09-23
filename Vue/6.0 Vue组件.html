@@ -1,0 +1,1276 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title>6.0 Vue组件.html</title>
+  <meta name="generator" content="Haroopad 0.13.1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>div.oembedall-githubrepos{border:1px solid #DDD;border-radius:4px;list-style-type:none;margin:0 0 10px;padding:8px 10px 0;font:13.34px/1.4 helvetica,arial,freesans,clean,sans-serif;width:452px;background-color:#fff}div.oembedall-githubrepos .oembedall-body{background:-moz-linear-gradient(center top,#FAFAFA,#EFEFEF);background:-webkit-gradient(linear,left top,left bottom,from(#FAFAFA),to(#EFEFEF));border-bottom-left-radius:4px;border-bottom-right-radius:4px;border-top:1px solid #EEE;margin-left:-10px;margin-top:8px;padding:5px 10px;width:100%}div.oembedall-githubrepos h3{font-size:14px;margin:0;padding-left:18px;white-space:nowrap}div.oembedall-githubrepos p.oembedall-description{color:#444;font-size:12px;margin:0 0 3px}div.oembedall-githubrepos p.oembedall-updated-at{color:#888;font-size:11px;margin:0}div.oembedall-githubrepos ul.oembedall-repo-stats{border:none;float:right;font-size:11px;font-weight:700;padding-left:15px;position:relative;z-index:5;margin:0}div.oembedall-githubrepos ul.oembedall-repo-stats li{border:none;color:#666;display:inline-block;list-style-type:none;margin:0!important}div.oembedall-githubrepos ul.oembedall-repo-stats li a{background-color:transparent;border:none;color:#666!important;background-position:5px -2px;background-repeat:no-repeat;border-left:1px solid #DDD;display:inline-block;height:21px;line-height:21px;padding:0 5px 0 23px}div.oembedall-githubrepos ul.oembedall-repo-stats li:first-child a{border-left:medium none;margin-right:-3px}div.oembedall-githubrepos ul.oembedall-repo-stats li a:hover{background:5px -27px no-repeat #4183C4;color:#FFF!important;text-decoration:none}div.oembedall-githubrepos ul.oembedall-repo-stats li:first-child a:hover{border-bottom-left-radius:3px;border-top-left-radius:3px}ul.oembedall-repo-stats li:last-child a:hover{border-bottom-right-radius:3px;border-top-right-radius:3px}span.oembedall-closehide{background-color:#aaa;border-radius:2px;cursor:pointer;margin-right:3px}div.oembedall-container{margin-top:5px;text-align:left}.oembedall-ljuser{font-weight:700}.oembedall-ljuser img{vertical-align:bottom;border:0;padding-right:1px}.oembedall-stoqembed{border-bottom:1px dotted #999;float:left;overflow:hidden;width:730px;line-height:1;background:#FFF;color:#000;font-family:Arial,Liberation Sans,DejaVu Sans,sans-serif;font-size:80%;text-align:left;margin:0;padding:0}.oembedall-stoqembed a{color:#07C;text-decoration:none;margin:0;padding:0}.oembedall-stoqembed a:hover{text-decoration:underline}.oembedall-stoqembed a:visited{color:#4A6B82}.oembedall-stoqembed h3{font-family:Trebuchet MS,Liberation Sans,DejaVu Sans,sans-serif;font-size:130%;font-weight:700;margin:0;padding:0}.oembedall-stoqembed .oembedall-reputation-score{color:#444;font-size:120%;font-weight:700;margin-right:2px}.oembedall-stoqembed .oembedall-user-info{height:35px;width:185px}.oembedall-stoqembed .oembedall-user-info .oembedall-user-gravatar32{float:left;height:32px;width:32px}.oembedall-stoqembed .oembedall-user-info .oembedall-user-details{float:left;margin-left:5px;overflow:hidden;white-space:nowrap;width:145px}.oembedall-stoqembed .oembedall-question-hyperlink{font-weight:700}.oembedall-stoqembed .oembedall-stats{background:#EEE;margin:0 0 0 7px;padding:4px 7px 6px;width:58px}.oembedall-stoqembed .oembedall-statscontainer{float:left;margin-right:8px;width:86px}.oembedall-stoqembed .oembedall-votes{color:#555;padding:0 0 7px;text-align:center}.oembedall-stoqembed .oembedall-vote-count-post{font-size:240%;color:#808185;display:block;font-weight:700}.oembedall-stoqembed .oembedall-views{color:#999;padding-top:4px;text-align:center}.oembedall-stoqembed .oembedall-status{margin-top:-3px;padding:4px 0;text-align:center;background:#75845C;color:#FFF}.oembedall-stoqembed .oembedall-status strong{color:#FFF;display:block;font-size:140%}.oembedall-stoqembed .oembedall-summary{float:left;width:635px}.oembedall-stoqembed .oembedall-excerpt{line-height:1.2;margin:0;padding:0 0 5px}.oembedall-stoqembed .oembedall-tags{float:left;line-height:18px}.oembedall-stoqembed .oembedall-tags a:hover{text-decoration:none}.oembedall-stoqembed .oembedall-post-tag{background-color:#E0EAF1;border-bottom:1px solid #3E6D8E;border-right:1px solid #7F9FB6;color:#3E6D8E;font-size:90%;line-height:2.4;margin:2px 2px 2px 0;padding:3px 4px;text-decoration:none;white-space:nowrap}.oembedall-stoqembed .oembedall-post-tag:hover{background-color:#3E6D8E;border-bottom:1px solid #37607D;border-right:1px solid #37607D;color:#E0EAF1}.oembedall-stoqembed .oembedall-fr{float:right}.oembedall-stoqembed .oembedall-statsarrow{background-image:url(http://cdn.sstatic.net/stackoverflow/img/sprites.png?v=3);background-repeat:no-repeat;overflow:hidden;background-position:0 -435px;float:right;height:13px;margin-top:12px;width:7px}.oembedall-facebook1{border:1px solid #1A3C6C;padding:0;font:13.34px/1.4 verdana;width:500px}.oembedall-facebook2{background-color:#627add}.oembedall-facebook2 a{color:#e8e8e8;text-decoration:none}.oembedall-facebookBody{background-color:#fff;vertical-align:top;padding:5px}.oembedall-facebookBody .contents{display:inline-block;width:100%}.oembedall-facebookBody div img{float:left;margin-right:5px}div.oembedall-lanyard{-webkit-box-shadow:none;-webkit-transition-delay:0s;-webkit-transition-duration:.4000000059604645s;-webkit-transition-property:width;-webkit-transition-timing-function:cubic-bezier(0.42,0,.58,1);background-attachment:scroll;background-clip:border-box;background-color:transparent;background-image:none;background-origin:padding-box;border-width:0;box-shadow:none;color:#112644;display:block;float:left;font-family:'Trebuchet MS',Trebuchet,sans-serif;font-size:16px;height:253px;line-height:19px;margin:0;max-width:none;min-height:0;outline:#112644 0;overflow-x:visible;overflow-y:visible;padding:0;position:relative;text-align:left;vertical-align:baseline;width:804px}div.oembedall-lanyard .tagline{font-size:1.5em}div.oembedall-lanyard .wrapper{overflow:hidden;clear:both}div.oembedall-lanyard .split{float:left;display:inline}div.oembedall-lanyard .prominent-place .flag:active,div.oembedall-lanyard .prominent-place .flag:focus,div.oembedall-lanyard .prominent-place .flag:hover,div.oembedall-lanyard .prominent-place .flag:link,div.oembedall-lanyard .prominent-place .flag:visited{float:left;display:block;width:48px;height:48px;position:relative;top:-5px;margin-right:10px}div.oembedall-lanyard .place-context{font-size:.889em}div.oembedall-lanyard .prominent-place .sub-place{display:block}div.oembedall-lanyard .prominent-place{font-size:1.125em;line-height:1.1em;font-weight:400}div.oembedall-lanyard .main-date{color:#8CB4E0;font-weight:700;line-height:1.1}div.oembedall-lanyard .first{width:48.57%;margin:0 0 0 2.857%}.mermaid .label{color:#333}.node circle,.node polygon,.node rect{fill:#cde498;stroke:#13540c;stroke-width:1px}.edgePath .path{stroke:green;stroke-width:1.5px}.cluster rect{fill:#cdffb2;rx:40;stroke:#6eaa49;stroke-width:1px}.cluster text{fill:#333}.actor{stroke:#13540c;fill:#cde498}text.actor{fill:#000;stroke:none}.actor-line{stroke:grey}.messageLine0{stroke-width:1.5;stroke-dasharray:"2 2";marker-end:"url(#arrowhead)";stroke:#333}.messageLine1{stroke-width:1.5;stroke-dasharray:"2 2";stroke:#333}#arrowhead{fill:#333}#crosshead path{fill:#333!important;stroke:#333!important}.messageText{fill:#333;stroke:none}.labelBox{stroke:#326932;fill:#cde498}.labelText,.loopText{fill:#000;stroke:none}.loopLine{stroke-width:2;stroke-dasharray:"2 2";marker-end:"url(#arrowhead)";stroke:#326932}.note{stroke:#6eaa49;fill:#fff5ad}.noteText{fill:#000;stroke:none;font-family:'trebuchet ms',verdana,arial;font-size:14px}.section{stroke:none;opacity:.2}.section0,.section2{fill:#6eaa49}.section1,.section3{fill:#fff;opacity:.2}.sectionTitle0,.sectionTitle1,.sectionTitle2,.sectionTitle3{fill:#333}.sectionTitle{text-anchor:start;font-size:11px;text-height:14px}.grid .tick{stroke:lightgrey;opacity:.3;shape-rendering:crispEdges}.grid path{stroke-width:0}.today{fill:none;stroke:red;stroke-width:2px}.task{stroke-width:2}.taskText{text-anchor:middle;font-size:11px}.taskTextOutsideRight{fill:#000;text-anchor:start;font-size:11px}.taskTextOutsideLeft{fill:#000;text-anchor:end;font-size:11px}.taskText0,.taskText1,.taskText2,.taskText3{fill:#fff}.task0,.task1,.task2,.task3{fill:#487e3a;stroke:#13540c}.taskTextOutside0,.taskTextOutside1,.taskTextOutside2,.taskTextOutside3{fill:#000}.active0,.active1,.active2,.active3{fill:#cde498;stroke:#13540c}.activeText0,.activeText1,.activeText2,.activeText3{fill:#000!important}.done0,.done1,.done2,.done3{stroke:grey;fill:lightgrey;stroke-width:2}.doneText0,.doneText1,.doneText2,.doneText3{fill:#000!important}.crit0,.crit1,.crit2,.crit3{stroke:#f88;fill:red;stroke-width:2}.activeCrit0,.activeCrit1,.activeCrit2,.activeCrit3{stroke:#f88;fill:#cde498;stroke-width:2}.doneCrit0,.doneCrit1,.doneCrit2,.doneCrit3{stroke:#f88;fill:lightgrey;stroke-width:2;cursor:pointer;shape-rendering:crispEdges}.activeCritText0,.activeCritText1,.activeCritText2,.activeCritText3,.doneCritText0,.doneCritText1,.doneCritText2,.doneCritText3{fill:#000!important}.titleText{text-anchor:middle;font-size:18px;fill:#000}text{font-family:'trebuchet ms',verdana,arial;font-size:14px}html{height:100%}body{margin:0!important;padding:5px 20px 26px!important;background-color:#fff;font-family:"Lucida Grande","Segoe UI","Apple SD Gothic Neo","Malgun Gothic","Lucida Sans Unicode",Helvetica,Arial,sans-serif;font-size:.9em;overflow-x:hidden;overflow-y:auto}br,h1,h2,h3,h4,h5,h6{clear:both}hr.page{background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAECAYAAACtBE5DAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OENDRjNBN0E2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OENDRjNBN0I2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4Q0NGM0E3ODY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo4Q0NGM0E3OTY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PqqezsUAAAAfSURBVHjaYmRABcYwBiM2QSA4y4hNEKYDQxAEAAIMAHNGAzhkPOlYAAAAAElFTkSuQmCC) repeat-x;border:0;height:3px;padding:0}hr.underscore{border-top-style:dashed!important}body >:first-child{margin-top:0!important}img.plugin{box-shadow:0 1px 3px rgba(0,0,0,.1);border-radius:3px}iframe{border:0}figure{-webkit-margin-before:0;-webkit-margin-after:0;-webkit-margin-start:0;-webkit-margin-end:0}kbd{border:1px solid #aaa;-moz-border-radius:2px;-webkit-border-radius:2px;border-radius:2px;-moz-box-shadow:1px 2px 2px #ddd;-webkit-box-shadow:1px 2px 2px #ddd;box-shadow:1px 2px 2px #ddd;background-color:#f9f9f9;background-image:-moz-linear-gradient(top,#eee,#f9f9f9,#eee);background-image:-o-linear-gradient(top,#eee,#f9f9f9,#eee);background-image:-webkit-linear-gradient(top,#eee,#f9f9f9,#eee);background-image:linear-gradient(top,#eee,#f9f9f9,#eee);padding:1px 3px;font-family:inherit;font-size:.85em}.oembeded .oembed_photo{display:inline-block}img[data-echo]{margin:25px 0;width:100px;height:100px;background:url(../img/ajax.gif) center center no-repeat #fff}.spinner{display:inline-block;width:10px;height:10px;margin-bottom:-.1em;border:2px solid rgba(0,0,0,.5);border-top-color:transparent;border-radius:100%;-webkit-animation:spin 1s infinite linear;animation:spin 1s infinite linear}.spinner:after{content:'';display:block;width:0;height:0;position:absolute;top:-6px;left:0;border:4px solid transparent;border-bottom-color:rgba(0,0,0,.5);-webkit-transform:rotate(45deg);transform:rotate(45deg)}@-webkit-keyframes spin{to{-webkit-transform:rotate(360deg)}}@keyframes spin{to{transform:rotate(360deg)}}p.toc{margin:0!important}p.toc ul{padding-left:10px}p.toc>ul{padding:10px;margin:0 10px;display:inline-block;border:1px solid #ededed;border-radius:5px}p.toc li,p.toc ul{list-style-type:none}p.toc li{width:100%;padding:0;overflow:hidden}p.toc li a::after{content:"."}p.toc li a:before{content:"• "}p.toc h5{text-transform:uppercase}p.toc .title{float:left;padding-right:3px}p.toc .number{margin:0;float:right;padding-left:3px;background:#fff;display:none}input.task-list-item{margin-left:-1.62em}.markdown{font-family:"Hiragino Sans GB","Microsoft YaHei",STHeiti,SimSun,"Lucida Grande","Lucida Sans Unicode","Lucida Sans",'Segoe UI',AppleSDGothicNeo-Medium,'Malgun Gothic',Verdana,Tahoma,sans-serif;padding:20px}.markdown a{text-decoration:none;vertical-align:baseline}.markdown a:hover{text-decoration:underline}.markdown h1{font-size:2.2em;font-weight:700;margin:1.5em 0 1em}.markdown h2{font-size:1.8em;font-weight:700;margin:1.275em 0 .85em}.markdown h3{font-size:1.6em;font-weight:700;margin:1.125em 0 .75em}.markdown h4{font-size:1.4em;font-weight:700;margin:.99em 0 .66em}.markdown h5{font-size:1.2em;font-weight:700;margin:.855em 0 .57em}.markdown h6{font-size:1em;font-weight:700;margin:.75em 0 .5em}.markdown h1+p,.markdown h1:first-child,.markdown h2+p,.markdown h2:first-child,.markdown h3+p,.markdown h3:first-child,.markdown h4+p,.markdown h4:first-child,.markdown h5+p,.markdown h5:first-child,.markdown h6+p,.markdown h6:first-child{margin-top:0}.markdown hr{border:1px solid #ccc}.markdown p{margin:1em 0;word-wrap:break-word}.markdown ol{list-style-type:decimal}.markdown li{display:list-item;line-height:1.4em}.markdown blockquote{margin:1em 20px}.markdown blockquote>:first-child{margin-top:0}.markdown blockquote>:last-child{margin-bottom:0}.markdown blockquote cite:before{content:'\2014 \00A0'}.markdown .code{border-radius:3px;word-wrap:break-word}.markdown pre{border-radius:3px;word-wrap:break-word;border:1px solid #ccc;overflow:auto;padding:.5em}.markdown pre code{border:0;display:block}.markdown pre>code{font-family:Consolas,Inconsolata,Courier,monospace;font-weight:700;white-space:pre;margin:0}.markdown code{border-radius:3px;word-wrap:break-word;border:1px solid #ccc;padding:0 5px;margin:0 2px}.markdown img{max-width:100%}.markdown mark{color:#000;background-color:#fcf8e3}.markdown table{padding:0;border-collapse:collapse;border-spacing:0;margin-bottom:16px}.markdown table tr td,.markdown table tr th{border:1px solid #ccc;margin:0;padding:6px 13px}.markdown table tr th{font-weight:700}.markdown table tr th>:first-child{margin-top:0}.markdown table tr th>:last-child{margin-bottom:0}.markdown table tr td>:first-child{margin-top:0}.markdown table tr td>:last-child{margin-bottom:0}@import url(http://fonts.googleapis.com/css?family=Roboto+Condensed:300italic,400italic,700italic,400,300,700);.haroopad{padding:20px;color:#222;font-size:15px;font-family:"Roboto Condensed",Tauri,"Hiragino Sans GB","Microsoft YaHei",STHeiti,SimSun,"Lucida Grande","Lucida Sans Unicode","Lucida Sans",'Segoe UI',AppleSDGothicNeo-Medium,'Malgun Gothic',Verdana,Tahoma,sans-serif;background:#fff;line-height:1.6;-webkit-font-smoothing:antialiased}.haroopad a{color:#3269a0}.haroopad a:hover{color:#4183c4}.haroopad h2{border-bottom:1px solid #e6e6e6}.haroopad h6{color:#777}.haroopad hr{border:1px solid #e6e6e6}.haroopad blockquote>code,.haroopad h1>code,.haroopad h2>code,.haroopad h3>code,.haroopad h4>code,.haroopad h5>code,.haroopad h6>code,.haroopad li>code,.haroopad p>code,.haroopad td>code{font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;font-size:85%;background-color:rgba(0,0,0,.02);padding:.2em .5em;border:1px solid #efefef}.haroopad pre>code{font-size:1em;letter-spacing:-1px;font-weight:700}.haroopad blockquote{border-left:4px solid #e6e6e6;padding:0 15px;color:#777}.haroopad table{background-color:#fafafa}.haroopad table tr td,.haroopad table tr th{border:1px solid #e6e6e6}.haroopad table tr:nth-child(2n){background-color:#f2f2f2}.hljs{display:block;overflow-x:auto;padding:.5em;background:#fdf6e3;color:#657b83;-webkit-text-size-adjust:none}.diff .hljs-header,.hljs-comment,.hljs-doctype,.hljs-javadoc,.hljs-pi,.lisp .hljs-string{color:#93a1a1}.css .hljs-tag,.hljs-addition,.hljs-keyword,.hljs-request,.hljs-status,.hljs-winutils,.method,.nginx .hljs-title{color:#859900}.hljs-command,.hljs-dartdoc,.hljs-hexcolor,.hljs-link_url,.hljs-number,.hljs-phpdoc,.hljs-regexp,.hljs-rules .hljs-value,.hljs-string,.hljs-tag .hljs-value,.tex .hljs-formula{color:#2aa198}.css .hljs-function,.hljs-built_in,.hljs-chunk,.hljs-decorator,.hljs-id,.hljs-identifier,.hljs-localvars,.hljs-title,.vhdl .hljs-literal{color:#268bd2}.hljs-attribute,.hljs-class .hljs-title,.hljs-constant,.hljs-link_reference,.hljs-parent,.hljs-type,.hljs-variable,.lisp .hljs-body,.smalltalk .hljs-number{color:#b58900}.css .hljs-pseudo,.diff .hljs-change,.hljs-attr_selector,.hljs-cdata,.hljs-header,.hljs-pragma,.hljs-preprocessor,.hljs-preprocessor .hljs-keyword,.hljs-shebang,.hljs-special,.hljs-subst,.hljs-symbol,.hljs-symbol .hljs-string{color:#cb4b16}.hljs-deletion,.hljs-important{color:#dc322f}.hljs-link_label{color:#6c71c4}.tex .hljs-formula{background:#eee8d5}.MathJax_Hover_Frame{border-radius:.25em;-webkit-border-radius:.25em;-moz-border-radius:.25em;-khtml-border-radius:.25em;box-shadow:0 0 15px #83A;-webkit-box-shadow:0 0 15px #83A;-moz-box-shadow:0 0 15px #83A;-khtml-box-shadow:0 0 15px #83A;border:1px solid #A6D!important;display:inline-block;position:absolute}.MathJax_Hover_Arrow{position:absolute;width:15px;height:11px;cursor:pointer}#MathJax_About{position:fixed;left:50%;width:auto;text-align:center;border:3px outset;padding:1em 2em;background-color:#DDD;color:#000;cursor:default;font-family:message-box;font-size:120%;font-style:normal;text-indent:0;text-transform:none;line-height:normal;letter-spacing:normal;word-spacing:normal;word-wrap:normal;white-space:nowrap;float:none;z-index:201;border-radius:15px;-webkit-border-radius:15px;-moz-border-radius:15px;-khtml-border-radius:15px;box-shadow:0 10px 20px gray;-webkit-box-shadow:0 10px 20px gray;-moz-box-shadow:0 10px 20px gray;-khtml-box-shadow:0 10px 20px gray;filter:progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}.MathJax_Menu{position:absolute;background-color:#fff;color:#000;width:auto;padding:2px;border:1px solid #CCC;margin:0;cursor:default;font:menu;text-align:left;text-indent:0;text-transform:none;line-height:normal;letter-spacing:normal;word-spacing:normal;word-wrap:normal;white-space:nowrap;float:none;z-index:201;box-shadow:0 10px 20px gray;-webkit-box-shadow:0 10px 20px gray;-moz-box-shadow:0 10px 20px gray;-khtml-box-shadow:0 10px 20px gray;filter:progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}.MathJax_MenuItem{padding:2px 2em;background:0 0}.MathJax_MenuArrow{position:absolute;right:.5em;color:#666}.MathJax_MenuActive .MathJax_MenuArrow{color:#fff}.MathJax_MenuArrow.RTL{left:.5em;right:auto}.MathJax_MenuCheck{position:absolute;left:.7em}.MathJax_MenuCheck.RTL{right:.7em;left:auto}.MathJax_MenuRadioCheck{position:absolute;left:1em}.MathJax_MenuRadioCheck.RTL{right:1em;left:auto}.MathJax_MenuLabel{padding:2px 2em 4px 1.33em;font-style:italic}.MathJax_MenuRule{border-top:1px solid #CCC;margin:4px 1px 0}.MathJax_MenuDisabled{color:GrayText}.MathJax_MenuActive{background-color:Highlight;color:HighlightText}.MathJax_Menu_Close{position:absolute;width:31px;height:31px;top:-15px;left:-15px}#MathJax_Zoom{position:absolute;background-color:#F0F0F0;overflow:auto;display:block;z-index:301;padding:.5em;border:1px solid #000;margin:0;font-weight:400;font-style:normal;text-align:left;text-indent:0;text-transform:none;line-height:normal;letter-spacing:normal;word-spacing:normal;word-wrap:normal;white-space:nowrap;float:none;box-shadow:5px 5px 15px #AAA;-webkit-box-shadow:5px 5px 15px #AAA;-moz-box-shadow:5px 5px 15px #AAA;-khtml-box-shadow:5px 5px 15px #AAA;filter:progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}#MathJax_ZoomOverlay{position:absolute;left:0;top:0;z-index:300;display:inline-block;width:100%;height:100%;border:0;padding:0;margin:0;background-color:#fff;opacity:0;filter:alpha(opacity=0)}#MathJax_ZoomFrame{position:relative;display:inline-block;height:0;width:0}#MathJax_ZoomEventTrap{position:absolute;left:0;top:0;z-index:302;display:inline-block;border:0;padding:0;margin:0;background-color:#fff;opacity:0;filter:alpha(opacity=0)}.MathJax_Preview{color:#888}#MathJax_Message{position:fixed;left:1px;bottom:2px;background-color:#E6E6E6;border:1px solid #959595;margin:0;padding:2px 8px;z-index:102;color:#000;font-size:80%;width:auto;white-space:nowrap}#MathJax_MSIE_Frame{position:absolute;top:0;left:0;width:0;z-index:101;border:0;margin:0;padding:0}.MathJax_Error{color:#C00;font-style:italic}footer{position:fixed;font-size:.8em;text-align:right;bottom:0;margin-left:-25px;height:20px;width:100%}</style>
+</head>
+<body class="markdown haroopad">
+<h1 id="六、vue组件"><a name="六、vue组件" href="#六、vue组件"></a>六、Vue组件</h1><p>Vue组件是Vue.js框架最为核心的应用之一，可以说Vue框架构建单页面应用就是依赖于Vue组件系统的。Vue为前端代码复用与解耦提供了一种便捷的操作方式，支撑起了整个Vue单页面开发的结构。</p><h2 id="6.1-组件注册"><a name="6.1-组件注册" href="#6.1-组件注册"></a>6.1 组件注册</h2><h5 id="全局注册"><a name="全局注册" href="#全局注册"></a>全局注册</h5><pre class="javascript hljs"><code class="javascript" data-origin="<pre><code class=&quot;javascript&quot;>&amp;lt;body&amp;gt;
+    &amp;lt;div id=&quot;web01&quot;&amp;gt;
+        &amp;lt;my-component&amp;gt;&amp;lt;/my-component&amp;gt;
+        &amp;lt;my-component&amp;gt;&amp;lt;/my-component&amp;gt;
+        &amp;lt;my-component&amp;gt;&amp;lt;/my-component&amp;gt;
+    &amp;lt;/div&amp;gt;
+    &amp;lt;div id=&quot;web02&quot;&amp;gt;
+        &amp;lt;my-component&amp;gt;&amp;lt;/my-component&amp;gt;
+        &amp;lt;my-component&amp;gt;&amp;lt;/my-component&amp;gt;
+        &amp;lt;my-component&amp;gt;&amp;lt;/my-component&amp;gt;
+    &amp;lt;/div&amp;gt;
+    &amp;lt;script&amp;gt;
+        /* 全局注册 */
+        Vue.component(&quot;my-component&quot;,{
+            template: &quot;&amp;lt;h3&amp;gt;a Vue component&amp;lt;/h3&amp;gt;&quot;
+        });
+
+        var vm01 = new Vue({
+            el: &quot;#web01&quot;
+        });
+
+        var vm02 = new Vue({
+            el: &quot;#web02&quot;
+        });
+    &amp;lt;/script&amp;gt;
+&amp;lt;/body&amp;gt;
+</code></pre>">&lt;body&gt;
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"web01"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">my-component</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">my-component</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">my-component</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">my-component</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">my-component</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">my-component</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"web02"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">my-component</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">my-component</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">my-component</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">my-component</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">my-component</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">my-component</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">script</span>&gt;</span><span class="javascript">
+        <span class="hljs-comment">/* 全局注册 */</span>
+        Vue.component(<span class="hljs-string">"my-component"</span>,{
+            template: <span class="hljs-string">"&lt;h3&gt;a Vue component&lt;/h3&gt;"</span>
+        });
+
+        <span class="hljs-keyword">var</span> vm01 = <span class="hljs-keyword">new</span> Vue({
+            el: <span class="hljs-string">"#web01"</span>
+        });
+
+        <span class="hljs-keyword">var</span> vm02 = <span class="hljs-keyword">new</span> Vue({
+            el: <span class="hljs-string">"#web02"</span>
+        });
+    </span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">body</span>&gt;</span>
+</span></code></pre><p>对于Vue组件全局注册，通过Vue全局实例的component函数来定义组件，component函数接收两个参数，第一个参数指定组件的名称，例如my-component，在页面元素中直接通过标签的方式引用；第二个参数为组件内容的JSON实例，这里使用了组件实例的template属性，该属性用于定义组件复用HTML代码内容，以字符串的格式出现。关于组件实例的属性内容，我们后续专门介绍。</p><p>对于全局注册的方式，在组件注册完成之后，其他的Vue实例都可以使用该组件。</p><h5 id="局部注册"><a name="局部注册" href="#局部注册"></a>局部注册</h5><pre class="javascript hljs"><code class="javascript" data-origin="<pre><code class=&quot;javascript&quot;>&amp;lt;body&amp;gt;
+    &amp;lt;div id=&quot;web01&quot;&amp;gt;
+        &amp;lt;mycomponent01&amp;gt;&amp;lt;/mycomponent01&amp;gt;
+        &amp;lt;my-component02&amp;gt;&amp;lt;/my-component02&amp;gt;
+    &amp;lt;/div&amp;gt;
+    &amp;lt;script&amp;gt;
+        var vm01 = new Vue({
+            el: &quot;#web01&quot;,
+            /*局部注册*/
+            components: {
+                mycomponent01: {
+                    template: &quot;&amp;lt;h3&amp;gt;a Vue component01&amp;lt;/h3&amp;gt;&quot;
+                },
+                &quot;my-component02&quot;: {
+                    template: &quot;&amp;lt;h3&amp;gt;a Vue component02&amp;lt;/h3&amp;gt;&quot;
+                }
+            }
+        })
+    &amp;lt;/script&amp;gt;
+&amp;lt;/body&amp;gt;
+</code></pre>">&lt;body&gt;
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"web01"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">mycomponent01</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">mycomponent01</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">my-component02</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">my-component02</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">script</span>&gt;</span><span class="javascript">
+        <span class="hljs-keyword">var</span> vm01 = <span class="hljs-keyword">new</span> Vue({
+            el: <span class="hljs-string">"#web01"</span>,
+            <span class="hljs-comment">/*局部注册*/</span>
+            components: {
+                mycomponent01: {
+                    template: <span class="hljs-string">"&lt;h3&gt;a Vue component01&lt;/h3&gt;"</span>
+                },
+                <span class="hljs-string">"my-component02"</span>: {
+                    template: <span class="hljs-string">"&lt;h3&gt;a Vue component02&lt;/h3&gt;"</span>
+                }
+            }
+        })
+    </span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">body</span>&gt;</span>
+</span></code></pre><p>对于Vue组件局部注册，通过一个Vue实例的components属性来定义，components属性为JSON对象，通过key来指定组件的名称；通过value来指定组件定义内容，接收一个组件实例对象。</p><p>既然components属性中的value为一个JSON对象的组件实例，我们完全可以使用另一种方式注册组件。</p><pre class="javascript hljs"><code class="javascript" data-origin="<pre><code class=&quot;javascript&quot;>&amp;lt;body&amp;gt;
+    &amp;lt;div id=&quot;web&quot;&amp;gt;
+        &amp;lt;my-component01&amp;gt;&amp;lt;/my-component01&amp;gt;
+        &amp;lt;my-component02&amp;gt;&amp;lt;/my-component02&amp;gt;
+    &amp;lt;/div&amp;gt;
+    &amp;lt;script&amp;gt;
+        /*var myComponent = {
+            template: &quot;&amp;lt;h3&amp;gt;a Vue component&amp;lt;/h3&amp;gt;&quot;
+        };*/
+
+        var myComponent = Vue.extend({
+            template: &quot;&amp;lt;h3&amp;gt;a Vue component&amp;lt;/h3&amp;gt;&quot;
+        });
+
+        /*全局注册*/
+        Vue.component(&quot;my-component01&quot;,myComponent);
+
+        /*局部注册*/
+        var vm = new Vue({
+            el: &quot;#web&quot;,
+            components: {
+                &quot;my-component02&quot;: myComponent
+            }
+        });
+    &amp;lt;/script&amp;gt;
+&amp;lt;/body&amp;gt;
+</code></pre>">&lt;body&gt;
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"web"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">my-component01</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">my-component01</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">my-component02</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">my-component02</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">script</span>&gt;</span><span class="javascript">
+        <span class="hljs-comment">/*var myComponent = {
+            template: "&lt;h3&gt;a Vue component&lt;/h3&gt;"
+        };*/</span>
+
+        <span class="hljs-keyword">var</span> myComponent = Vue.extend({
+            template: <span class="hljs-string">"&lt;h3&gt;a Vue component&lt;/h3&gt;"</span>
+        });
+
+        <span class="hljs-comment">/*全局注册*/</span>
+        Vue.component(<span class="hljs-string">"my-component01"</span>,myComponent);
+
+        <span class="hljs-comment">/*局部注册*/</span>
+        <span class="hljs-keyword">var</span> vm = <span class="hljs-keyword">new</span> Vue({
+            el: <span class="hljs-string">"#web"</span>,
+            components: {
+                <span class="hljs-string">"my-component02"</span>: myComponent
+            }
+        });
+    </span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">body</span>&gt;</span>
+</span></code></pre><p>Vue.extend函数是Vue提供的一种更加严谨的组件对象创建方式。</p><h5 id="组件命名"><a name="组件命名" href="#组件命名"></a>组件命名</h5><p>在注册一个组件的时候，我们始终需要给定它一个名字，而由于HMTL元素解析不区分大小写，所有HTML标签都会解析为小写，也即在HTML页面中，我们无法看到如下的标签：</p><pre class="javascript hljs"><code class="javascript" data-origin="<pre><code class=&quot;javascript&quot;>&amp;lt;myComponent02&amp;gt;&amp;lt;/myComponent02&amp;gt;
+</code></pre>">&lt;myComponent02&gt;<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-title">myComponent02</span>&gt;</span>
+</span></code></pre><p>基于以上的原则，Vue提供了两种组件的命名方式：</p><ol>
+<li><p>kebab-case：以“-”连接不同的单词命名组件，在使用组件时，也以“-”的方式出现。</p>
+<pre class="javascript hljs"><code class="javascript" data-origin="<pre><code class=&quot;javascript&quot;>&amp;lt;body&amp;gt;
+&amp;lt;div id=&quot;web&quot;&amp;gt;
+ &amp;lt;my-component01&amp;gt;&amp;lt;/my-component01&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;script&amp;gt;
+ Vue.component(&quot;my-component01&quot;,{
+     template: &quot;&amp;lt;h3&amp;gt;a Vue component01&amp;lt;/h3&amp;gt;&quot;
+ });
+
+ var vm = new Vue({
+     el: &quot;#web&quot;
+ })
+&amp;lt;/script&amp;gt;
+&amp;lt;/body&amp;gt;
+</code></pre>">&lt;body&gt;
+<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"web"</span>&gt;</span>
+ <span class="hljs-tag">&lt;<span class="hljs-title">my-component01</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">my-component01</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">script</span>&gt;</span><span class="javascript">
+ Vue.component(<span class="hljs-string">"my-component01"</span>,{
+     template: <span class="hljs-string">"&lt;h3&gt;a Vue component01&lt;/h3&gt;"</span>
+ });
+
+ <span class="hljs-keyword">var</span> vm = <span class="hljs-keyword">new</span> Vue({
+     el: <span class="hljs-string">"#web"</span>
+ })
+</span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">body</span>&gt;</span>
+</span></code></pre>
+</li><li><p>PascalCase：以驼峰式命名组件名，在使用组件时，使用“-”连接单词使用。</p>
+<pre class="javascript hljs"><code class="javascript" data-origin="<pre><code class=&quot;javascript&quot;>&amp;lt;body&amp;gt;
+ &amp;lt;div id=&quot;web&quot;&amp;gt;
+     &amp;lt;my-component02&amp;gt;&amp;lt;/my-component02&amp;gt;
+     &amp;lt;!--这种方式会出现异常--&amp;gt;
+     &amp;lt;!--&amp;lt;myComponent02&amp;gt;&amp;lt;/myComponent02&amp;gt;--&amp;gt;
+ &amp;lt;/div&amp;gt;
+ &amp;lt;script&amp;gt;
+     Vue.component(&quot;myComponent02&quot;,{
+         template: &quot;&amp;lt;h3&amp;gt;a Vue component02&amp;lt;/h3&amp;gt;&quot;
+     });
+
+     var vm = new Vue({
+         el: &quot;#web&quot;
+     })
+ &amp;lt;/script&amp;gt;
+&amp;lt;/body&amp;gt;
+</code></pre>">&lt;body&gt;
+ <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"web"</span>&gt;</span>
+     <span class="hljs-tag">&lt;<span class="hljs-title">my-component02</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">my-component02</span>&gt;</span>
+     <span class="hljs-comment">&lt;!--这种方式会出现异常--&gt;</span>
+     <span class="hljs-comment">&lt;!--&lt;myComponent02&gt;&lt;/myComponent02&gt;--&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;<span class="hljs-title">script</span>&gt;</span><span class="javascript">
+     Vue.component(<span class="hljs-string">"myComponent02"</span>,{
+         template: <span class="hljs-string">"&lt;h3&gt;a Vue component02&lt;/h3&gt;"</span>
+     });
+
+     <span class="hljs-keyword">var</span> vm = <span class="hljs-keyword">new</span> Vue({
+         el: <span class="hljs-string">"#web"</span>
+     })
+ </span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">body</span>&gt;</span>
+</span></code></pre>
+</li></ol><h5 id="组件的template模板"><a name="组件的template模板" href="#组件的template模板"></a>组件的template模板</h5><p>组件与Vue实例中的template属性是十分相似的，但组件的应用要远远超过template模板，由于组件的出现，我们在项目中几乎不使用Vue实例的template模板。</p><p>与template模板一样，当组件template内容定义过多时，我们是用字符串来定义模板内容将十分的不便，因此，对于组件template属性的定义，我们还可以使用一种更加便捷的方式。</p><pre class="javascript hljs"><code class="javascript" data-origin="<pre><code class=&quot;javascript&quot;>&amp;lt;body&amp;gt;
+    &amp;lt;div id=&quot;web&quot;&amp;gt;
+        &amp;lt;my-component&amp;gt;&amp;lt;/my-component&amp;gt;
+    &amp;lt;/div&amp;gt;
+    &amp;lt;script&amp;gt;
+        window.onload = function(){
+            Vue.component(&quot;my-component&quot;,{
+                template: &quot;#template01&quot;
+            });
+            var vm = new Vue({
+                el: &quot;#web&quot;
+            })
+        };
+    &amp;lt;/script&amp;gt;
+    &amp;lt;template id=&quot;template01&quot;&amp;gt;
+        &amp;lt;ul&amp;gt;
+            &amp;lt;li&amp;gt;111&amp;lt;/li&amp;gt;
+            &amp;lt;li&amp;gt;222&amp;lt;/li&amp;gt;
+            &amp;lt;li&amp;gt;333&amp;lt;/li&amp;gt;
+        &amp;lt;/ul&amp;gt;
+    &amp;lt;/template&amp;gt;
+&amp;lt;/body&amp;gt;
+</code></pre>">&lt;body&gt;
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"web"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">my-component</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">my-component</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">script</span>&gt;</span><span class="javascript">
+        <span class="hljs-built_in">window</span>.onload = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span></span>{
+            Vue.component(<span class="hljs-string">"my-component"</span>,{
+                template: <span class="hljs-string">"#template01"</span>
+            });
+            <span class="hljs-keyword">var</span> vm = <span class="hljs-keyword">new</span> Vue({
+                el: <span class="hljs-string">"#web"</span>
+            })
+        };
+    </span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">template</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"template01"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">ul</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>111<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>222<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>333<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">template</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">body</span>&gt;</span>
+</span></code></pre><p>对于组件模板的使用，我们可以将组件的template属性定义为一个字符串，将模板内容定义为一个&lt;template&gt;模板，通过CSS选择器的方式进行模板的指定。</p><h2 id="6.2-组件实例"><a name="6.2-组件实例" href="#6.2-组件实例"></a>6.2 组件实例</h2><p>Vue组件实际上是可复用的实例，它与Vue实例的执行原理、操作方式基本相同。因此，Vue实例具有什么样的属性，则组件具有什么样的属性，但还有一些例外。Vue组件具有data、methods、computed、watch及生命周期钩子函数等，但组件实例没有el属性，因为每一个组件实例是挂载在Vue实例下的。</p><h3 id="data属性类型必须是一个函数"><a name="data属性类型必须是一个函数" href="#data属性类型必须是一个函数"></a>data属性类型必须是一个函数</h3><p>组件实例的data属性必须是一个带有返回值的函数，而不能直接使用JSON数据格式。这样限定的原因很好理解，因为每一个组件实例都需要维护一份该组件实例所单独持有的数据信息。</p><pre class="javascript hljs"><code class="javascript" data-origin="<pre><code class=&quot;javascript&quot;>&amp;lt;body&amp;gt;
+    &amp;lt;div id=&quot;web&quot;&amp;gt;
+        &amp;lt;my-component&amp;gt;&amp;lt;/my-component&amp;gt;
+        &amp;lt;my-component&amp;gt;&amp;lt;/my-component&amp;gt;
+        &amp;lt;my-component&amp;gt;&amp;lt;/my-component&amp;gt;
+    &amp;lt;/div&amp;gt;
+    &amp;lt;template id=&quot;template01&quot;&amp;gt;
+        &amp;lt;div&amp;gt;
+            &amp;lt;p&amp;gt;{{num}}&amp;lt;/p&amp;gt;
+            &amp;lt;button @click=&quot;addNum&quot;&amp;gt;当前组件自增&amp;lt;/button&amp;gt;
+        &amp;lt;/div&amp;gt;
+    &amp;lt;/template&amp;gt;
+    &amp;lt;script&amp;gt;
+        Vue.component(&quot;my-component&quot;,{
+            template: &quot;#template01&quot;,
+            data: function () {
+                return {num: 0}
+            },
+            /* 该配置会出现错误 */
+            /*data: {
+                num: 0
+            },*/
+            methods: {
+                addNum: function () {
+                    this.num++;
+                }
+            }
+        });
+
+        var vm = new Vue({
+            el: &quot;#web&quot;
+        });
+    &amp;lt;/script&amp;gt;
+&amp;lt;/body&amp;gt;
+</code></pre>">&lt;body&gt;
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"web"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">my-component</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">my-component</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">my-component</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">my-component</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">my-component</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">my-component</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">template</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"template01"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>{{num}}<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">button</span> @<span class="hljs-attribute">click</span>=<span class="hljs-value">"addNum"</span>&gt;</span>当前组件自增<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">template</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">script</span>&gt;</span><span class="javascript">
+        Vue.component(<span class="hljs-string">"my-component"</span>,{
+            template: <span class="hljs-string">"#template01"</span>,
+            data: <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">()</span> </span>{
+                <span class="hljs-keyword">return</span> {num: <span class="hljs-number">0</span>}
+            },
+            <span class="hljs-comment">/* 该配置会出现错误 */</span>
+            <span class="hljs-comment">/*data: {
+                num: 0
+            },*/</span>
+            methods: {
+                addNum: <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">()</span> </span>{
+                    <span class="hljs-keyword">this</span>.num++;
+                }
+            }
+        });
+
+        <span class="hljs-keyword">var</span> vm = <span class="hljs-keyword">new</span> Vue({
+            el: <span class="hljs-string">"#web"</span>
+        });
+    </span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">body</span>&gt;</span>
+</span></code></pre><p>上述案例中，每个组件中num都独立维护，各自自增；试想，如果组件中的data是一个JSON对象，则属性值将会被各个组件所共享，数据将不会各自自增。</p><h2 id="6.3-动态组件"><a name="6.3-动态组件" href="#6.3-动态组件"></a>6.3 动态组件</h2><p>Vue为组件的使用提供了很多的灵活操作方式，接下来，我们学习每种情况。</p><h3 id="6.3.1-组件的dom解析"><a name="6.3.1-组件的dom解析" href="#6.3.1-组件的dom解析"></a>6.3.1 组件的DOM解析</h3><h5 id="组件模板内容必须存在一个根节点。"><a name="组件模板内容必须存在一个根节点。" href="#组件模板内容必须存在一个根节点。"></a>组件模板内容必须存在一个根节点。</h5><p>尝试将上述代码案例中组件模板的div标签去掉，模板解析将会出现异常，因为Vue组件模板要求必须存在一个根节点。</p><h5 id="html原生解析父节点的限制"><a name="html原生解析父节点的限制" href="#html原生解析父节点的限制"></a>HTML原生解析父节点的限制</h5><p>在HTML原生解析中，诸如ul、ol、table 和 select这些元素，对于哪些元素可以出现在其内部是有严格限制的。而相对的，有些元素，诸如 li、tr 和 option，只能出现在其它某些特定的元素内部。</p><p>也就是说，当li这样的标签出现table标签之下时，将会造成解析错误。当我们在ul、ol、table 和 select这些元素内部使用自定义组件标签时，同样会出现错误。</p><pre class="javascript hljs"><code class="javascript" data-origin="<pre><code class=&quot;javascript&quot;>&amp;lt;body&amp;gt;
+    &amp;lt;div id=&quot;web&quot;&amp;gt;
+        &amp;lt;table&amp;gt;
+            &amp;lt;my-component&amp;gt;&amp;lt;/my-component&amp;gt;
+            &amp;lt;my-component&amp;gt;&amp;lt;/my-component&amp;gt;
+            &amp;lt;my-component&amp;gt;&amp;lt;/my-component&amp;gt;
+        &amp;lt;/table&amp;gt;
+    &amp;lt;/div&amp;gt;
+    &amp;lt;template id=&quot;template01&quot;&amp;gt;
+        &amp;lt;tr&amp;gt;
+            &amp;lt;td&amp;gt;111&amp;lt;/td&amp;gt;&amp;lt;td&amp;gt;222&amp;lt;/td&amp;gt;&amp;lt;td&amp;gt;333&amp;lt;/td&amp;gt;
+        &amp;lt;/tr&amp;gt;
+    &amp;lt;/template&amp;gt;
+    &amp;lt;script&amp;gt;
+        Vue.component(&quot;my-component&quot;,{
+            template: &quot;#template01&quot;
+        });
+        var vm = new Vue({
+            el: &quot;#web&quot;
+        });
+    &amp;lt;/script&amp;gt;
+&amp;lt;/body&amp;gt;
+</code></pre>">&lt;body&gt;
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"web"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">table</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">my-component</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">my-component</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">my-component</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">my-component</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">my-component</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">my-component</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">table</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">template</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"template01"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">tr</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>111<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>222<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>333<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">template</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">script</span>&gt;</span><span class="javascript">
+        Vue.component(<span class="hljs-string">"my-component"</span>,{
+            template: <span class="hljs-string">"#template01"</span>
+        });
+        <span class="hljs-keyword">var</span> vm = <span class="hljs-keyword">new</span> Vue({
+            el: <span class="hljs-string">"#web"</span>
+        });
+    </span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">body</span>&gt;</span>
+</span></code></pre><p>当执行上述代码时，我们表面上看到页面似乎没有问题，但实际页面在解析过程中已经出现了问题，我们在控制台查看HTML DOM解析结构，发现已经出现了问题，tr元素出现在table元素的外部。</p><p>针对这种问题，Vue为我们提供了is属性进行问题的解决，使用is属性来指定将要复用的组件信息。</p><pre class="javascript hljs"><code class="javascript" data-origin="<pre><code class=&quot;javascript&quot;>&amp;lt;body&amp;gt;
+    &amp;lt;div id=&quot;web&quot;&amp;gt;
+        &amp;lt;table&amp;gt;
+            &amp;lt;tr is=&quot;my-component&quot;&amp;gt;&amp;lt;/tr&amp;gt;
+            &amp;lt;tr is=&quot;my-component&quot;&amp;gt;&amp;lt;/tr&amp;gt;
+            &amp;lt;tr is=&quot;my-component&quot;&amp;gt;&amp;lt;/tr&amp;gt;
+        &amp;lt;/table&amp;gt;
+    &amp;lt;/div&amp;gt;
+    &amp;lt;template id=&quot;template01&quot;&amp;gt;
+        &amp;lt;tr&amp;gt;
+            &amp;lt;td&amp;gt;111&amp;lt;/td&amp;gt;&amp;lt;td&amp;gt;222&amp;lt;/td&amp;gt;&amp;lt;td&amp;gt;333&amp;lt;/td&amp;gt;
+        &amp;lt;/tr&amp;gt;
+    &amp;lt;/template&amp;gt;
+    &amp;lt;script&amp;gt;
+        Vue.component(&quot;my-component&quot;,{
+            template: &quot;#template01&quot;
+        });
+        var vm = new Vue({
+            el: &quot;#web&quot;
+        });
+    &amp;lt;/script&amp;gt;
+&amp;lt;/body&amp;gt;
+</code></pre>">&lt;body&gt;
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"web"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">table</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">tr</span> <span class="hljs-attribute">is</span>=<span class="hljs-value">"my-component"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">tr</span> <span class="hljs-attribute">is</span>=<span class="hljs-value">"my-component"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">tr</span> <span class="hljs-attribute">is</span>=<span class="hljs-value">"my-component"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">table</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">template</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"template01"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">tr</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>111<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>222<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">td</span>&gt;</span>333<span class="hljs-tag">&lt;/<span class="hljs-title">td</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">tr</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">template</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">script</span>&gt;</span><span class="javascript">
+        Vue.component(<span class="hljs-string">"my-component"</span>,{
+            template: <span class="hljs-string">"#template01"</span>
+        });
+        <span class="hljs-keyword">var</span> vm = <span class="hljs-keyword">new</span> Vue({
+            el: <span class="hljs-string">"#web"</span>
+        });
+    </span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">body</span>&gt;</span>
+</span></code></pre><h3 id="6.3.2-组件插槽的内容"><a name="6.3.2-组件插槽的内容" href="#6.3.2-组件插槽的内容"></a>6.3.2 组件插槽的内容</h3><p>在某些业务场景中，我们需要在组件定义模板中动态插入一些HTML页面，如果按照之前的组件使用方式，我们将无法实现。</p><p>例如：我们需要在组件模板的h3标签下插入变化的HTML页面，这里插入一个ul，通过下述代码是无法实现的。</p><pre class="javascript hljs"><code class="javascript" data-origin="<pre><code class=&quot;javascript&quot;>&amp;lt;body&amp;gt;
+    &amp;lt;div id=&quot;web&quot;&amp;gt;
+        &amp;lt;my-component&amp;gt;
+            &amp;lt;ul&amp;gt;
+                &amp;lt;li&amp;gt;111&amp;lt;/li&amp;gt;
+                &amp;lt;li&amp;gt;222&amp;lt;/li&amp;gt;
+                &amp;lt;li&amp;gt;333&amp;lt;/li&amp;gt;
+            &amp;lt;/ul&amp;gt;
+        &amp;lt;/my-component&amp;gt;
+    &amp;lt;/div&amp;gt;
+    &amp;lt;template id=&quot;template01&quot;&amp;gt;
+        &amp;lt;div&amp;gt;
+            &amp;lt;h3&amp;gt;slot内容分发&amp;lt;/h3&amp;gt;
+        &amp;lt;/div&amp;gt;
+    &amp;lt;/template&amp;gt;
+    &amp;lt;script&amp;gt;
+        Vue.component(&quot;my-component&quot;,{
+            template: &quot;#template01&quot;
+        });
+
+        var vm = new Vue({
+            el: &quot;#web&quot;
+        });
+    &amp;lt;/script&amp;gt;
+&amp;lt;/body&amp;gt;
+</code></pre>">&lt;body&gt;
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"web"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">my-component</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">ul</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>111<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>222<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>333<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">my-component</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">template</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"template01"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>slot内容分发<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">template</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">script</span>&gt;</span><span class="javascript">
+        Vue.component(<span class="hljs-string">"my-component"</span>,{
+            template: <span class="hljs-string">"#template01"</span>
+        });
+
+        <span class="hljs-keyword">var</span> vm = <span class="hljs-keyword">new</span> Vue({
+            el: <span class="hljs-string">"#web"</span>
+        });
+    </span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">body</span>&gt;</span>
+</span></code></pre><p>Vue通过组件模板自定义标签slot，来进行预留插槽，在使用组件时，再将具体内容插入到组件模板中。</p><pre class="javascript hljs"><code class="javascript" data-origin="<pre><code class=&quot;javascript&quot;>&amp;lt;body&amp;gt;
+    &amp;lt;div id=&quot;web&quot;&amp;gt;
+        &amp;lt;my-component&amp;gt;
+            &amp;lt;!--通过Vue的slot属性来使用预留插槽--&amp;gt;
+            &amp;lt;ul slot=&quot;s2&quot;&amp;gt;
+                &amp;lt;li&amp;gt;111&amp;lt;/li&amp;gt;
+                &amp;lt;li&amp;gt;222&amp;lt;/li&amp;gt;
+                &amp;lt;li&amp;gt;333&amp;lt;/li&amp;gt;
+            &amp;lt;/ul&amp;gt;
+            &amp;lt;div slot=&quot;s1&quot;&amp;gt;
+                &amp;lt;h3&amp;gt;slot插槽的使用&amp;lt;/h3&amp;gt;
+            &amp;lt;/div&amp;gt;
+        &amp;lt;/my-component&amp;gt;
+    &amp;lt;/div&amp;gt;
+    &amp;lt;template id=&quot;template01&quot;&amp;gt;
+        &amp;lt;div&amp;gt;
+            &amp;lt;h3&amp;gt;slot内容分发&amp;lt;/h3&amp;gt;
+            &amp;lt;!--通过name属性来指定插槽的名称--&amp;gt;
+            &amp;lt;slot name=&quot;s1&quot;&amp;gt;&amp;lt;/slot&amp;gt;
+            &amp;lt;slot name=&quot;s2&quot;&amp;gt;&amp;lt;/slot&amp;gt;
+        &amp;lt;/div&amp;gt;
+    &amp;lt;/template&amp;gt;
+    &amp;lt;script&amp;gt;
+        Vue.component(&quot;my-component&quot;,{
+            template: &quot;#template01&quot;
+        });
+
+        var vm = new Vue({
+            el: &quot;#web&quot;
+        });
+    &amp;lt;/script&amp;gt;
+&amp;lt;/body&amp;gt;
+</code></pre>">&lt;body&gt;
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"web"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">my-component</span>&gt;</span>
+            <span class="hljs-comment">&lt;!--通过Vue的slot属性来使用预留插槽--&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">slot</span>=<span class="hljs-value">"s2"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>111<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>222<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>333<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">slot</span>=<span class="hljs-value">"s1"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>slot插槽的使用<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">my-component</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">template</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"template01"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>slot内容分发<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
+            <span class="hljs-comment">&lt;!--通过name属性来指定插槽的名称--&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">slot</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"s1"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">slot</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">slot</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"s2"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">slot</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">template</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">script</span>&gt;</span><span class="javascript">
+        Vue.component(<span class="hljs-string">"my-component"</span>,{
+            template: <span class="hljs-string">"#template01"</span>
+        });
+
+        <span class="hljs-keyword">var</span> vm = <span class="hljs-keyword">new</span> Vue({
+            el: <span class="hljs-string">"#web"</span>
+        });
+    </span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">body</span>&gt;</span>
+</span></code></pre><h3 id="6.3.3-组件的动态切换"><a name="6.3.3-组件的动态切换" href="#6.3.3-组件的动态切换"></a>6.3.3 组件的动态切换</h3><p>有的时候，在不同组件之间进行动态切换是非常有用的，例如我们系统经常使用的一个导航栏。</p><pre class="javascript hljs"><code class="javascript" data-origin="<pre><code class=&quot;javascript&quot;>&amp;lt;body&amp;gt;
+    &amp;lt;div id=&quot;web&quot;&amp;gt;
+        &amp;lt;!--定义导航栏的切换--&amp;gt;
+        &amp;lt;ul&amp;gt;
+            &amp;lt;!--为每一个选项卡绑定切换事件，直接改变currentView的数据--&amp;gt;
+            &amp;lt;li&amp;gt;&amp;lt;button @click=&quot;currentView='home'&quot;&amp;gt;Home&amp;lt;/button&amp;gt;&amp;lt;/li&amp;gt;
+            &amp;lt;li&amp;gt;&amp;lt;button @click=&quot;currentView='page1'&quot;&amp;gt;page1&amp;lt;/button&amp;gt;&amp;lt;/li&amp;gt;
+            &amp;lt;li&amp;gt;&amp;lt;button @click=&quot;currentView='page2'&quot;&amp;gt;page2&amp;lt;/button&amp;gt;&amp;lt;/li&amp;gt;
+        &amp;lt;/ul&amp;gt;
+        &amp;lt;!--导航栏切换的区域，根据导航栏选中的内容不同，进行不同信息的展示--&amp;gt;
+        &amp;lt;div&amp;gt;
+            &amp;lt;!-- component元素是Vue动态组件定义的标签，存在一个is属性，该属性接收自定义组件的名称，将该组件内容展示出来--&amp;gt;
+            &amp;lt;component :is=&quot;currentView&quot;&amp;gt;&amp;lt;/component&amp;gt;
+        &amp;lt;/div&amp;gt;
+    &amp;lt;/div&amp;gt;
+    &amp;lt;script&amp;gt;
+        var vm = new Vue({
+            el: &quot;#web&quot;,
+            data: {
+               currentView: &quot;home&quot;
+            },
+            components: {
+                home: {
+                    template: &quot;&amp;lt;h3&amp;gt;home：{{home}}&amp;lt;/h3&amp;gt;&quot;,
+                    data: function () {
+                        /*产生一个0到100不包含100的随机数*/
+                        return {
+                            home: parseInt(Math.random()*100)
+                        };
+                    }
+                },
+                page1: {
+                    template: &quot;&amp;lt;h3&amp;gt;page1&amp;lt;/h3&amp;gt;&quot;
+                },
+                page2: {
+                    template: &quot;&amp;lt;h3&amp;gt;page2&amp;lt;/h3&amp;gt;&quot;
+                }
+            }
+        });
+    &amp;lt;/script&amp;gt;
+&amp;lt;/body&amp;gt;
+</code></pre>">&lt;body&gt;
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"web"</span>&gt;</span>
+        <span class="hljs-comment">&lt;!--定义导航栏的切换--&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">ul</span>&gt;</span>
+            <span class="hljs-comment">&lt;!--为每一个选项卡绑定切换事件，直接改变currentView的数据--&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">button</span> @<span class="hljs-attribute">click</span>=<span class="hljs-value">"currentView='home'"</span>&gt;</span>Home<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">button</span> @<span class="hljs-attribute">click</span>=<span class="hljs-value">"currentView='page1'"</span>&gt;</span>page1<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">button</span> @<span class="hljs-attribute">click</span>=<span class="hljs-value">"currentView='page2'"</span>&gt;</span>page2<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
+        <span class="hljs-comment">&lt;!--导航栏切换的区域，根据导航栏选中的内容不同，进行不同信息的展示--&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
+            <span class="hljs-comment">&lt;!-- component元素是Vue动态组件定义的标签，存在一个is属性，该属性接收自定义组件的名称，将该组件内容展示出来--&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">component</span> <span class="hljs-attribute">:is</span>=<span class="hljs-value">"currentView"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">component</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">script</span>&gt;</span><span class="javascript">
+        <span class="hljs-keyword">var</span> vm = <span class="hljs-keyword">new</span> Vue({
+            el: <span class="hljs-string">"#web"</span>,
+            data: {
+               currentView: <span class="hljs-string">"home"</span>
+            },
+            components: {
+                home: {
+                    template: <span class="hljs-string">"&lt;h3&gt;home：{{home}}&lt;/h3&gt;"</span>,
+                    data: <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">()</span> </span>{
+                        <span class="hljs-comment">/*产生一个0到100不包含100的随机数*/</span>
+                        <span class="hljs-keyword">return</span> {
+                            home: <span class="hljs-built_in">parseInt</span>(<span class="hljs-built_in">Math</span>.random()*<span class="hljs-number">100</span>)
+                        };
+                    }
+                },
+                page1: {
+                    template: <span class="hljs-string">"&lt;h3&gt;page1&lt;/h3&gt;"</span>
+                },
+                page2: {
+                    template: <span class="hljs-string">"&lt;h3&gt;page2&lt;/h3&gt;"</span>
+                }
+            }
+        });
+    </span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">body</span>&gt;</span>
+</span></code></pre><p>组件的动态切换需要配合Vue内置的component标签来使用，该标签用于动态地显示组件内容，具体展示哪个组件，根据is属性值来进行指定，接收值为组件的名称。</p><p>并且，通过上面的随机数测试，我们发现每次切换到Home页面时，页面上的随机数都是变化的，也就是说，页面没切换一次相当于组件都重新编译解析了一次。如果我们组件定义内容较多，且内容不是动态变化的，那么，每次切换都重新加载组件内容，显然是一种资源浪费。</p><p>为了避免这种资源浪费，Vue为我们提供了一个keep-alive标签，将该标签定义在component外部，该component容器中的组件只会在第一次加载时编译一次，完成编译之后，每次切换将不再重新编译，也就是keep-alive将第一次编译的内容缓存了下来。</p><p>我们可以根据实际的业务场景来确定是否使用keep-alive标签。</p><pre class="javascript hljs"><code class="javascript" data-origin="<pre><code class=&quot;javascript&quot;>&amp;lt;div&amp;gt;
+    &amp;lt;keep-alive&amp;gt;
+        &amp;lt;!-- component元素是Vue动态组件定义的标签，存在一个is属性，该属性接收自定义组件的名称，将该组件内容展示出来--&amp;gt;
+        &amp;lt;component :is=&quot;currentView&quot;&amp;gt;&amp;lt;/component&amp;gt;
+    &amp;lt;/keep-alive&amp;gt;
+&amp;lt;/div&amp;gt;
+</code></pre>">&lt;div&gt;
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">keep-alive</span>&gt;</span>
+        <span class="hljs-comment">&lt;!-- component元素是Vue动态组件定义的标签，存在一个is属性，该属性接收自定义组件的名称，将该组件内容展示出来--&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">component</span> <span class="hljs-attribute">:is</span>=<span class="hljs-value">"currentView"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">component</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">keep-alive</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+</span></code></pre><h2 id="6.4-组件的信息传递"><a name="6.4-组件的信息传递" href="#6.4-组件的信息传递"></a>6.4 组件的信息传递</h2><p>通常对于一个大型应用系统来说，系统构建都是以一个组件树来进行组织的。查看组件的组织结构图。</p><p>由图发现，系统是由多个复杂的组件嵌套构成的，那么组件与组件之间一定存在复杂的数据交互问题。</p><p>又由组件的基础知识可知，每一个组件都是挂载在一个Vue实例下的，而组件本身也是一个Vue实例，组件使用过程中存在父子关系，Vue实例就像是一个父实例，而组件实例就相当于是一个子实例。</p><h3 id="6.4.1-父组件向子组件传递数据"><a name="6.4.1-父组件向子组件传递数据" href="#6.4.1-父组件向子组件传递数据"></a>6.4.1 父组件向子组件传递数据</h3><p>组件实例通过props属性来支持数据传递。</p><h5 id="静态数据传递"><a name="静态数据传递" href="#静态数据传递"></a>静态数据传递</h5><p>案例1：</p><pre class="javascript hljs"><code class="javascript" data-origin="<pre><code class=&quot;javascript&quot;>&amp;lt;body&amp;gt;
+    &amp;lt;div id=&quot;web&quot;&amp;gt;
+        &amp;lt;!--组件在使用时传递具体的数据内容--&amp;gt;
+        &amp;lt;my-component01 message=&quot;1&quot;&amp;gt;&amp;lt;/my-component01&amp;gt;
+        &amp;lt;my-component01 message=&quot;Hello&quot;&amp;gt;&amp;lt;/my-component01&amp;gt;
+        &amp;lt;my-component01 message=&quot;Hello World&quot;&amp;gt;&amp;lt;/my-component01&amp;gt;
+        &amp;lt;my-component01 message=&quot;true&quot;&amp;gt;&amp;lt;/my-component01&amp;gt;
+    &amp;lt;/div&amp;gt;
+    &amp;lt;script&amp;gt;
+        Vue.component(&quot;my-component01&quot;,{
+            template: &quot;&amp;lt;h3&amp;gt;{{message + ' of type is ' + typeof message}}&amp;lt;/h3&amp;gt;&quot;,
+            /* 使用props属性来声明该组件将要接收来自父组件或者外部的数据，数据类型为数据 */
+            props: [&quot;message&quot;]
+        });
+
+        var vm = new Vue({
+            el: &quot;#web&quot;
+        });
+    &amp;lt;/script&amp;gt;
+&amp;lt;/body&amp;gt;
+</code></pre>">&lt;body&gt;
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"web"</span>&gt;</span>
+        <span class="hljs-comment">&lt;!--组件在使用时传递具体的数据内容--&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">my-component01</span> <span class="hljs-attribute">message</span>=<span class="hljs-value">"1"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">my-component01</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">my-component01</span> <span class="hljs-attribute">message</span>=<span class="hljs-value">"Hello"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">my-component01</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">my-component01</span> <span class="hljs-attribute">message</span>=<span class="hljs-value">"Hello World"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">my-component01</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">my-component01</span> <span class="hljs-attribute">message</span>=<span class="hljs-value">"true"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">my-component01</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">script</span>&gt;</span><span class="javascript">
+        Vue.component(<span class="hljs-string">"my-component01"</span>,{
+            template: <span class="hljs-string">"&lt;h3&gt;{{message + ' of type is ' + typeof message}}&lt;/h3&gt;"</span>,
+            <span class="hljs-comment">/* 使用props属性来声明该组件将要接收来自父组件或者外部的数据，数据类型为数据 */</span>
+            props: [<span class="hljs-string">"message"</span>]
+        });
+
+        <span class="hljs-keyword">var</span> vm = <span class="hljs-keyword">new</span> Vue({
+            el: <span class="hljs-string">"#web"</span>
+        });
+    </span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">body</span>&gt;</span>
+</span></code></pre><p>组件通过props属性来声明该组件将要接收来自父组件或者外部的数据，数据类型要求为一个数组，数组中定义字符串类型的数据名。在使用组件时，通过数组中的数据名来指定该数据名所指代的具体值。</p><p>这里传入的值都是字符串类型的，如果我们想要传递特定数据类型的值时，应该怎么做？例如，将传递值1以数字1的方式传入、将true字符串以布尔值的方式传入。</p><pre class="javascript hljs"><code class="javascript" data-origin="<pre><code class=&quot;javascript&quot;>&amp;lt;div id=&quot;web&quot;&amp;gt;
+    &amp;lt;!--组件在使用时传递具体的数据内容--&amp;gt;
+    &amp;lt;my-component01 v-bind:message=&quot;1&quot;&amp;gt;&amp;lt;/my-component01&amp;gt;
+    &amp;lt;my-component01 message=&quot;Hello&quot;&amp;gt;&amp;lt;/my-component01&amp;gt;
+    &amp;lt;my-component01 message=&quot;Hello World&quot;&amp;gt;&amp;lt;/my-component01&amp;gt;
+    &amp;lt;my-component01 :message=&quot;true&quot;&amp;gt;&amp;lt;/my-component01&amp;gt;
+&amp;lt;/div&amp;gt;
+</code></pre>">&lt;div id=<span class="hljs-string">"web"</span>&gt;
+    <span class="xml"><span class="hljs-comment">&lt;!--组件在使用时传递具体的数据内容--&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">my-component01</span> <span class="hljs-attribute">v-bind:message</span>=<span class="hljs-value">"1"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">my-component01</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">my-component01</span> <span class="hljs-attribute">message</span>=<span class="hljs-value">"Hello"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">my-component01</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">my-component01</span> <span class="hljs-attribute">message</span>=<span class="hljs-value">"Hello World"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">my-component01</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">my-component01</span> <span class="hljs-attribute">:message</span>=<span class="hljs-value">"true"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">my-component01</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+</span></code></pre><p>通过将传递属性使用v-bind指令进行绑定，我们发现1与true传递之后，数据类型已经解析为number与boolean。</p><p>但如果将Hello进行v-bind数据绑定后，页面会出现undefined类型；而如果将Hello World进行v-bind数据绑定后，页面将会直接报错。这种现象出现的原因是，使用v-bind进行数据绑定后，已经变成了动态数据传递。</p><h5 id="动态数据绑定"><a name="动态数据绑定" href="#动态数据绑定"></a>动态数据绑定</h5><pre class="javascript hljs"><code class="javascript" data-origin="<pre><code class=&quot;javascript&quot;>&amp;lt;body&amp;gt;
+    &amp;lt;div id=&quot;web&quot;&amp;gt;
+        &amp;lt;my-component message=&quot;Hello&quot;&amp;gt;&amp;lt;/my-component&amp;gt;
+        &amp;lt;my-component :message=&quot;1&quot;&amp;gt;&amp;lt;/my-component&amp;gt;
+        &amp;lt;!-- 将父实例当中的message数据进行传递 --&amp;gt;
+        &amp;lt;my-component :message=&quot;message&quot;&amp;gt;&amp;lt;/my-component&amp;gt;
+
+        &amp;lt;!-- 复合数据的传递 --&amp;gt;
+        &amp;lt;!-- 将data字符串当做一个JSON格式的对象进行传递--&amp;gt;
+        &amp;lt;my-component01 :message=&quot;{data:'Hello World'}&quot;&amp;gt;&amp;lt;/my-component01&amp;gt;
+        &amp;lt;!-- 动态地将父实例中person对象进行传递 --&amp;gt;
+        &amp;lt;my-component02 :message=&quot;person&quot;&amp;gt;&amp;lt;/my-component02&amp;gt;
+    &amp;lt;/div&amp;gt;
+    &amp;lt;script&amp;gt;
+        Vue.component(&quot;my-component&quot;,{
+            template: &quot;&amp;lt;h3&amp;gt;{{message}}&amp;lt;/h3&amp;gt;&quot;,
+            props:[&quot;message&quot;]
+        });
+
+        Vue.component(&quot;my-component01&quot;,{
+            template: &quot;&amp;lt;h3&amp;gt;{{message.data}}&amp;lt;/h3&amp;gt;&quot;,
+            /* 将data JSON数据赋值给message在组件中进行数据处理 */
+            props:[&quot;message&quot;]
+        });
+
+
+        Vue.component(&quot;my-component02&quot;,{
+            template: &quot;&amp;lt;h3&amp;gt;{{message.name}}&amp;lt;/h3&amp;gt;&quot;,
+            /* 将person对象数据赋值给message在组件中进行数据处理 */
+            props:[&quot;message&quot;]
+        });
+
+        var vm = new Vue({
+            el: &quot;#web&quot;,
+            data: {
+                message: &quot;Hello World&quot;,
+                person: {
+                    id: 1,
+                    name: &quot;zhangsan&quot;,
+                    sex: &quot;男&quot;
+                }
+            }
+        });
+    &amp;lt;/script&amp;gt;
+&amp;lt;/body&amp;gt;
+</code></pre>">&lt;body&gt;
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"web"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">my-component</span> <span class="hljs-attribute">message</span>=<span class="hljs-value">"Hello"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">my-component</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">my-component</span> <span class="hljs-attribute">:message</span>=<span class="hljs-value">"1"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">my-component</span>&gt;</span>
+        <span class="hljs-comment">&lt;!-- 将父实例当中的message数据进行传递 --&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">my-component</span> <span class="hljs-attribute">:message</span>=<span class="hljs-value">"message"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">my-component</span>&gt;</span>
+
+        <span class="hljs-comment">&lt;!-- 复合数据的传递 --&gt;</span>
+        <span class="hljs-comment">&lt;!-- 将data字符串当做一个JSON格式的对象进行传递--&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">my-component01</span> <span class="hljs-attribute">:message</span>=<span class="hljs-value">"{data:'Hello World'}"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">my-component01</span>&gt;</span>
+        <span class="hljs-comment">&lt;!-- 动态地将父实例中person对象进行传递 --&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">my-component02</span> <span class="hljs-attribute">:message</span>=<span class="hljs-value">"person"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">my-component02</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">script</span>&gt;</span><span class="javascript">
+        Vue.component(<span class="hljs-string">"my-component"</span>,{
+            template: <span class="hljs-string">"&lt;h3&gt;{{message}}&lt;/h3&gt;"</span>,
+            props:[<span class="hljs-string">"message"</span>]
+        });
+
+        Vue.component(<span class="hljs-string">"my-component01"</span>,{
+            template: <span class="hljs-string">"&lt;h3&gt;{{message.data}}&lt;/h3&gt;"</span>,
+            <span class="hljs-comment">/* 将data JSON数据赋值给message在组件中进行数据处理 */</span>
+            props:[<span class="hljs-string">"message"</span>]
+        });
+
+
+        Vue.component(<span class="hljs-string">"my-component02"</span>,{
+            template: <span class="hljs-string">"&lt;h3&gt;{{message.name}}&lt;/h3&gt;"</span>,
+            <span class="hljs-comment">/* 将person对象数据赋值给message在组件中进行数据处理 */</span>
+            props:[<span class="hljs-string">"message"</span>]
+        });
+
+        <span class="hljs-keyword">var</span> vm = <span class="hljs-keyword">new</span> Vue({
+            el: <span class="hljs-string">"#web"</span>,
+            data: {
+                message: <span class="hljs-string">"Hello World"</span>,
+                person: {
+                    id: <span class="hljs-number">1</span>,
+                    name: <span class="hljs-string">"zhangsan"</span>,
+                    sex: <span class="hljs-string">"男"</span>
+                }
+            }
+        });
+    </span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">body</span>&gt;</span>
+</span></code></pre><p>在动态数据传递中，要使用v-bind进行属性绑定，进行动态数据绑定时，绑定的字符串内容将以变量的方式出现。</p><h5 id="props单向数据流特性"><a name="props单向数据流特性" href="#props单向数据流特性"></a>props单向数据流特性</h5><p>props属性组件数据传递时具有单向数据流特性，父实例中数据发生改变时，子组件中的数据也会随之改变；但子组件中数据发生改变，并且该数据依赖于props属性，父实例中的数据不会随着props属性数据的改变而改变，这就是props属性的单向数据流特性。</p><p>在测试props单向数据流特性的复杂案例之前，我们先来看一个简单的案例：</p><pre class="javascript hljs"><code class="javascript" data-origin="<pre><code class=&quot;javascript&quot;>&amp;lt;body&amp;gt;
+    &amp;lt;div id=&quot;web&quot;&amp;gt;
+        &amp;lt;!-- input实现了双向数据绑定 --&amp;gt;
+        &amp;lt;input type=&quot;text&quot; v-model=&quot;fatherMessage&quot;&amp;gt;
+        &amp;lt;p&amp;gt;{{fatherMessage}}&amp;lt;/p&amp;gt;
+        &amp;lt;!-- outer-message进行组件数据传递，outer-message相当于outerMessage --&amp;gt;
+        &amp;lt;my-component :outer-message=&quot;fatherMessage&quot;&amp;gt;&amp;lt;/my-component&amp;gt;
+    &amp;lt;/div&amp;gt;
+    &amp;lt;script&amp;gt;
+        Vue.component(&quot;my-component&quot;,{
+            template: &quot;&amp;lt;h3&amp;gt;{{outerMessage}}&amp;lt;/h3&amp;gt;&quot;,
+            props: [&quot;outerMessage&quot;]
+        });
+
+        var vm = new Vue({
+            el: &quot;#web&quot;,
+            data: {
+                fatherMessage: &quot;&quot;
+            }
+        });
+    &amp;lt;/script&amp;gt;
+&amp;lt;/body&amp;gt;
+</code></pre>">&lt;body&gt;
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"web"</span>&gt;</span>
+        <span class="hljs-comment">&lt;!-- input实现了双向数据绑定 --&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"text"</span> <span class="hljs-attribute">v-model</span>=<span class="hljs-value">"fatherMessage"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>{{fatherMessage}}<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+        <span class="hljs-comment">&lt;!-- outer-message进行组件数据传递，outer-message相当于outerMessage --&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">my-component</span> <span class="hljs-attribute">:outer-message</span>=<span class="hljs-value">"fatherMessage"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">my-component</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">script</span>&gt;</span><span class="javascript">
+        Vue.component(<span class="hljs-string">"my-component"</span>,{
+            template: <span class="hljs-string">"&lt;h3&gt;{{outerMessage}}&lt;/h3&gt;"</span>,
+            props: [<span class="hljs-string">"outerMessage"</span>]
+        });
+
+        <span class="hljs-keyword">var</span> vm = <span class="hljs-keyword">new</span> Vue({
+            el: <span class="hljs-string">"#web"</span>,
+            data: {
+                fatherMessage: <span class="hljs-string">""</span>
+            }
+        });
+    </span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">body</span>&gt;</span>
+</span></code></pre><p>通过上述案例，我们可以看出当外部父实例中的数据发生改变时，子组件中的数据也随之发生了改变。</p><blockquote>
+<p>注意：props属性进行数据名称定义时采用了驼峰式的命名，但在数据名称使用时使用“-”连接。直接使用“-”会造成编译异常。</p>
+</blockquote><p>接下来，我们测试子组件向父实例数据逆向数据传递。</p><pre class="javascript hljs"><code class="javascript" data-origin="<pre><code class=&quot;javascript&quot;>&amp;lt;body&amp;gt;
+    &amp;lt;div id=&quot;web&quot;&amp;gt;
+        &amp;lt;!-- input实现了双向数据绑定 --&amp;gt;
+        &amp;lt;input type=&quot;text&quot; v-model=&quot;fatherMessage&quot;&amp;gt;
+        &amp;lt;p&amp;gt;父实例当中的数据：{{fatherMessage}}&amp;lt;/p&amp;gt;
+        &amp;lt;!-- son-message进行组件数据传递，son-message相当于sonMessage --&amp;gt;
+        &amp;lt;my-component :son-message=&quot;fatherMessage&quot;&amp;gt;&amp;lt;/my-component&amp;gt;
+    &amp;lt;/div&amp;gt;
+    &amp;lt;script&amp;gt;
+        Vue.component(&quot;my-component&quot;,{
+            /*将从props属性中接收到的父数据绑定到input输入框中，input框具有双向数据绑定的功能*/
+            template: &quot;&amp;lt;div&amp;gt;&amp;lt;h3&amp;gt;子组件当中的数据：{{sonMessage}}&amp;lt;/h3&amp;gt;&amp;lt;input type='text' v-model='sonMessage'&amp;gt;&amp;lt;/div&amp;gt;&quot;,
+            props: [&quot;sonMessage&quot;]
+        });
+
+        var vm = new Vue({
+            el: &quot;#web&quot;,
+            data: {
+                fatherMessage: &quot;&quot;
+            }
+        });
+    &amp;lt;/script&amp;gt;
+&amp;lt;/body&amp;gt;
+</code></pre>">&lt;body&gt;
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"web"</span>&gt;</span>
+        <span class="hljs-comment">&lt;!-- input实现了双向数据绑定 --&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"text"</span> <span class="hljs-attribute">v-model</span>=<span class="hljs-value">"fatherMessage"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>父实例当中的数据：{{fatherMessage}}<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+        <span class="hljs-comment">&lt;!-- son-message进行组件数据传递，son-message相当于sonMessage --&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">my-component</span> <span class="hljs-attribute">:son-message</span>=<span class="hljs-value">"fatherMessage"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">my-component</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">script</span>&gt;</span><span class="javascript">
+        Vue.component(<span class="hljs-string">"my-component"</span>,{
+            <span class="hljs-comment">/*将从props属性中接收到的父数据绑定到input输入框中，input框具有双向数据绑定的功能*/</span>
+            template: <span class="hljs-string">"&lt;div&gt;&lt;h3&gt;子组件当中的数据：{{sonMessage}}&lt;/h3&gt;&lt;input type='text' v-model='sonMessage'&gt;&lt;/div&gt;"</span>,
+            props: [<span class="hljs-string">"sonMessage"</span>]
+        });
+
+        <span class="hljs-keyword">var</span> vm = <span class="hljs-keyword">new</span> Vue({
+            el: <span class="hljs-string">"#web"</span>,
+            data: {
+                fatherMessage: <span class="hljs-string">""</span>
+            }
+        });
+    </span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">body</span>&gt;</span>
+</span></code></pre><p>当我们在父输入框中输入数据时，会将数据同步到子组件当中去；但在子组件输入框中输入数据时，子组件内容的数据会发生更新，但父实例数据不会发生同步。</p><p>通过上述的测试，我们得出了一个结论：当父实例数据发生变更时，会通过props属性自动将数据同步到子组件当中去；但子组件操作数据时，并不会将自身变化的数据影响到父实例当中去，这就是props属性的单向数据流特性。</p><p>父组件可以通过props属性向子组件传递数据，那么子组件是否可以向父组件传递数据呢？答案是肯定的，关于子组件向父组件传递数据的知识我们后续学习。</p><h5 id="props数据验证"><a name="props数据验证" href="#props数据验证"></a>props数据验证</h5><p>为了保证props传递数据的安全严谨性，Vue为props属性提供了数据校验的相关功能。在进行数据校验时，props属性不再接收字符串格式的数组，而是接收一个JSON格式的对象。</p><pre class="javascript hljs"><code class="javascript" data-origin="<pre><code class=&quot;javascript&quot;>    &amp;lt;body&amp;gt;
+        &amp;lt;div id=&quot;web&quot;&amp;gt;
+            &amp;lt;my-component :message=&quot;message&quot;&amp;gt;&amp;lt;/my-component&amp;gt;
+        &amp;lt;/div&amp;gt;
+        &amp;lt;script&amp;gt;
+            Vue.component(&quot;my-component&quot;,{
+                template: &quot;&amp;lt;h3&amp;gt;{{message}}&amp;lt;/h3&amp;gt;&quot;,
+                /* props数据校验，接收一个JSON对象 */
+                props: {
+                    /* 对于Message数据的校验 */
+                    message: {
+                        /* message的数据类型必须为Number */
+                        type: Number,
+                        /* message数据为必传值 */
+                        required: true,
+                        /* 对于message数据的自定义校验函数，返回值为true表示校验通过，false为校验不通过 */
+                        validator: function (value) {
+                            return value &amp;gt; 0 &amp;amp;&amp;amp; value &amp;lt;=128;
+                        }
+                    }
+                }
+            });
+
+            var vm = new Vue({
+                el: &quot;#web&quot;,
+                data: {
+                    message: 180
+                }
+            });
+        &amp;lt;/script&amp;gt;
+    &amp;lt;/body&amp;gt;
+</code></pre>">    &lt;body&gt;
+        <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"web"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">my-component</span> <span class="hljs-attribute">:message</span>=<span class="hljs-value">"message"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">my-component</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">script</span>&gt;</span><span class="javascript">
+            Vue.component(<span class="hljs-string">"my-component"</span>,{
+                template: <span class="hljs-string">"&lt;h3&gt;{{message}}&lt;/h3&gt;"</span>,
+                <span class="hljs-comment">/* props数据校验，接收一个JSON对象 */</span>
+                props: {
+                    <span class="hljs-comment">/* 对于Message数据的校验 */</span>
+                    message: {
+                        <span class="hljs-comment">/* message的数据类型必须为Number */</span>
+                        type: <span class="hljs-built_in">Number</span>,
+                        <span class="hljs-comment">/* message数据为必传值 */</span>
+                        required: <span class="hljs-literal">true</span>,
+                        <span class="hljs-comment">/* 对于message数据的自定义校验函数，返回值为true表示校验通过，false为校验不通过 */</span>
+                        validator: <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(value)</span> </span>{
+                            <span class="hljs-keyword">return</span> value &gt; <span class="hljs-number">0</span> &amp;&amp; value &lt;=<span class="hljs-number">128</span>;
+                        }
+                    }
+                }
+            });
+
+            <span class="hljs-keyword">var</span> vm = <span class="hljs-keyword">new</span> Vue({
+                el: <span class="hljs-string">"#web"</span>,
+                data: {
+                    message: <span class="hljs-number">180</span>
+                }
+            });
+        </span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">body</span>&gt;</span>
+</span></code></pre><p>以上是props数据校验的基本方式，当数据校验不通过时，并不会影响页面的正常编译渲染，只是会在控制台抛出一些Vue的校验异常警告。因此，props属性的数据校验只是编程层面的数据校验，相当于为程序员编程时提供一些组件的使用警告。</p><p>其他的数据校验格式：</p><pre class="javascript hljs"><code class="javascript" data-origin="<pre><code class=&quot;javascript&quot;>Vue.component('my-component', {
+  props: {
+    // 基础的类型检查 (`null` 匹配任何类型)
+    propA: Number,
+    // 多个可能的类型
+    propB: [String, Number],
+    // 必填的字符串
+    propC: {
+      type: String,
+      required: true
+    },
+    // 带有默认值的数字
+    propD: {
+      type: Number,
+      default: 100
+    },
+    // 带有默认值的对象
+    propE: {
+      type: Object,
+      // 对象或数组默认值必须从一个工厂函数获取
+      default: function () {
+        return { message: 'hello' }
+      }
+    },
+    // 自定义验证函数
+    propF: {
+      validator: function (value) {
+        // 这个值必须匹配下列字符串中的一个
+        return ['success', 'warning', 'danger'].indexOf(value) !== -1
+      }
+    }
+  }
+})
+</code></pre>">Vue.component(<span class="hljs-string">'my-component'</span>, {
+  props: {
+    <span class="hljs-comment">// 基础的类型检查 (`null` 匹配任何类型)</span>
+    propA: <span class="hljs-built_in">Number</span>,
+    <span class="hljs-comment">// 多个可能的类型</span>
+    propB: [<span class="hljs-built_in">String</span>, <span class="hljs-built_in">Number</span>],
+    <span class="hljs-comment">// 必填的字符串</span>
+    propC: {
+      type: <span class="hljs-built_in">String</span>,
+      required: <span class="hljs-literal">true</span>
+    },
+    <span class="hljs-comment">// 带有默认值的数字</span>
+    propD: {
+      type: <span class="hljs-built_in">Number</span>,
+      <span class="hljs-keyword">default</span>: <span class="hljs-number">100</span>
+    },
+    <span class="hljs-comment">// 带有默认值的对象</span>
+    propE: {
+      type: <span class="hljs-built_in">Object</span>,
+      <span class="hljs-comment">// 对象或数组默认值必须从一个工厂函数获取</span>
+      <span class="hljs-keyword">default</span>: <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">return</span> { message: <span class="hljs-string">'hello'</span> }
+      }
+    },
+    <span class="hljs-comment">// 自定义验证函数</span>
+    propF: {
+      validator: <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(value)</span> </span>{
+        <span class="hljs-comment">// 这个值必须匹配下列字符串中的一个</span>
+        <span class="hljs-keyword">return</span> [<span class="hljs-string">'success'</span>, <span class="hljs-string">'warning'</span>, <span class="hljs-string">'danger'</span>].indexOf(value) !== -<span class="hljs-number">1</span>
+      }
+    }
+  }
+})
+</code></pre><h3 id="6.4.2-子组件向父组件传递数据"><a name="6.4.2-子组件向父组件传递数据" href="#6.4.2-子组件向父组件传递数据"></a>6.4.2 子组件向父组件传递数据</h3><p>父实例、父组件向子组件传递数据Vue通过props属性来实现，而props的数据传递本质上却是不可逆的。在某些特殊的场景下，我们想要将子组件中的数据传递到父实例或者父组件中，这时就必须借助Vue提供的自定义事件机制来进行数据传递。</p><p>自定义事件涉及到了v-on指令的事件监听与$emit事件触发。</p><h5 id="使用事件向父实例抛出一个子组件值"><a name="使用事件向父实例抛出一个子组件值" href="#使用事件向父实例抛出一个子组件值"></a>使用事件向父实例抛出一个子组件值</h5><p>案例：</p><pre class="javascript hljs"><code class="javascript" data-origin="<pre><code class=&quot;javascript&quot;>&amp;lt;!DOCTYPE html&amp;gt;
+&amp;lt;html lang=&quot;en&quot;&amp;gt;
+&amp;lt;head&amp;gt;
+    &amp;lt;meta charset=&quot;UTF-8&quot;&amp;gt;
+    &amp;lt;title&amp;gt;test-子组件向父组件传递数据&amp;lt;/title&amp;gt;
+    &amp;lt;script src=&quot;../vue/vue.js&quot;&amp;gt;&amp;lt;/script&amp;gt;
+    &amp;lt;!--
+        1、编写父实例，访问自身数据；
+        2、编写子组件，访问自身数据；
+        3、将父实例中的数据通过props属性传递给子组件；
+        4、将子组件中的数据通过自定义事件绑定传递给子组件
+            4.1 在子组件模板中绑定一个click事件，该事件将触发send函数的执行；
+            4.2 定义send函数，send函数中通过$emit函数进行事件广播，触发组件外部的指定事件son-click，并子组件中的数据进行传递；
+            4.3 在子组件的使用处，绑定自定义事件类型son-click，该事件由$emit函数触发，
+                son-click事件触发后会执行指定的父实例中的receive函数，该函数即可接受$emit函数发射出来的参数。
+            4.4 receive函数内部将传递过来的数据绑定在父实例当中。
+    --&amp;gt;
+&amp;lt;/head&amp;gt;
+&amp;lt;body&amp;gt;
+    &amp;lt;div id=&quot;web&quot;&amp;gt;
+        &amp;lt;h3&amp;gt;父实例，访问自身数据：fatherId-{{fatherId}}，fatherName-{{fatherName}}&amp;lt;/h3&amp;gt;
+        &amp;lt;h3&amp;gt;父实例，访问子组件传递的数据：sonId-{{sonId}}，sonName-{{sonName}}&amp;lt;/h3&amp;gt;
+        &amp;lt;!-- 子组件上定义一个自定义事件类型，名称为sonClick，该事件将会触发父实例中函数的执行--&amp;gt;
+        &amp;lt;my-component :father-id=&quot;fatherId&quot;
+            :father-Name=&quot;fatherName&quot;
+            @son-click=&quot;receive&quot;&amp;gt;
+        &amp;lt;/my-component&amp;gt;
+    &amp;lt;/div&amp;gt;
+    &amp;lt;template id=&quot;template01&quot;&amp;gt;
+        &amp;lt;div&amp;gt;
+            &amp;lt;h3&amp;gt;子组件，访问自身数据：sonId-{{sonId}}, sonName-{{sonName}}&amp;lt;/h3&amp;gt;
+            &amp;lt;h3&amp;gt;子组件，访问父实例数据：fatherId-{{fatherId}}, fatherName-{{fatherName}}&amp;lt;/h3&amp;gt;
+            &amp;lt;!-- 设置一个click事件，该事件触发send函数执行 --&amp;gt;
+            &amp;lt;button @click=&quot;send&quot;&amp;gt;子组件向父实例发送数据&amp;lt;/button&amp;gt;
+        &amp;lt;/div&amp;gt;
+    &amp;lt;/template&amp;gt;
+    &amp;lt;script&amp;gt;
+        Vue.component(&quot;my-component&quot;,{
+            template: &quot;#template01&quot;,
+            data: function () {
+                return {
+                    sonId: 1,
+                    sonName: &quot;son&quot;
+                }
+            },
+            props: [&quot;fatherId&quot;,&quot;fatherName&quot;],
+            methods: {
+                send: function () {
+                    /*利用$emit函数进行事件广播，第一个参数始终为将要触发的事件名称，之后的参数为该事件接收的实参*/
+                    /*注意：这里的事件名称要与子组件使用时定义的名称相同*/
+                    this.$emit(&quot;son-click&quot;,this.sonId,this.sonName);
+                }
+            }
+        });
+
+        var vm = new Vue({
+            el: &quot;#web&quot;,
+            data: {
+                fatherId: 1,
+                fatherName: &quot;father&quot;,
+                sonId: 0,
+                sonName: &quot;&quot;
+            },
+            methods: {
+                receive: function (sonId,sonName) {
+                    this.sonId = sonId;
+                    this.sonName = sonName;
+                }
+            }
+        });
+    &amp;lt;/script&amp;gt;
+&amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+</code></pre>">&lt;!DOCTYPE html&gt;
+<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">html</span> <span class="hljs-attribute">lang</span>=<span class="hljs-value">"en"</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">head</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">meta</span> <span class="hljs-attribute">charset</span>=<span class="hljs-value">"UTF-8"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">title</span>&gt;</span>test-子组件向父组件传递数据<span class="hljs-tag">&lt;/<span class="hljs-title">title</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"../vue/vue.js"</span>&gt;</span><span class="javascript"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+    <span class="hljs-comment">&lt;!--
+        1、编写父实例，访问自身数据；
+        2、编写子组件，访问自身数据；
+        3、将父实例中的数据通过props属性传递给子组件；
+        4、将子组件中的数据通过自定义事件绑定传递给子组件
+            4.1 在子组件模板中绑定一个click事件，该事件将触发send函数的执行；
+            4.2 定义send函数，send函数中通过$emit函数进行事件广播，触发组件外部的指定事件son-click，并子组件中的数据进行传递；
+            4.3 在子组件的使用处，绑定自定义事件类型son-click，该事件由$emit函数触发，
+                son-click事件触发后会执行指定的父实例中的receive函数，该函数即可接受$emit函数发射出来的参数。
+            4.4 receive函数内部将传递过来的数据绑定在父实例当中。
+    --&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">head</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">body</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"web"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>父实例，访问自身数据：fatherId-{{fatherId}}，fatherName-{{fatherName}}<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>父实例，访问子组件传递的数据：sonId-{{sonId}}，sonName-{{sonName}}<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
+        <span class="hljs-comment">&lt;!-- 子组件上定义一个自定义事件类型，名称为sonClick，该事件将会触发父实例中函数的执行--&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">my-component</span> <span class="hljs-attribute">:father-id</span>=<span class="hljs-value">"fatherId"</span>
+            <span class="hljs-attribute">:father-Name</span>=<span class="hljs-value">"fatherName"</span>
+            @<span class="hljs-attribute">son-click</span>=<span class="hljs-value">"receive"</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">my-component</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">template</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"template01"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>子组件，访问自身数据：sonId-{{sonId}}, sonName-{{sonName}}<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>子组件，访问父实例数据：fatherId-{{fatherId}}, fatherName-{{fatherName}}<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
+            <span class="hljs-comment">&lt;!-- 设置一个click事件，该事件触发send函数执行 --&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">button</span> @<span class="hljs-attribute">click</span>=<span class="hljs-value">"send"</span>&gt;</span>子组件向父实例发送数据<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">template</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">script</span>&gt;</span><span class="javascript">
+        Vue.component(<span class="hljs-string">"my-component"</span>,{
+            template: <span class="hljs-string">"#template01"</span>,
+            data: <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">()</span> </span>{
+                <span class="hljs-keyword">return</span> {
+                    sonId: <span class="hljs-number">1</span>,
+                    sonName: <span class="hljs-string">"son"</span>
+                }
+            },
+            props: [<span class="hljs-string">"fatherId"</span>,<span class="hljs-string">"fatherName"</span>],
+            methods: {
+                send: <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">()</span> </span>{
+                    <span class="hljs-comment">/*利用$emit函数进行事件广播，第一个参数始终为将要触发的事件名称，之后的参数为该事件接收的实参*/</span>
+                    <span class="hljs-comment">/*注意：这里的事件名称要与子组件使用时定义的名称相同*/</span>
+                    <span class="hljs-keyword">this</span>.$emit(<span class="hljs-string">"son-click"</span>,<span class="hljs-keyword">this</span>.sonId,<span class="hljs-keyword">this</span>.sonName);
+                }
+            }
+        });
+
+        <span class="hljs-keyword">var</span> vm = <span class="hljs-keyword">new</span> Vue({
+            el: <span class="hljs-string">"#web"</span>,
+            data: {
+                fatherId: <span class="hljs-number">1</span>,
+                fatherName: <span class="hljs-string">"father"</span>,
+                sonId: <span class="hljs-number">0</span>,
+                sonName: <span class="hljs-string">""</span>
+            },
+            methods: {
+                receive: <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(sonId,sonName)</span> </span>{
+                    <span class="hljs-keyword">this</span>.sonId = sonId;
+                    <span class="hljs-keyword">this</span>.sonName = sonName;
+                }
+            }
+        });
+    </span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">html</span>&gt;</span>
+</span></code></pre><p>要点：</p><ol>
+<li>$emit函数是Vue中事件发射函数，能够主动触发自定义事件执行，第一个参数指定将要触发的事件名称，之后的参数指定事件传递的实参值。</li><li>$emit函数的事件名称必须与子组件绑定时的名称完全一致，一般要求“-”连接方式。</li><li>子组件绑定自定义事件名称，间接触发外部父实例中的函数，该函数用于接收子组件传出的数据。</li></ol><h5 id="v-model的双向数据绑定"><a name="v-model的双向数据绑定" href="#v-model的双向数据绑定"></a>v-model的双向数据绑定</h5><p>自定义事件同样可以应用于支持v-model的输入框，因为在v-model指令在本质上完全是依托于事件绑定进行实现的。</p><p>记住：</p><pre class="javascript hljs"><code class="javascript" data-origin="<pre><code class=&quot;javascript&quot;>&amp;lt;input v-model=&quot;searchText&quot;&amp;gt;
+</code></pre>">&lt;input v-model=<span class="hljs-string">"searchText"</span>&gt;
+</code></pre><p>完全等价于：</p><pre class="javascript hljs"><code class="javascript" data-origin="<pre><code class=&quot;javascript&quot;>&amp;lt;input
+  v-bind:value=&quot;searchText&quot;
+  v-on:input=&quot;searchText = $event.target.value&quot;
+&amp;gt;
+</code></pre>">&lt;input
+  v-bind:value=<span class="hljs-string">"searchText"</span>
+  v-on:input=<span class="hljs-string">"searchText = $event.target.value"</span>
+&gt;
+</code></pre><p>也就是说v-model指令实际上绑定了一个名为value的属性，同时绑定了input事件。input事件内部利用$event事件对象将操作值重新赋给了searchText。</p><p>案例：</p><pre class="javascript hljs"><code class="javascript" data-origin="<pre><code class=&quot;javascript&quot;>&amp;lt;!DOCTYPE html&amp;gt;
+&amp;lt;html lang=&quot;en&quot;&amp;gt;
+&amp;lt;head&amp;gt;
+    &amp;lt;meta charset=&quot;UTF-8&quot;&amp;gt;
+    &amp;lt;title&amp;gt;test-子组件v-model双向数据绑定&amp;lt;/title&amp;gt;
+    &amp;lt;script src=&quot;../vue/vue.js&quot;&amp;gt;&amp;lt;/script&amp;gt;
+    &amp;lt;!--
+        1、编写父实例，使用input进行双向数据绑定。
+        2、编写子组件，使用input输入框，但不使用v-model进行数据绑定。
+        3、利用v-bind进行子组件的props属性数据绑定，绑定名称为father-value，该属性接收值为父实例中的fatherValue
+           将父实例中的fatherValue数据传递给子组件的father-value，子组件内部同样使用v-bind将props中fatherValue值
+           绑定到input框中，实现父实例数据向子组件的传递。
+        4、在子组件内部input中显示绑定input事件，input事件将触发执行子组件的updateValue，updateValue函数要求
+           传入当前的事件对象$event；updateValue函数内部通过event对象获取input框操作值，再利用$emit函数触发外部
+           事件的执行，将子组件内部的数据发射到外部；$emit函数绑定的事件类型也必须是input的事件；在子组件的使用
+           处，显示定义input事件，该事件将触发外部父实例的fatherUpdateValue函数，fatherUpdateValue函数接收子组件
+           发射出来的信息；最后fatherUpdateValue函数将接收到的值绑定到父实例中去。
+    --&amp;gt;
+&amp;lt;/head&amp;gt;
+&amp;lt;body&amp;gt;
+    &amp;lt;div id=&quot;web&quot;&amp;gt;
+        父实例双向数据绑定：&amp;lt;input type=&quot;text&quot; v-model=&quot;fatherValue&quot;&amp;gt;
+        &amp;lt;br/&amp;gt;
+        &amp;lt;br/&amp;gt;
+        &amp;lt;!-- v-bind，father-value采用“-”连接，与props属性中数据名称相对应，负责将父实例中的数据传入到子组件中 --&amp;gt;
+        &amp;lt;!-- v-on，监听$emit函数对事件的触发，事件触发后调用外部父实例中的fatherUpdateValue函数，这里的input并不一定要如此命名--&amp;gt;
+        &amp;lt;my-component :father-value=&quot;fatherValue&quot; @input=&quot;fatherUpdateValue&quot;&amp;gt;&amp;lt;/my-component&amp;gt;
+    &amp;lt;/div&amp;gt;
+    &amp;lt;template id=&quot;template01&quot;&amp;gt;
+        &amp;lt;div&amp;gt;
+            &amp;lt;!-- 这里的v-bind必须要绑定value属性，该名字是input框Vue内部处理的默认名称，绑定props属性传入的值--&amp;gt;
+            &amp;lt;!-- 这里的v-on必须要绑定input事件，该事件是input框Vue内部处理的默认事件，触发子组件内部的事件--&amp;gt;
+            子组件双向数据绑定：&amp;lt;input type=&quot;text&quot; :value=&quot;fatherValue&quot; @input=&quot;updateValue($event)&quot;&amp;gt;
+        &amp;lt;/div&amp;gt;
+    &amp;lt;/template&amp;gt;
+    &amp;lt;script&amp;gt;
+        Vue.component(&quot;my-component&quot;,{
+            template: &quot;#template01&quot;,
+            props: [&quot;fatherValue&quot;],
+            methods: {
+                updateValue(event){
+                    this.$emit(&quot;input&quot;,event.target.value);
+                }
+            }
+        });
+
+        var vm = new Vue({
+            el: &quot;#web&quot;,
+            data: {
+                fatherValue: &quot;&quot;
+            },
+            methods: {
+                fatherUpdateValue(value){
+                    this.fatherValue = value;
+                }
+            }
+        });
+    &amp;lt;/script&amp;gt;
+&amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+</code></pre>">&lt;!DOCTYPE html&gt;
+<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">html</span> <span class="hljs-attribute">lang</span>=<span class="hljs-value">"en"</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">head</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">meta</span> <span class="hljs-attribute">charset</span>=<span class="hljs-value">"UTF-8"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">title</span>&gt;</span>test-子组件v-model双向数据绑定<span class="hljs-tag">&lt;/<span class="hljs-title">title</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"../vue/vue.js"</span>&gt;</span><span class="javascript"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+    <span class="hljs-comment">&lt;!--
+        1、编写父实例，使用input进行双向数据绑定。
+        2、编写子组件，使用input输入框，但不使用v-model进行数据绑定。
+        3、利用v-bind进行子组件的props属性数据绑定，绑定名称为father-value，该属性接收值为父实例中的fatherValue
+           将父实例中的fatherValue数据传递给子组件的father-value，子组件内部同样使用v-bind将props中fatherValue值
+           绑定到input框中，实现父实例数据向子组件的传递。
+        4、在子组件内部input中显示绑定input事件，input事件将触发执行子组件的updateValue，updateValue函数要求
+           传入当前的事件对象$event；updateValue函数内部通过event对象获取input框操作值，再利用$emit函数触发外部
+           事件的执行，将子组件内部的数据发射到外部；$emit函数绑定的事件类型也必须是input的事件；在子组件的使用
+           处，显示定义input事件，该事件将触发外部父实例的fatherUpdateValue函数，fatherUpdateValue函数接收子组件
+           发射出来的信息；最后fatherUpdateValue函数将接收到的值绑定到父实例中去。
+    --&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">head</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">body</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"web"</span>&gt;</span>
+        父实例双向数据绑定：<span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"text"</span> <span class="hljs-attribute">v-model</span>=<span class="hljs-value">"fatherValue"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">br</span>/&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">br</span>/&gt;</span>
+        <span class="hljs-comment">&lt;!-- v-bind，father-value采用“-”连接，与props属性中数据名称相对应，负责将父实例中的数据传入到子组件中 --&gt;</span>
+        <span class="hljs-comment">&lt;!-- v-on，监听$emit函数对事件的触发，事件触发后调用外部父实例中的fatherUpdateValue函数，这里的input并不一定要如此命名--&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">my-component</span> <span class="hljs-attribute">:father-value</span>=<span class="hljs-value">"fatherValue"</span> @<span class="hljs-attribute">input</span>=<span class="hljs-value">"fatherUpdateValue"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">my-component</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">template</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"template01"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
+            <span class="hljs-comment">&lt;!-- 这里的v-bind必须要绑定value属性，该名字是input框Vue内部处理的默认名称，绑定props属性传入的值--&gt;</span>
+            <span class="hljs-comment">&lt;!-- 这里的v-on必须要绑定input事件，该事件是input框Vue内部处理的默认事件，触发子组件内部的事件--&gt;</span>
+            子组件双向数据绑定：<span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"text"</span> <span class="hljs-attribute">:value</span>=<span class="hljs-value">"fatherValue"</span> @<span class="hljs-attribute">input</span>=<span class="hljs-value">"updateValue($event)"</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">template</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">script</span>&gt;</span><span class="javascript">
+        Vue.component(<span class="hljs-string">"my-component"</span>,{
+            template: <span class="hljs-string">"#template01"</span>,
+            props: [<span class="hljs-string">"fatherValue"</span>],
+            methods: {
+                updateValue(event){
+                    <span class="hljs-keyword">this</span>.$emit(<span class="hljs-string">"input"</span>,event.target.value);
+                }
+            }
+        });
+
+        <span class="hljs-keyword">var</span> vm = <span class="hljs-keyword">new</span> Vue({
+            el: <span class="hljs-string">"#web"</span>,
+            data: {
+                fatherValue: <span class="hljs-string">""</span>
+            },
+            methods: {
+                fatherUpdateValue(value){
+                    <span class="hljs-keyword">this</span>.fatherValue = value;
+                }
+            }
+        });
+    </span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">html</span>&gt;</span>
+</span></code></pre>
+
+<footer style="position:fixed; font-size:.8em; text-align:right; bottom:0px; margin-left:-25px; height:20px; width:100%;">generated by <a href="http://pad.haroopress.com" target="_blank">haroopad</a></footer>
+</body>
+</html>
